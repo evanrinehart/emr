@@ -492,7 +492,7 @@ ol.thumb-grid li img  {
   margin-bottom:  5px;
 }
 
-a  {
+a {
   text-decoration:  underline;
 }
 
@@ -512,10 +512,16 @@ footer.footer  {
   background-color:  #070b26;
   color:  #d3dbf7;
   font-family:  "Open Sans", sans-serif;
+  font-size: 0.8em;
+  line-height: 1.75em;
 }
 
 footer.footer a {
   color:  #bbc7cc;
   font-weight:  700;
+}
+
+h2, h3, h4 {
+  font-weight: bold;
 }
 
