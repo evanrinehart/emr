@@ -500,7 +500,7 @@ a.no-underline {
   text-decoration:  none;
 }
 
-#social-media-links a {
+#social-media-links .links a {
   padding:  6px;
 }
 
