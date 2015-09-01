@@ -31,3 +31,11 @@ ol.thumb-grid li img {
 	font-size: 70%;
 	margin-bottom: 5px;
 }
+
+a {
+  text-decoration: underline;
+}
+
+a.no-underline {
+  text-decoration: none;
+}
