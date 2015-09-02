@@ -47,7 +47,6 @@ src="https://www.facebook.com/tr?id=1016142188416147&ev=PageView&noscript=1"
 </head>
 <body class="home-template">
 
-
 <div id="top-menu-container">
   <ul id="top-menu">
     <li><a class="arctic_scroll" href="#about">About</a></li>
@@ -59,11 +58,12 @@ src="https://www.facebook.com/tr?id=1016142188416147&ev=PageView&noscript=1"
   </ul>
 </div>
 
-<section class="main-header " style="background-image: url(assets/img/cover-interior-room-cropped.jpg)">
+<div id="mobile-menu-nav">
+  <a class="mobile-menu-trigger" href="#mobile-menu">Menu</a>
+</div>
 
-    <nav class="main-nav overlay clearfix" id="mobile-menu-nav">
-      <a class="mobile-menu-trigger" href="#mobile-menu">Menu</a>
-    </nav>
+
+<section class="main-header " style="background-image: url(assets/img/cover-interior-room-cropped.jpg)">
 
     <div class="vertical escape-overlay">
       <div class="main-header-content inner">
@@ -81,7 +81,9 @@ src="https://www.facebook.com/tr?id=1016142188416147&ev=PageView&noscript=1"
 
 </section>
 
+
 <main id="content" class="content" role="main">
+
 
 
         <section class="alt-color" id="about">
@@ -513,7 +515,7 @@ src="https://www.facebook.com/tr?id=1016142188416147&ev=PageView&noscript=1"
       </div>
     </section>
 
-        <section>
+        <section id="sign-up-section">
           <div class="container">
 
           <!-- Text -->
@@ -599,9 +601,7 @@ src="https://www.facebook.com/tr?id=1016142188416147&ev=PageView&noscript=1"
     <script src="public/jquery.js?v=304d580990"></script>
 
     <script type="text/javascript" src="assets/js/index.js?v=304d580990"></script>
-<!--
     <script type="text/javascript" src="assets/js/bootstrap.js"></script>
--->
 
     <script>
       $(function(){
@@ -627,6 +627,14 @@ src="https://www.facebook.com/tr?id=1016142188416147&ev=PageView&noscript=1"
             zIndex:5,
             stopper: "#sign-up"
           });
+  
+          $("#mobile-menu-nav").affix({
+            offset: {
+              top: 0,
+              bottom: $(document).height() - $('#sign-up-section').offset().top - $('#mobile-menu-nav').outerHeight(true)
+            } 
+          });
+
           $(".sticky").sticky({
             topSpacing: 58,
             zIndex:2,

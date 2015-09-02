@@ -237,7 +237,7 @@ nav ol, nav ul {
     transition: all ease .3s;
 }
 a.mobile-menu-trigger {
-    color: #fdf9f0;
+    color: gray;
 }
 .main-nav.overlay .mobile-menu-trigger {
     border-color: #fdf9f0;
@@ -523,5 +523,14 @@ footer.footer a {
 
 h2, h3, h4 {
   font-weight: bold;
+}
+
+#mobile-menu-nav {
+  z-index: 2;
+  color: blue;
+}
+
+.affix-top, .affix-bottom {
+  position: absolute;
 }
 
