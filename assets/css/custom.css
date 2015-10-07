@@ -296,10 +296,6 @@ nav ol, nav ul {
     padding: 0 9px;
     text-align: center;
     z-index: 3;
-    -webkit-transition: 1s ease-in-out;
-    -moz-transition: 1s ease-in-out;
-    -o-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
   }
   #top-menu.open {
     opacity: 1.0;
