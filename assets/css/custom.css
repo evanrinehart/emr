@@ -167,6 +167,7 @@ h2 {
   display: block;
   position: fixed;
   margin: 0;
+  color: #FCFAE2;
   background-color: #323133;
   left: 0;
   right: 0;
@@ -178,25 +179,45 @@ h2 {
   padding-top: 0.2em;
 }
 
+#top-menu-container a {
+  text-decoration: none;
+  color: #FCFAE2;
+}
+
 #top-menu-container .menu-banner {
   position: fixed;
   top: 7px;
   left: 1em;
 }
 
-#top-menu-container .menu-banner .title {
-  color: #FCFAE2;
-  text-decoration: none;
-  font-family: Merriweather, Georgia, serif;
+.menu-banner.small {
+  line-height: 14px;
+}
+
+.menu-banner.small .title {
+  font-size: 10pt;
+}
+
+.menu-banner.small .city {
+  font-size: 8pt;
+}
+
+.menu-banner.large .title {
   font-size: 15pt;
-  font-weight: 400;
   margin-right: 1rem;
 }
 
-#top-menu-container .menu-banner .city {
-  color: #FCFAE2;
-  font-family: Roboto, sans-serif;
+.menu-banner.large .city {
   font-size: 14pt;
+}
+
+#top-menu-container .menu-banner .title {
+  font-family: Merriweather, Georgia, serif;
+  font-weight: 400;
+}
+
+#top-menu-container .menu-banner .city {
+  font-family: Roboto, sans-serif;
   font-weight: 100;
   letter-spacing: 1.5px;
 }
@@ -294,6 +315,12 @@ nav ol, nav ul {
   #top-menu {
     display: inline;
   }
+  .menu-banner.small {
+    display: none;
+  }
+  .menu-banner.large {
+    display: inline;
+  }
 }
 
 @media only screen and (max-width:959px) {
@@ -304,6 +331,12 @@ nav ol, nav ul {
     display: block;
   }
   #top-menu {
+    display: none;
+  }
+  .menu-banner.small {
+    display: inline;
+  }
+  .menu-banner.large {
     display: none;
   }
 }
@@ -475,6 +508,7 @@ section.module.parallax-sign-up {
     color: #6c0c0c;
 }
 body {
+    margin-top: 42px;
     font-size: 18px;
 }
 h1, h2, h3, h4, h5, h6, p {
