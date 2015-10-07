@@ -454,6 +454,7 @@ src="https://www.facebook.com/tr?id=1016142188416147&ev=PageView&noscript=1"
           </div>
         </section>
 
+<!--
         <nav id="mobile-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
           <div class="inner">
 
@@ -506,6 +507,7 @@ src="https://www.facebook.com/tr?id=1016142188416147&ev=PageView&noscript=1"
 
           </div>
         </nav>
+-->
     <section class="module parallax parallax-sign-up" id="sign-up">
       <div class="escape-overlay">
         <div class="parallax-container">
@@ -614,6 +616,12 @@ src="https://www.facebook.com/tr?id=1016142188416147&ev=PageView&noscript=1"
     <script>
       $('#mobile-hamburger').click(function(e){
         $(this).toggleClass('open');
+        $('#top-menu').toggleClass('open');
+      });
+
+      $(document).on('click', '#top-menu.open a', function(){
+        $('#mobile-hamburger').toggleClass('open');
+        $('#top-menu').toggleClass('open');
       });
     </script>
 
