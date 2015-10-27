@@ -703,6 +703,29 @@ section.module.parallax-sign-up {
   cursor: pointer;
 }
 
+#how-it-works .small-heading {
+  display: none;
+  font-family: Roboto, sans-serif;
+}
+
+@media screen and (max-width:768px) {
+  #how-it-works {
+    padding: 20px 10px;
+  }
+
+  #how-it-works table {
+    display: none;
+  }
+
+  #how-it-works .arrow-up {
+    display: none;
+  }
+
+  #how-it-works .small-heading {
+    display: block;
+  }
+}
+
 
 #rooms {
   background-image: url(../img/parallax-mansion-front.jpg);
