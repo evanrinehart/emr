@@ -704,6 +704,41 @@ section.module.parallax-sign-up {
 }
 
 
+#rooms {
+  background-image: url(../img/parallax-mansion-front.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 40px 20px 105px 20px;
+}
+
+#rooms h2 {
+  font-size: 32pt;
+  font-family: Merriweather, Georgia, serif;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+#rooms p {
+  line-height: 2.0;
+  margin-bottom: 1em;
+}
+
+#rooms .copy {
+  float: right;
+  width: 50%;
+  background-color: #D9DAE8;
+  opacity: 0.9;
+  padding: 20px;
+  margin: 0 25px;
+}
+
+@media screen and (max-width:768px) {
+  #rooms .copy {
+    width: 100%;
+  }
+}
+
+
 #location {
   background-image: url(../img/parallax-mansion-side.jpg);
   padding-top: 270px;
