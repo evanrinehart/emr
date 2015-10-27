@@ -613,6 +613,97 @@ h2, h3, h4 {
 }
 
 /* october rework */
+  
+/*
+section.module.parallax-chambers {
+    background-image: url(../img/parallax-mansion-front.jpg);
+}
+section.module.parallax-tips {
+    background-image: url(../img/parallax-heavens.jpg);
+}
+section.module.parallax-faqs {
+    background-image: url(../img/parallax-cats.jpg);
+}
+section.module.parallax-location {
+    background-image: url(../img/parallax-river.jpg);
+}
+section.module.parallax-sign-up {
+}
+*/
+
+#how-it-works {
+  text-align: center;
+  background-color: #FFFCE4;
+  padding: 20px 80px;
+}
+
+#how-it-works .blurb {
+  padding: 10px 20px;
+  background-color: #C3CAE1;
+  margin-bottom: 40px;
+  font-size: 12pt;
+  font-weight: 100;
+  line-height: 2.0;
+  text-align: left;
+}
+
+#how-it-works .arrow-up {
+  position: relative;
+  margin: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 22px solid #C3CAE1;
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+  margin-left: -22px;
+}
+
+#how-it-works .arrow-1 { left: 10%;  }
+#how-it-works .arrow-2 { left: 30%;  }
+#how-it-works .arrow-3 { left: 50%;  }
+#how-it-works .arrow-4 { left: 70%;  }
+#how-it-works .arrow-5 { left: 90%;  }
+
+#how-it-works h2 {
+  font-size: 32pt;
+  font-family: Merriweather, Georgia, serif;
+  letter-spacing: 1px;
+}
+
+#how-it-works table {
+  width: 100%;
+  font-family: Roboto, sans-serif;
+  margin-bottom: 40px;
+}
+
+#how-it-works table td {
+  vertical-align: bottom;
+  width: 20%;
+}
+
+#how-it-works .tip {
+  font-size: 14pt;
+  font-style: italic;
+}
+
+#how-it-works .nav-button {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+#how-it-works .nav-button a {
+  text-decoration: none;
+  background-color: white;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  color: #2F2F30;
+  border: 1px solid #2F2F30;
+  padding: 5px 25px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+
 #location {
   background-image: url(../img/parallax-mansion-side.jpg);
   padding-top: 270px;
@@ -644,23 +735,6 @@ h2, h3, h4 {
   font-family: Merriweather, Georgia, serif;
   letter-spacing: 1px;
 }
-  
-/*
-section.module.parallax-chambers {
-    background-image: url(../img/parallax-mansion-front.jpg);
-}
-section.module.parallax-tips {
-    background-image: url(../img/parallax-heavens.jpg);
-}
-section.module.parallax-faqs {
-    background-image: url(../img/parallax-cats.jpg);
-}
-section.module.parallax-location {
-    background-image: url(../img/parallax-river.jpg);
-}
-section.module.parallax-sign-up {
-}
-*/
 
 #newsletter {
   background-color: #FFFCE4;
