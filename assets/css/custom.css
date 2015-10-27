@@ -781,6 +781,88 @@ section.module.parallax-sign-up {
 }
 
 
+#jazz-music-parlor {
+  background-color: #D8DAE9;
+  font-size: 12pt;
+  padding: 40px 0;
+  margin: auto;
+  position: relative;
+}
+
+#jazz-music-parlor h3 {
+  color: #2F2F30;
+}
+
+#jazz-music-parlor .copy {
+  text-align: left;
+}
+
+#jazz-music-parlor img {
+  width: 100%;
+}
+
+#jazz-music-parlor p {
+  line-height: 2.0;
+  margin-bottom: 1em;
+  font-weight: 100;
+}
+
+#jazz-music-parlor .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: #202020;
+  opacity: 0.8;
+}
+
+#jazz-music-parlor .overlay-text {
+  position: absolute;
+  display: table;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 4;
+  color: white;
+}
+
+#jazz-music-parlor .overlay-text p {
+  text-align: center;
+  font-size: 32pt;
+  font-weight: bold;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 1px;
+}
+
+
+#tickets {
+  background-color: #FFFCE4;
+  padding-top: 30px;
+}
+
+#tickets h2 {
+  font-size: 32pt;
+  font-family: Merriweather, Georgia, serif;
+  letter-spacing: 1px;
+}
+
+#tickets .copy {
+  font-family: Roboto, sans-serif;
+  font-size: 16pt;
+  font-weight: 300;
+  padding: 0 40px;
+}
+
+#tickets .widget {
+  padding: 0 40px;
+}
+
 
 #location {
   background-image: url(../img/parallax-mansion-side.jpg);
