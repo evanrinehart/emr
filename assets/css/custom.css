@@ -795,10 +795,15 @@ section.module.parallax-sign-up {
 
 #jazz-music-parlor .copy {
   text-align: left;
+  padding: 0 40px;
 }
 
 #jazz-music-parlor img {
   width: 100%;
+}
+
+#jazz-music-parlor .picture {
+  margin-bottom: 40px;
 }
 
 #jazz-music-parlor p {
