@@ -738,6 +738,48 @@ section.module.parallax-sign-up {
   }
 }
 
+#mardi-gras-study {
+  background-color: #D8DAE9;
+  font-size: 12pt;
+  padding: 40px 0;
+  margin: auto;
+}
+
+#mardi-gras-study h3 {
+  color: #2F2F30;
+}
+
+#mardi-gras-study .copy {
+  text-align: left;
+}
+
+#mardi-gras-study img {
+  width: 100%;
+}
+
+#mardi-gras-study p {
+  line-height: 2.0;
+  margin-bottom: 1em;
+  font-weight: 100;
+}
+
+#mardi-gras-study .buy-tickets {
+  background-color: #4D5895;
+  color: #FFFCE4;
+  padding: 6px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 1px;
+  font-size: 14pt;
+}
+
+#mardi-gras-study .buy-tickets:hover {
+  background-color: #363966;
+}
+
+
 
 #location {
   background-image: url(../img/parallax-mansion-side.jpg);
