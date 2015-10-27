@@ -713,6 +713,10 @@ section.module.parallax-sign-up {
     padding: 20px 10px;
   }
 
+  #how-it-works h2 {
+    font-size: 24pt;
+  }
+
   #how-it-works table {
     display: none;
   }
@@ -928,7 +932,7 @@ section.module.parallax-sign-up {
   background-color: #FFFCE4;
   text-align: center;
   padding-top: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 30px;
 }
 
 #newsletter h2 {
@@ -956,6 +960,18 @@ section.module.parallax-sign-up {
   font-size: 14pt !important;
 }
 
+#newsletter .force-bootstrap-corners {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#newsletter .ad-hoc-space-below {
+  margin-bottom: 50px;
+}
+
+#newsletter .email {
+}
+
 #newsletter .form-button {
   color: #FFFCE4;
   background-color: #4D5895;
@@ -970,6 +986,29 @@ section.module.parallax-sign-up {
 
 #newsletter .form-button:hover {
   background-color: #363966;
+}
+
+#newsletter .mobile.form-button {
+  display: none;
+  margin: auto;
+}
+
+@media screen and (max-width:768px) {
+  #newsletter .form-button {
+    display: none;
+  }
+
+  #newsletter .undo-bootstrap-corners-on-mobile {
+    border-radius: 2px;
+  }
+
+  #newsletter .undo-bootstrap-table-on-mobile {
+    display: block;
+  }
+
+  #newsletter .mobile.form-button {
+    display: block;
+  }
 }
 
 #footer {

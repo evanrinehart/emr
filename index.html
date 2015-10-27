@@ -334,11 +334,29 @@ Escape My Room does not allow walk-ins. Everyone visiting must have a ticket.
       >
         <div id="mc_embed_signup_scroll">
           <div class="mc-field-group">
-            <div class="input-group">
-              <input type="email" value="" name="EMAIL" class="required email form-control override-bootstrap-font-size-12" id="mce-EMAIL" placeholder="Your email address">
+            <div class="input-group undo-bootstrap-table-on-mobile ad-hoc-space-below">
+              <input
+                type="email"
+                value=""
+                name="EMAIL"
+                class="required email form-control override-bootstrap-font-size-12 undo-bootstrap-corners-on-mobile"
+                id="mce-EMAIL"
+                placeholder="Your email address"
+              >
               <span class="input-group-btn">
-                <input type="submit" value="SUBSCRIBE" name="subscribe" id="mc-embedded-subscribe" class="form-button btn override-bootstrap-font-size-18">
+                <input
+                  type="submit"
+                  value="SUBSCRIBE"
+                  name="subscribe"
+                  id="mc-embedded-subscribe"
+                  class="form-button btn override-bootstrap-font-size-18 force-bootstrap-corners"
+                >
               </span>
+
+            </div>
+
+            <div class="input-group undo-bootstrap-table-on-mobile">
+              <input type="submit" value="SUBSCRIBE" name="subscribe" id="mc-embedded-subscribe" class="mobile form-button btn override-bootstrap-font-size-18">
             </div>
           </div>
           <div id="mce-responses" class="clear">
@@ -368,13 +386,14 @@ Escape My Room does not allow walk-ins. Everyone visiting must have a ticket.
   <script src="public/jquery.js?v=304d580990"></script>
 <!--    <script type="text/javascript" src="assets/js/index.js?v=304d580990"></script> -->
   <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+  <script type="text/javascript" src="assets/js/fastclick.js"></script>
 <!--    <script type="text/javascript" src="assets/js/booking.js"></script>
 -->
 
   <script>
     $(function(){
-  console.log('adjusting');
-  adjust_google_maps();
+      adjust_google_maps();
+      FastClick.attach(document.body);
     });
   </script>
 
@@ -424,14 +443,6 @@ Escape My Room does not allow walk-ins. Everyone visiting must have a ticket.
         adjust_google_maps();
       });
 
-    </script>
-
-    <script type="text/javascript">
-/*
-      $(function() {
-          FastClick.attach(document.body);
-      });
-*/
     </script>
 
     <script>
