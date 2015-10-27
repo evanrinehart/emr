@@ -735,6 +735,7 @@ section.module.parallax-sign-up {
 @media screen and (max-width:768px) {
   #rooms .copy {
     width: 100%;
+    margin: auto;
   }
 }
 
