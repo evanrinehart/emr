@@ -161,7 +161,7 @@ to four months.
     <p><a>READ TIPS + FAQ</a></p>
   </div>
 
-  <div>
+  <div id="rooms">
     <div>
       <h2>Rooms</h2>
 
@@ -238,10 +238,19 @@ purchased. We do not currently offer any discounts on admission.
     <script src="https://d3gxy7nm8y4yjr.cloudfront.net/js/embed.js" type="text/javascript"></script>
   </div>
 
-  <div>
-    <div>GOOGLE MAP</div>
+  <div id="location">
+    <div class="map">
+      <iframe
+        id="google-maps"
+        width="450"
+        height="450"
+        frameborder="0"
+        style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?q=701%20Loyola%20Avenue%2C%20New%20Orleans%2C%20LA%2C%20United%20States&key=AIzaSyDQsIA2erhxwUqO6L4au1EBOXhh8e_NyWg">
+      </iframe>
+    </div>
 
-    <div>
+    <div class="copy">
       <h2>Location</h2>
 
       <p>
@@ -260,6 +269,9 @@ first served basis.
       <p>
 Escape My Room does not allow walk-ins. Everyone visiting must have a ticket.
       </p>
+    </div>
+
+    <div class="clearfix"></div>
   </div>
 
   <div id="newsletter">
@@ -319,9 +331,8 @@ Escape My Room does not allow walk-ins. Everyone visiting must have a ticket.
 
   <script>
     $(function(){
-        $(".arctic_scroll").arctic_scroll({
-          speed: 500
-        });
+  console.log('adjusting');
+  adjust_google_maps();
     });
   </script>
 
@@ -338,6 +349,7 @@ Escape My Room does not allow walk-ins. Everyone visiting must have a ticket.
   </script>
 
   <script>
+/*
     $('body').flowtype({
        minimum   : 500,
        maximum   : 1200,
@@ -345,50 +357,39 @@ Escape My Room does not allow walk-ins. Everyone visiting must have a ticket.
        maxFont   : 40,
        fontRatio : 55 // When using fontRatio, increase the value to make the font smaller (and vice versa)
     });
+*/
   </script>
 
   <script type="text/javascript">
       function adjust_google_maps(){
+        var small = $(window).width() < 768;
         var iframe = $('iframe#google-maps');
         var container = iframe.parent();
-        var w = container.width();
-        var l = iframe.position().left;
-        iframe.width(w - 2*l);
+        var section = container.parent();
+        var w = section.width();
+        var l = container.offset().left;
+        if(small){
+          var newW = w - 2*l;
+        }
+        else{
+          var newW = w / 2 - 2 * l;
+        }
+        iframe.width(newW);
+        $('#location .copy').width(newW - 40);
       }
 
       $(window).resize(function(){
         adjust_google_maps();
       });
 
-      $(function(){
-/*
-        $(".top-menu-container").sticky({
-          zIndex:5,
-          stopper: "#sign-up"
-        });
-
-        $("#mobile-menu-nav").affix({
-          offset: {
-            top: 0,
-            bottom: $(document).height() - $('#sign-up-section').offset().top - $('#mobile-menu-nav').outerHeight(true)
-          } 
-        });
-
-        $(".sticky").sticky({
-          topSpacing: 58,
-          zIndex:2,
-          stopper: "#escape-footer"
-        });
-*/
-
-        adjust_google_maps();
-      });
     </script>
 
     <script type="text/javascript">
+/*
       $(function() {
           FastClick.attach(document.body);
       });
+*/
     </script>
 
     <script>

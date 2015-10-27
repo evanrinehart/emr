@@ -371,21 +371,6 @@ section.module.parallax h1 {
     text-shadow: 0 0 10px rgba(0, 0, 0, .2);
     text-indent: 0;
 }
-section.module.parallax-chambers {
-    background-image: url(../img/parallax-mansion-front.jpg);
-}
-section.module.parallax-tips {
-    background-image: url(../img/parallax-heavens.jpg);
-}
-section.module.parallax-faqs {
-    background-image: url(../img/parallax-cats.jpg);
-}
-section.module.parallax-location {
-    background-image: url(../img/parallax-river.jpg);
-}
-section.module.parallax-sign-up {
-    background-image: url(../img/parallax-mansion-side.jpg);
-}
 
 @media screen and (max-width:500px) {
   section.module.parallax {
@@ -628,6 +613,54 @@ h2, h3, h4 {
 }
 
 /* october rework */
+#location {
+  background-image: url(../img/parallax-mansion-side.jpg);
+  padding-top: 270px;
+  padding-bottom: 180px;
+}
+
+#location .map {
+  float: left;
+  margin: 0 25px;
+}
+
+#location .copy {
+  width: 45%;
+  float: left;
+  background-color: #D9DAE8;
+  opacity: 0.9;
+  padding: 20px;
+  margin: 0 25px;
+}
+
+#location .copy p {
+  line-height: 2.0;
+  margin-bottom: 1em;
+}
+
+#location .copy h2 {
+  text-align: left;
+  font-size: 32pt;
+  font-family: Merriweather, Georgia, serif;
+  letter-spacing: 1px;
+}
+  
+/*
+section.module.parallax-chambers {
+    background-image: url(../img/parallax-mansion-front.jpg);
+}
+section.module.parallax-tips {
+    background-image: url(../img/parallax-heavens.jpg);
+}
+section.module.parallax-faqs {
+    background-image: url(../img/parallax-cats.jpg);
+}
+section.module.parallax-location {
+    background-image: url(../img/parallax-river.jpg);
+}
+section.module.parallax-sign-up {
+}
+*/
 
 #newsletter {
   background-color: #FFFCE4;
