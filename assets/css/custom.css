@@ -710,6 +710,13 @@ section.module.parallax-sign-up {
 #how-it-works .small-heading {
   display: none;
   font-family: Roboto, sans-serif;
+  font-size: 16pt;
+  margin-bottom: 10px;
+}
+
+#how-it-works .small-icon {
+  display: none;
+  margin-bottom: 15px;
 }
 
 @media screen and (max-width:768px) {
@@ -730,6 +737,10 @@ section.module.parallax-sign-up {
   }
 
   #how-it-works .small-heading {
+    display: block;
+  }
+
+  #how-it-works .small-icon {
     display: block;
   }
 }
