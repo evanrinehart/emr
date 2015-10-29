@@ -673,12 +673,16 @@ section.module.parallax-sign-up {
 #how-it-works table {
   width: 100%;
   font-family: Roboto, sans-serif;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 #how-it-works table td {
-  vertical-align: bottom;
+  padding: 5px 0;
+  font-size: 16pt;
   width: 20%;
+}
+
+#how-it-works table img {
 }
 
 #how-it-works .tip {
@@ -732,10 +736,18 @@ section.module.parallax-sign-up {
 
 
 #rooms {
-  background-image: url(../img/parallax-mansion-front.jpg);
-  background-position: top center;
+  background-image: url(../img/mansion-2.jpg);
+  background-size: 100%;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-color: black;
   padding: 40px 20px 105px 20px;
+}
+
+@media screen and (max-width:1000px) {
+  #rooms {
+    background-size: auto;
+  }
 }
 
 #rooms h2 {
@@ -895,11 +907,20 @@ section.module.parallax-sign-up {
   padding: 0 40px;
 }
 
-
 #location {
-  background-image: url(../img/parallax-mansion-side.jpg);
+  background-image: url(../img/mansion-1.jpg);
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: black;
   padding-top: 270px;
   padding-bottom: 180px;
+}
+
+@media screen and (max-width:1000px) {
+  #location {
+    background-size: auto;
+  }
 }
 
 #location .map {
