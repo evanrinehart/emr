@@ -812,8 +812,12 @@ section.module.parallax-sign-up {
   text-align: left;
 }
 
+#mardi-gras-study .picture {
+  text-align: center;
+}
+
 #mardi-gras-study img {
-  width: 100%;
+  width: 75%;
 }
 
 #mardi-gras-study p {
@@ -857,11 +861,12 @@ section.module.parallax-sign-up {
 }
 
 #jazz-music-parlor img {
-  width: 100%;
+  width: 75%;
 }
 
 #jazz-music-parlor .picture {
   margin-bottom: 40px;
+  text-align: center;
 }
 
 #jazz-music-parlor p {
