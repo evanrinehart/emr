@@ -1124,6 +1124,12 @@ section.module.parallax-sign-up {
   top: -40px;
 }
 
+#tickets { position: relative; }
+#tickets-nav {
+  position: absolute;
+  top: -40px;
+}
+
 #location { position: relative; }
 #location-nav {
   position: absolute;
