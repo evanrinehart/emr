@@ -4,13 +4,15 @@ function setHighlight(i){
   var highlight = '#4F5496';
   $('#how-it-works table .title').eq(i).css('color',highlight);
   var icon = $('#how-it-works table .icon').eq(i);
-  icon.find('img').attr('src', icon.data('highlight'));
+  icon.find('img.highlight').removeClass('hide');
+  icon.find('img.normal').addClass('hide');
 }
 
 function clearHighlight(i){
   $('#how-it-works table .title').eq(i).css('color', 'black');
   var icon = $('#how-it-works table .icon').eq(i);
-  icon.find('img').attr('src', icon.data('normal'));
+  icon.find('img.normal').removeClass('hide');
+  icon.find('img.highlight').addClass('hide');
 }
 
 function clearAllHighlights(){
