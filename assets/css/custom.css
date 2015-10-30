@@ -737,7 +737,7 @@ section.module.parallax-sign-up {
   }
 
   #how-it-works .arrow-up {
-    display: none;
+    left: 50%;
   }
 
   #how-it-works .small-heading {
@@ -1149,6 +1149,7 @@ section.module.parallax-sign-up {
 
 #newsletter a {
   color: #4D5895;
+  padding: 0 5px;
 }
 
 #newsletter a:hover {
