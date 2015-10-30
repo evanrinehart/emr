@@ -1011,7 +1011,7 @@ section.module.parallax-sign-up {
 }
 
 #newsletter .ad-hoc-space-below {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 #newsletter .email {
@@ -1033,13 +1033,12 @@ section.module.parallax-sign-up {
   background-color: #363966;
 }
 
-#newsletter .mobile.form-button {
+#newsletter .show-on-mobile {
   display: none;
-  margin: auto;
 }
 
 @media screen and (max-width:768px) {
-  #newsletter .form-button {
+  #newsletter .hide-on-mobile {
     display: none;
   }
 
@@ -1051,7 +1050,7 @@ section.module.parallax-sign-up {
     display: block;
   }
 
-  #newsletter .mobile.form-button {
+  #newsletter .show-on-mobile {
     display: block;
   }
 }
@@ -1148,4 +1147,10 @@ section.module.parallax-sign-up {
   top: -40px;
 }
 
+#newsletter a {
+  color: #4D5895;
+}
 
+#newsletter a:hover {
+  color: #363966;
+}
