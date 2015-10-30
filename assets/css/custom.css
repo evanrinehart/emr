@@ -637,6 +637,10 @@ section.module.parallax-sign-up {
   padding: 20px 80px;
 }
 
+#how-it-works .blurb-space {
+  min-height: 140px;
+}
+
 #how-it-works .blurb {
   padding: 10px 20px;
   background-color: #C3CAE1;
@@ -742,6 +746,10 @@ section.module.parallax-sign-up {
 
   #how-it-works .small-icon {
     display: block;
+  }
+
+  #how-it-works .hidden {
+    display: block !important;
   }
 }
 
@@ -1127,3 +1135,5 @@ section.module.parallax-sign-up {
   position: absolute;
   top: -40px;
 }
+
+
