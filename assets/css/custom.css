@@ -1060,3 +1060,70 @@ section.module.parallax-sign-up {
   text-decoration: none;
   color: #FFFCE4;
 }
+
+
+
+#tips-faq .modal-content {
+  background-color: #cac8b6;
+  color: #353535;
+}
+
+#tips-faq .modal-header {
+  border-bottom-color: #a4a989;
+  min-height: 42px;
+}
+
+#tips-faq .modal-body {
+  padding: 20px 32px;
+}
+
+#tips-faq h4 {
+  font-size: 28pt;
+  text-align: center;
+}
+
+#tips-faq ul {
+/*  list-style: none;*/
+  padding: 0;
+}
+
+#tips-faq h5 {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+#tips-faq .modal-footer {
+  border-top-color: #a4a989;
+}
+
+#tips-faq .modal-footer button {
+  font-family: Roboto, sans-serif;
+  letter-spacing: 1px;
+  color: #353535;
+  background-color: #988a71;
+}
+
+
+#how-it-works { position: relative; }
+#how-it-works-nav {
+  position: absolute;
+  top: -40px;
+}
+
+#rooms { position: relative; }
+#rooms-nav {
+  position: absolute;
+  top: -40px;
+}
+
+#location { position: relative; }
+#location-nav {
+  position: absolute;
+  top: 200px;
+}
+
+#newsletter { position: relative; }
+#newsletter-nav {
+  position: absolute;
+  top: -40px;
+}
