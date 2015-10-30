@@ -36,7 +36,4 @@ $('#how-it-works table td').on('mouseenter', function(e){
   clearAllHighlights();
   setHighlight(currentlySelected);
   setHighlight(which);
-  $('#how-it-works table .title').eq(which).css('color',highlight);
-  var icon = $('#how-it-works table .icon').eq(which);
-  icon.find('img').attr('src', icon.data('highlight'));
 });
