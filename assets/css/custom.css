@@ -1055,6 +1055,19 @@ section.module.parallax-sign-up {
   }
 }
 
+#newsletter a {
+  color: #4D5895;
+  padding: 0 5px;
+}
+
+#newsletter a:hover {
+  color: #363966;
+}
+
+#newsletter .links {
+  margin-top: 20px;
+}
+
 #footer {
   background-color: #262951;
   color: #FFFCE4;
@@ -1147,11 +1160,3 @@ section.module.parallax-sign-up {
   top: -40px;
 }
 
-#newsletter a {
-  color: #4D5895;
-  padding: 0 5px;
-}
-
-#newsletter a:hover {
-  color: #363966;
-}
