@@ -349,6 +349,7 @@ body.custom-modal-open {
   font-size: 18px;
   line-height: normal;
   letter-spacing: normal;
+  border: 1px solid #C3CAE1;
 }
 
 .checkout-panel h1 {
@@ -474,6 +475,7 @@ body.custom-modal-open {
   text-align: center;
   line-height: normal;
   letter-spacing: normal;
+  border: 1px solid #C3CAE1;
 }
 
 .custom-dialog h1 {
