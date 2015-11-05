@@ -417,7 +417,7 @@ $(document).on('change', '.booking-widget [name="select-ticket-count"]', functio
   e.preventDefault();
   var n = $(this).val();
   if(n == 'too-many'){
-    $(this).val(state.ticketCount);
+    this.value = state.ticketCount;
     summonDialog(dialog(
       '8+ TICKETS',
       'Please call for more information on booking 8 or more tickets at a time.'
