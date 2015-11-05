@@ -518,6 +518,8 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
 });
 
 $(document).on('change', '.checkout-panel [name="promo_code"]', function(e){
+  var code = $(this).val();
+  $(this).val(code.toUpperCase());
   recalculatePrice();
 });
 
