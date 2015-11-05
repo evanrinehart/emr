@@ -47,6 +47,10 @@ body.custom-modal-open {
   text-decoration: none;
 }
 
+.custom-fullscreen select {
+  color: black;
+}
+
 .custom-fullscreen td, .custom-fullscreen th {
   padding: 0px;
 }
