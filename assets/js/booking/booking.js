@@ -333,7 +333,7 @@ $(document).on('click', '.modal-overlay', function(e){
 $(document).on('click', '.booking-widget a.left-arrow', function(e){
   e.preventDefault();
   var today = dateToday();
-  if(state.baseDate >= today){
+  if(state.baseDate > today){
     state.baseDate = dateAdd(state.baseDate, -1);
     reloadBookingUI();
   }
