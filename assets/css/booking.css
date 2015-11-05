@@ -370,7 +370,7 @@ body.custom-modal-open {
 
 .checkout-panel input {
   font-size: 8pt;
-  font-family: sans-serif;
+  color: black;
 }
 
 .checkout-panel td, .checkout-panel th {
