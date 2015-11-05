@@ -429,6 +429,10 @@ $(document).on('change', '.booking-widget [name="select-ticket-count"]', functio
   }
 });
 
+$(document).on('blur', '.booking-widget [name="select-ticket-count"]', function(e){
+  this.value = state.ticketCount;
+});
+
 $(document).on('click', '.checkout-panel .checkout-button', function(e){
   e.preventDefault();
   var button = $(this);
