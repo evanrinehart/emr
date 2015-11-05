@@ -121,7 +121,7 @@ function withAvailabilities(startDate, endDate, callbacks){
   withRooms(function(rooms){
     if(needFetch){
       fetchData(
-        dateAdd(startDate,-10),
+        startDate,
         dateAdd(endDate,10),
         function(results){ callbacks.fetchDone(rooms, results); },
         callbacks.error
