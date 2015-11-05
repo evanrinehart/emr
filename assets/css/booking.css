@@ -1,0 +1,449 @@
+body {
+  background-color: black;
+  color: gray;
+}
+
+body.custom-modal-open {
+  overflow: hidden;
+}
+
+.modal-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.modal-overlay.dark {
+  opacity: 0.5;
+  background-color: black;
+}
+
+.overlay-scroll {
+  overflow-y: auto;
+}
+
+
+/* fullscreen panel */
+.custom-fullscreen {
+  color: #f0f0f0;
+  background-color: #0b0d11;
+  height: 100%;
+}
+
+.custom-fullscreen .close-button {
+  font-size: 30px;
+  float: right;
+  margin-top: -4px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+.custom-fullscreen .close-button:hover {
+  color: white;
+}
+
+.custom-fullscreen .close-button:active {
+  color: black;
+}
+
+.custom-fullscreen .title {
+  text-align: center;
+  background-color: gray;
+  color: black;
+}
+
+.custom-fullscreen h1 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.custom-fullscreen {
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+  color: #f0f0f0;
+  background-color: #0b0d11;
+}
+
+.booking-widget .arrow:hover {
+  color: white;
+}
+
+.booking-widget .arrow:active {
+  color: lime;
+}
+
+.booking-widget .availability-list {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.booking-widget .availability-header {
+  text-align: center;
+}
+
+.booking-widget .availability-list .column {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.booking-widget .loading {
+  font-size: 36px;
+}
+
+.booking-widget .arrow {
+  font-weight: bold;
+  color: gray;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 50px;
+}
+
+.booking-widget div.left-arrow {
+  float: left;
+}
+
+.booking-widget div.right-arrow {
+  float: right;
+}
+
+.booking-widget .lower-section {
+  text-align: center;
+  font-size: 18px;
+}
+
+.booking-widget table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.booking-widget .list-heading {
+  overflow-y: scroll;
+}
+
+.booking-widget .list-heading th {
+  font-weight: normal;
+  border-right: 1px solid gray;
+  padding-bottom: 5px;
+}
+
+.booking-widget .inner-table {
+  text-align: left;
+}
+
+.booking-widget .inner-table tr {
+  vertical-align: top;
+}
+
+.booking-widget .inner-table td {
+  border-right: 1px solid gray;
+}
+
+.booking-widget .inner-container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.booking-widget .slot:hover{
+  border: 1px solid gray;
+}
+
+.booking-widget .slot {
+  cursor: pointer;
+}
+
+.booking-widget .result{
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 1px solid #0b0d11;
+  padding-bottom: 5px;
+}
+
+.booking-widget .clearfix {
+  clear: both;
+}
+
+.booking-widget .select-room {
+}
+
+.booking-widget .filter-section {
+  padding: 5px;
+  font-size: 15px;
+}
+
+.booking-widget .filter-control {
+  float: left;
+}
+
+.booking-widget .filter-widget-container {
+}
+
+.booking-widget .filter-widget {
+  border: 1px solid gray;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.booking-widget .filter-widget:hover {
+  border: 1px solid white;
+  color: white;
+}
+
+.booking-widget .filter-widget:active {
+  border: 1px solid lime;
+  color: lime;
+}
+
+.booking-widget .filter-widget-group {
+  padding: 5px;
+}
+
+.booking-widget .filter-widget-group label {
+  margin-right: 5px;
+}
+
+.booking-widget .full-width {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.booking-widget .filter-widget-group.cascading {
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 4px;
+}
+
+.booking-widget .full-width .icon {
+  float: right;
+}
+
+.float-right {
+  float: right;
+}
+
+
+.inline-block {
+  display: inline-block;
+}
+
+.booking-widget .result .time {
+  font-weight: 100;
+  color: gray;
+}
+
+.booking-widget .result .remaining {
+  font-size: 8pt;
+  color: #202020;
+  padding: 3px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.booking-widget .no-match {
+  color: gray;
+}
+
+.booking-widget .mardi-gras-study { color: #C1FFC1; }
+.booking-widget .jazz-music-parlor { color: #97FFFF; }
+.booking-widget .color3 { color: #FF3030; }
+.booking-widget .color4 { color: #FF82AB; }
+.booking-widget .color5 { color: #FFDAB9; }
+.booking-widget .color6 { color: #FFBBFF; }
+.booking-widget .bg-mardi-gras-study { background-color: #C1FFC1; }
+.booking-widget .bg-jazz-music-parlor { background-color: #97FFFF; }
+.booking-widget .bg-color3 { background-color: #FF3030; }
+.booking-widget .bg-color4 { background-color: #FF82AB; }
+.booking-widget .bg-color5 { background-color: #FFDAB9; }
+.booking-widget .bg-color6 { background-color: #FFBBFF; }
+
+
+
+/* checkout */
+.custom-modal-tall {
+  color: #f0f0f0;
+  background-color: #0b0d11;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+@media screen and (min-width: 350px){
+  .custom-modal-tall {
+    width: 350px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+
+.custom-modal-tall .close-button {
+  font-size: 30px;
+  float: right;
+  margin-top: -4px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+.custom-modal-tall .close-button:hover {
+  color: white;
+}
+
+.custom-modal-tall .close-button:active {
+  color: black;
+}
+
+.custom-modal-tall .title {
+  text-align: center;
+  background-color: gray;
+  color: black;
+}
+
+.custom-modal-tall h1 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.custom-modal-tall {
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+  color: #f0f0f0;
+  background-color: #0b0d11;
+}
+
+.checkout-panel {
+  font-size: 18px;
+}
+
+.checkout-panel .checkout-body {
+  padding: 16px;
+}
+
+.checkout-panel .checkout-form {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.checkout-panel .checkout-form .rule-row td {
+  border-bottom: 1px solid gray;
+}
+
+.checkout-panel .checkout-form .space-row td {
+  padding-top: 5px;
+}
+
+.checkout-panel .right {
+  text-align: right;
+}
+
+.checkout-panel .narrow {
+  width: 35px;
+}
+
+.checkout-panel .wide {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.checkout-panel input.half {
+  width: 50%;
+}
+
+.checkout-panel .complete-purchase {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.checkout-panel .complete-purchase a {
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 4px 12px;
+}
+
+.checkout-panel .complete-purchase a:hover {
+  color: lime;
+  border-color: lime;
+}
+
+.checkout-panel .complete-purchase a:active {
+  color: black;
+  background-color: white;
+}
+
+.checkout-panel .small {
+  font-size: 14px;
+}
+
+.checkout-panel .ui-link {
+  color: cyan;
+}
+
+.checkout-panel .processing-indicator {
+  font-size: 18px;
+  display: none;
+}
+
+.checkout-panel .stripe-form {
+  display: none;
+}
+
+/* dialog */
+.custom-dialog {
+  width: auto;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 11;
+  color: #f0f0f0;
+  background-color: #0b0d11;
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+}
+
+@media screen and (min-width: 350px){
+  .custom-dialog {
+    width: 350px;
+  }
+}
+
+.custom-dialog .title {
+  text-align: center;
+  background-color: gray;
+  color: black;
+}
+
+.custom-dialog h1 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.custom-dialog .dialog-body {
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.custom-dialog .dialog-footer {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.custom-dialog .dialog-dismiss {
+  border: 1px solid gray;
+  padding: 4px 16px;
+  cursor: pointer;
+}
+
+.custom-dialog .dialog-dismiss:active {
+  color: black;
+  background-color: white;
+}
+
