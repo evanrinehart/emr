@@ -429,6 +429,9 @@ $(document).on('change', '.booking-widget [name="select-ticket-count"]', functio
   }
 });
 
+// To reset the box in case they choose 8+ on iOS which does not allow
+// updating the value during the change handler. iOS happens to execute
+// the blur event immediately after change.
 $(document).on('blur', '.booking-widget [name="select-ticket-count"]', function(e){
   this.value = state.ticketCount;
 });
