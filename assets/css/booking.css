@@ -366,6 +366,7 @@ body.custom-modal-open {
 
 .checkout-panel select {
   font-size: 8pt;
+  color: black;
 }
 
 .checkout-panel input {
