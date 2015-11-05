@@ -1,7 +1,7 @@
 var maxTicketCount = 7;
 var targetColumnWidth = 160;
 
-var old_ticket_quantity_kludge = null;
+var old_ticket_quantity_kludge = 1;
 
 //developer test account
 //var stripePubkey = 'pk_test_lPTj3zvBP0Kl2DgWKguSzrmS';
