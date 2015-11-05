@@ -48,7 +48,7 @@ function dialog(header, message, onClose){
   return function(mode, w, h){
     with(HTML){
       var e = element(
-        div({class: 'modal-dialog', style: mode=='small'?'width: 400px':''},
+        div({class: 'dialog-panel', style: mode=='small'?'width: 400px':''},
           div({class: 'title'}, h1({class: 'inline-block'}, header)),
           div({class: 'dialog-body'}, message),
           div({class: 'dialog-footer'}, a({class: 'dialog-dismiss'}, 'OK'))
@@ -107,7 +107,7 @@ function bookingWidget(width, height, room, ticketCount, baseDate, rooms, availa
         div({class: 'filter-section'},
           input({type: 'hidden', name: 'previous-hold-id', value: ''}),
           div(
-            span(roomSelect(room, rooms||[])),
+            span(roomSelect(room, rooms||[])),' ',
             span(label('Tickets'), ' ', ticketSelect(ticketCount))
           )
         ),
@@ -172,7 +172,7 @@ function checkoutPanel(data){
       with(HTML){
         var attrs = {name: name, value: value||'', class: 'wide'};
         if(readonly) attrs.readonly = 'readonly';
-        return tr(td({style: 'width:170px'}, label(lab)), td({class: 'right'}, input(attrs)));
+        return tr(td({class: 'sized-column'}, label(lab)), td({class: 'right'}, input(attrs)));
       }
     }
 
@@ -610,7 +610,7 @@ function reloadBookingUI(){
 
 $(document).on('click', '.dialog-dismiss', function(e){
   e.preventDefault();
-  var onClose = $(this).closest('.modal-dialog')[0].onClose;
+  var onClose = $(this).closest('.dialog-panel')[0].onClose;
   dismissModalPanel();
   if(onClose) onClose();
 });

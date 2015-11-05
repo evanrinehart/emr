@@ -31,6 +31,24 @@ body.custom-modal-open {
   color: #f0f0f0;
   background-color: #0b0d11;
   height: 100%;
+  letter-spacing: normal;
+}
+
+.custom-fullscreen div {
+  line-height: normal;
+}
+
+.custom-fullscreen label {
+  margin: 0;
+  font-weight: normal;
+}
+
+.custom-fullscreen a {
+  text-decoration: none;
+}
+
+.custom-fullscreen td, .custom-fullscreen th {
+  padding: 0px;
 }
 
 .custom-fullscreen .close-button {
@@ -39,6 +57,7 @@ body.custom-modal-open {
   margin-top: -4px;
   margin-right: 3px;
   cursor: pointer;
+  color: black;
 }
 
 .custom-fullscreen .close-button:hover {
@@ -53,12 +72,17 @@ body.custom-modal-open {
   text-align: center;
   background-color: gray;
   color: black;
+  line-height: normal;
 }
 
 .custom-fullscreen h1 {
   font-size: 24px;
   font-weight: normal;
   margin: 0;
+  line-height: normal;
+  letter-spacing: normal;
+  text-indent: initial;
+  font-family: Roboto, sans-serif;
 }
 
 .custom-fullscreen {
@@ -114,6 +138,10 @@ body.custom-modal-open {
 .booking-widget .lower-section {
   text-align: center;
   font-size: 18px;
+}
+
+.booking-widget .lower-section th {
+  text-align: center;
 }
 
 .booking-widget table {
@@ -320,6 +348,38 @@ body.custom-modal-open {
 
 .checkout-panel {
   font-size: 18px;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.checkout-panel h1 {
+  line-height: normal;
+  letter-spacing: normal;
+  text-indent: initial;
+  font-family: Roboto, sans-serif;
+}
+
+.checkout-panel label {
+  font-weight: normal;
+  margin: 0;
+}
+
+.checkout-panel select {
+  font-size: 8pt;
+}
+
+.checkout-panel input {
+  font-size: 8pt;
+  font-family: sans-serif;
+}
+
+.checkout-panel td, .checkout-panel th {
+  padding-top: 0px;
+  padding-bottom: 1px;
+}
+
+.checkout-panel .close-button {
+  color: black;
 }
 
 .checkout-panel .checkout-body {
@@ -344,12 +404,16 @@ body.custom-modal-open {
 }
 
 .checkout-panel .narrow {
-  width: 35px;
+  width: 45px;
 }
 
 .checkout-panel .wide {
   width: 100%;
   box-sizing: border-box;
+}
+
+.checkout-panel .sized-column {
+  width: 145px;
 }
 
 .checkout-panel input.half {
@@ -365,6 +429,8 @@ body.custom-modal-open {
   cursor: pointer;
   border: 1px solid white;
   padding: 4px 12px;
+  color: white;
+  text-decoration: none;
 }
 
 .checkout-panel .complete-purchase a:hover {
@@ -406,6 +472,15 @@ body.custom-modal-open {
   font-size: 18px;
   font-family: Roboto, sans-serif;
   text-align: center;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.custom-dialog h1 {
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: Roboto, sans-serif;
+  text-indent: initial;
 }
 
 @media screen and (min-width: 350px){
@@ -424,6 +499,11 @@ body.custom-modal-open {
   font-size: 24px;
   font-weight: normal;
   margin: 0;
+}
+
+.custom-dialog a {
+  text-decoration: none;
+  color: #f0f0f0;
 }
 
 .custom-dialog .dialog-body {
