@@ -24,7 +24,7 @@ body.custom-modal-open {
 /* fullscreen panel */
 .custom-fullscreen {
   color: #f0f0f0;
-  background-color: #0b0d11;
+  background-color: #26262c;
   height: 100%;
   letter-spacing: normal;
 }
@@ -69,7 +69,7 @@ body.custom-modal-open {
 
 .custom-fullscreen .title {
   text-align: center;
-  background-color: gray;
+  background-color: #C3CAE1;
   color: black;
   line-height: normal;
 }
@@ -88,7 +88,7 @@ body.custom-modal-open {
   font-size: 20px;
   font-family: Roboto, sans-serif;
   color: #f0f0f0;
-  background-color: #0b0d11;
+  background-color: #26262c;
 }
 
 .booking-widget .arrow:hover {
@@ -96,7 +96,7 @@ body.custom-modal-open {
 }
 
 .booking-widget .arrow:active {
-  color: lime;
+  color: #C3CAE1;
 }
 
 .booking-widget .availability-list {
@@ -120,7 +120,7 @@ body.custom-modal-open {
 
 .booking-widget .arrow {
   font-weight: bold;
-  color: gray;
+  color: #C3CAE1;
   cursor: pointer;
   font-family: sans-serif;
   font-size: 50px;
@@ -154,7 +154,7 @@ body.custom-modal-open {
 
 .booking-widget .list-heading th {
   font-weight: normal;
-  border-right: 1px solid gray;
+  border-right: 1px solid #C3CAE1;
   padding-bottom: 5px;
 }
 
@@ -167,7 +167,7 @@ body.custom-modal-open {
 }
 
 .booking-widget .inner-table td {
-  border-right: 1px solid gray;
+  border-right: 1px solid #C3CAE1;
 }
 
 .booking-widget .inner-container {
@@ -176,7 +176,7 @@ body.custom-modal-open {
 }
 
 .booking-widget .slot:hover{
-  border: 1px solid gray;
+  border: 1px solid #C3CAE1;
 }
 
 .booking-widget .slot {
@@ -187,7 +187,7 @@ body.custom-modal-open {
   margin-bottom: 20px;
   margin-left: 5px;
   margin-right: 5px;
-  border: 1px solid #0b0d11;
+  border: 1px solid #26262c;
   padding-bottom: 5px;
 }
 
@@ -211,7 +211,7 @@ body.custom-modal-open {
 }
 
 .booking-widget .filter-widget {
-  border: 1px solid gray;
+  border: 1px solid #C3CAE1;
   padding: 3px;
   cursor: pointer;
 }
@@ -222,8 +222,8 @@ body.custom-modal-open {
 }
 
 .booking-widget .filter-widget:active {
-  border: 1px solid lime;
-  color: lime;
+  border: 1px solid #C3CAE1;
+  color: #C3CAE1;
 }
 
 .booking-widget .filter-widget-group {
@@ -260,8 +260,7 @@ body.custom-modal-open {
 }
 
 .booking-widget .result .time {
-  font-weight: 100;
-  color: gray;
+  color: white;
 }
 
 .booking-widget .result .remaining {
@@ -273,7 +272,7 @@ body.custom-modal-open {
 }
 
 .booking-widget .no-match {
-  color: gray;
+  color: #c0c0c0;
 }
 
 .booking-widget .mardi-gras-study { color: #C1FFC1; }
@@ -294,7 +293,7 @@ body.custom-modal-open {
 /* checkout */
 .custom-modal-tall {
   color: #f0f0f0;
-  background-color: #0b0d11;
+  background-color: #26262c;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -328,7 +327,7 @@ body.custom-modal-open {
 
 .custom-modal-tall .title {
   text-align: center;
-  background-color: gray;
+  background-color: #C3CAE1;
   color: black;
 }
 
@@ -342,7 +341,7 @@ body.custom-modal-open {
   font-size: 20px;
   font-family: Roboto, sans-serif;
   color: #f0f0f0;
-  background-color: #0b0d11;
+  background-color: #26262c;
 }
 
 .checkout-panel {
@@ -392,7 +391,7 @@ body.custom-modal-open {
 }
 
 .checkout-panel .checkout-form .rule-row td {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #C3CAE1;
 }
 
 .checkout-panel .checkout-form .space-row td {
@@ -427,15 +426,15 @@ body.custom-modal-open {
 
 .checkout-panel .complete-purchase a {
   cursor: pointer;
-  border: 1px solid white;
+  border: 1px solid #C3CAE1;
   padding: 4px 12px;
-  color: white;
+  color: #C3CAE1;
   text-decoration: none;
 }
 
 .checkout-panel .complete-purchase a:hover {
-  color: lime;
-  border-color: lime;
+  color: white;
+  border-color: white;
 }
 
 .checkout-panel .complete-purchase a:active {
@@ -468,7 +467,7 @@ body.custom-modal-open {
   margin-right: auto;
   z-index: 11;
   color: #f0f0f0;
-  background-color: #0b0d11;
+  background-color: #26262c;
   font-size: 18px;
   font-family: Roboto, sans-serif;
   text-align: center;
@@ -491,7 +490,7 @@ body.custom-modal-open {
 
 .custom-dialog .title {
   text-align: center;
-  background-color: gray;
+  background-color: #C3CAE1;
   color: black;
 }
 
@@ -517,7 +516,7 @@ body.custom-modal-open {
 }
 
 .custom-dialog .dialog-dismiss {
-  border: 1px solid gray;
+  border: 1px solid #C3CAE1;
   padding: 4px 16px;
   cursor: pointer;
 }
