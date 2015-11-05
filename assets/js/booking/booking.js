@@ -272,7 +272,7 @@ function checkoutPanel(data){
       ),
       div({class: 'complete-purchase'},
         span({class: 'processing-indicator'}, i({class: 'fa fa-spinner fa-spin'}), ' Processing ...'),
-        a({class: 'checkout-button'}, 'Complete Purchase'))
+        a({class: 'checkout-button', tabindex:'0'}, 'Complete Purchase'))
     ));
   }
 }

@@ -260,7 +260,8 @@ body.custom-modal-open {
 }
 
 .booking-widget .result .time {
-  color: white;
+  font-weight: 300;
+  color: #f0f0f0;
 }
 
 .booking-widget .result .remaining {
@@ -275,13 +276,13 @@ body.custom-modal-open {
   color: #c0c0c0;
 }
 
-.booking-widget .mardi-gras-study { color: #C1FFC1; }
+.booking-widget .mardi-gras-study { color: #F4F7BA; }
 .booking-widget .jazz-music-parlor { color: #97FFFF; }
 .booking-widget .color3 { color: #FF3030; }
 .booking-widget .color4 { color: #FF82AB; }
 .booking-widget .color5 { color: #FFDAB9; }
 .booking-widget .color6 { color: #FFBBFF; }
-.booking-widget .bg-mardi-gras-study { background-color: #C1FFC1; }
+.booking-widget .bg-mardi-gras-study { background-color: #F4F7BA; }
 .booking-widget .bg-jazz-music-parlor { background-color: #97FFFF; }
 .booking-widget .bg-color3 { background-color: #FF3030; }
 .booking-widget .bg-color4 { background-color: #FF82AB; }
