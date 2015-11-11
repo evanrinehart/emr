@@ -51,7 +51,9 @@ function dialog(header, message, onClose){
         div({class: 'dialog-panel', style: mode=='small'?'width: 400px':''},
           div({class: 'title'}, h1({class: 'inline-block'}, header)),
           div({class: 'dialog-body'}, message),
-          div({class: 'dialog-footer'}, a({class: 'dialog-dismiss'}, 'OK'))
+          div({class: 'dialog-footer'},
+            a({class: 'dialog-button dialog-dismiss'}, 'OK')
+          )
         )
       );
       e.onClose = onClose;
@@ -108,7 +110,12 @@ function bookingWidget(width, height, room, ticketCount, baseDate, rooms, availa
           input({type: 'hidden', name: 'previous-hold-id', value: ''}),
           div(
             span(roomSelect(room, rooms||[])),' ',
-            span(label('Tickets'), ' ', ticketSelect(ticketCount))
+            span(label('Tickets'), ' ', ticketSelect(ticketCount)),' ',
+//ww1
+            span(a({class: "stylized-link summon-datepicker"},
+              i({class: 'fa fa-calendar'}),' ',
+              "PICK DATE"
+            ))
           )
         ),
         div({class: 'clearfix'}),
@@ -316,6 +323,20 @@ function formatSlot(slot){
 $(document).on('click', '.activate-booking', function(e){
   e.preventDefault(); 
   reloadBookingUI();
+});
+
+//ww2
+$(document).on('click', '.booking-widget .summon-datepicker', function(e){
+  e.preventDefault();
+  if(booking_loading_flag) return;
+  summonDialog(datepicker({
+    selectedDate: state.baseDate,
+    currentMonth: firstOfMonth(dateToday()),
+    ok: function(date){
+      state.baseDate = date;
+      reloadBookingUI();
+    }
+  }));
 });
 
 $(document).on('click', '.modal-dismiss', function(e){

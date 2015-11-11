@@ -26,6 +26,17 @@ var rooms = null;
 /* the users current hold, if any */
 var my_hold_id = null;
 
+/* true while loading */
+var booking_loading_flag = false;
+function enableLoadingFlag(){
+  console.log('loading flag enable')
+  booking_loading_flag = true;
+}
+function disableLoadingFlag(){
+  console.log('loading flag disable')
+  booking_loading_flag = false;
+}
+
 function dataPresentForDate(d){
   return db.hasOwnProperty(encodeDate(d));
 }
@@ -37,13 +48,16 @@ function clearData(){
 
 function withRooms(callback){
   if(rooms === null){
+    enableLoadingFlag();
     $.ajax({
       url: "https://booking.escapemyroom.com/api/rooms",
       success: function(data){
+        disableLoadingFlag();
         rooms = data;
         callback(rooms);
       },
       error: function(xhr){
+        disableLoadingFlag();
         console.log(xhr);
         callback([]);
       }
@@ -56,6 +70,7 @@ function withRooms(callback){
 
 function fetchData(startDate, endDate, okCb, errorCb){
   var crashMsg = 'Sorry, there was a problem fetching availability data. Please try again later.';
+  enableLoadingFlag();
   $.ajax({
     method: 'get',
     url: "https://booking.escapemyroom.com/api/availability",
@@ -64,6 +79,8 @@ function fetchData(startDate, endDate, okCb, errorCb){
       end_date: encodeDate(endDate)
     },
     success: function(results){
+      disableLoadingFlag();
+
       if(jstype(results) != 'Object'){
         errorCb(crashMsg);
         return;
@@ -98,6 +115,7 @@ function fetchData(startDate, endDate, okCb, errorCb){
       okCb(db);
     },
     error: function(xhr){
+      disableLoadingFlag();
       console.log(xhr);
       errorCb(crashMsg);
     }

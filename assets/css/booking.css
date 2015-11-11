@@ -91,6 +91,13 @@ body.custom-modal-open {
   background-color: #26262c;
 }
 
+.booking-widget .stylized-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+}
+
 .booking-widget .arrow:hover {
   color: white;
 }
@@ -518,13 +525,13 @@ body.custom-modal-open {
   padding-bottom: 20px;
 }
 
-.custom-dialog .dialog-dismiss {
+.custom-dialog .dialog-button {
   border: 1px solid #C3CAE1;
   padding: 4px 16px;
   cursor: pointer;
 }
 
-.custom-dialog .dialog-dismiss:active {
+.custom-dialog .dialog-button:active {
   color: black;
   background-color: white;
 }

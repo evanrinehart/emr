@@ -39,6 +39,20 @@ function zipWith(as, bs, f){
 
 var dayNames = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
 var monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+var longMonthNames = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+];
 
 function dateToday(){
   var now = new Date();
@@ -47,6 +61,14 @@ function dateToday(){
 
 function dateAdd(d, n){
   return new Date(d.getFullYear(), d.getMonth(), d.getDate()+n);
+}
+
+function firstOfMonth(d){
+  return new Date(d.getFullYear(), d.getMonth(), 1);
+}
+
+function monthAdd(d, n){
+  return new Date(d.getFullYear(), d.getMonth()+n, 1);
 }
 
 function readDate(text){
@@ -79,4 +101,9 @@ function money(amount){
 function flip(){
   if(Math.random() < 0.5) return true;
   else return false;
+}
+
+
+function monthLength(month){
+  return new Date(month.getFullYear(), month.getMonth()+1, 0).getDate();
 }
