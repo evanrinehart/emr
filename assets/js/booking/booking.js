@@ -330,6 +330,7 @@ $(document).on('click', '.booking-widget .summon-datepicker', function(e){
   e.preventDefault();
   if(booking_loading_flag) return;
   summonDialog(datepicker({
+    today: dateToday(),
     selectedDate: state.baseDate,
     currentMonth: firstOfMonth(dateToday()),
     ok: function(date){

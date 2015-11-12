@@ -6,6 +6,7 @@ function calendarForMonth(year, month){
 function datepicker(config){
 
   var currentMonth = config.currentMonth;
+  var today = config.today;
   var selectedDate = config.selectedDate;
   var selectedMonth = firstOfMonth(selectedDate);
 
@@ -27,7 +28,7 @@ function datepicker(config){
   }
 
   function monthButton(month){
-    var sel = month==selectedMonth ? ' selected' : '';
+    var sel = dateEq(month,selectedMonth) ? ' selected' : '';
     with(HTML){
       return a({
         'data-month': encodeDate(month),
@@ -63,21 +64,26 @@ function datepicker(config){
 
     with(HTML){
       return div({class: 'calendar'},
-        div(longMonthNames[month.getMonth()]," ",month.getFullYear()),
+        h4(longMonthNames[month.getMonth()]," ",month.getFullYear()),
         table(
           tr(th('S'),th('M'),th('T'),th('W'),th('T'),th('F'),th('S')),
           grid.map(function(row){
             return tr(row.map(function(n){
               if(!n) return td('');
               var d = new Date(month.getFullYear(), month.getMonth(), n);
-              var sel = selected && selected == d ? ' selected' : '';
-              return td(
-                {
-                  'data-date': encodeDate(d),
-                  class: 'date-button'+sel
-                },
-                n ? n : ''
-              );
+              var sel = selected && dateEq(selected,d) ? ' selected' : '';
+              if(d >= today){
+                return td(
+                  {
+                    'data-date': encodeDate(d),
+                    class: 'date-button'+sel
+                  },
+                  n ? n : ''
+                );
+              }
+              else{
+                return td({class: 'disabled-date'}, n);
+              }
             }));
           })
         )
@@ -89,11 +95,16 @@ function datepicker(config){
   with(HTML){
     gui = element(
       div({class: 'dialog-panel emr-datepicker'},
-        div({class: 'title'}, h1({class: 'inline-block'}, 'SELECT DATE')),
+        div({class: 'title'},
+          h1({class: 'inline-block'}, 'SELECT DATE'),
+          a({class: 'modal-dismiss close-button'}, i({class: 'fa fa-close'}))
+        ),
         div({class: 'dialog-body'},
-          table(
-            tr(monthOptions.slice(0,4).map(function(m){ return td(monthButton(m)); })),
-            tr(monthOptions.slice(4,8).map(function(m){ return td(monthButton(m)); }))
+          div({class: 'month-menu'},
+            table(
+              tr(monthOptions.slice(0,4).map(function(m){ return td(monthButton(m)); })),
+              tr(monthOptions.slice(4,8).map(function(m){ return td(monthButton(m)); }))
+            )
           ),
           calendar(selectedMonth, selectedDate)
         )
@@ -107,6 +118,8 @@ function datepicker(config){
     cal.replaceWith(newContent)
   };
 
+  gui.confirmCb = config.ok;
+
   return gui;
 }
 
@@ -119,4 +132,25 @@ $(document).on('click', '.emr-datepicker .dialog-confirm', function(){
   var cb = dialog.confirmCb;
   dismissModalPanel();
   cb(value);
+});
+
+
+$(document).on('click', '.emr-datepicker .month-button', function(e){
+  e.preventDefault();
+  var dialog = $(this).closest('.emr-datepicker');
+  dialog.find('.month-button').removeClass('selected');
+  $(this).addClass('selected');
+  var selection = state.baseDate;
+  var newMonth = readDate($(this).data('month'));
+  dialog[0].setMonth(newMonth, selection);
+});
+
+$(document).on('click', '.emr-datepicker .date-button', function(e){
+  e.preventDefault();
+  var d = readDate($(this).data('date'));
+  var dialog = $(this).closest('.emr-datepicker');
+  dialog.find('.month-button').removeClass('selected');
+  var cb = dialog[0].confirmCb;
+  dismissModalPanel();
+  cb(d);
 });
