@@ -483,7 +483,7 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
   var form = $(this).closest('.checkout-panel');
   var problem = validateCheckoutForm(form);
   if(problem){
-    console.log(problem);
+    summonDialog(dialog('ERROR', problem));
     return;
   }
   var loading = form.find('.processing-indicator');
