@@ -57,6 +57,7 @@ function summonTallModal(content){
   var overlay = $('<div class="modal-overlay overlay-scroll"></div>');
   var panel = $('<div class="custom-modal-tall"></div>');
   panel.append(content);
+  overlay.append('<div class="darkness"></div>');
   overlay.append(panel);
   modalStack.push(overlay);
   level++;
