@@ -321,6 +321,23 @@ function formatSlot(slot){
   ];
 }
 
+function validateCheckoutForm(form){
+  function field(f){ return form.find('[name="'+f+'"]').val(); }
+  function blank(x){ return x.trim() == ''; }
+  if(blank(field('first_name'))) return 'First name is required.';
+  if(blank(field('last_name'))) return 'Last name is required.';
+  if(blank(field('email'))) return 'Email is required.';
+  if(blank(field('phone'))) return 'A phone number is required.';
+  var total = parseFloat(field('total'));
+  if(total == 0) return null;
+  if(blank(field('card_number'))) return 'Please enter a valid credit card number.'; 
+  if(blank(field('card_cvc'))) return "Please enter the card's CVC security code.";
+  if(blank(field('card_month'))) return 'Please select an expiration month.';
+  if(blank(field('card_year'))) return "Please enter the card's expiration year.";
+  if(!field('card_year').match(/^\d+$/)) return "Invalid expiration year.";
+  return null;
+}
+
 $(document).on('click', '.activate-booking', function(e){
   e.preventDefault(); 
   reloadBookingUI();
@@ -464,6 +481,11 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
   e.preventDefault();
   var button = $(this);
   var form = $(this).closest('.checkout-panel');
+  var problem = validateCheckoutForm(form);
+  if(problem){
+    console.log(problem);
+    return;
+  }
   var loading = form.find('.processing-indicator');
   var field = function(name){ return form.find('[name="'+name+'"]').val(); };
   var ticket_count = parseInt(field('ticket_count'));

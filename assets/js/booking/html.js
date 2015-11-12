@@ -115,7 +115,7 @@ var HTML;
     var options = config.options;
     var attributes = config.attributes;
     return select(attributes, [
-      placeholder ? option(placeholder) : '',
+      placeholder ? option({value: ''}, placeholder) : '',
       options.map(function(opt){
         if(opt.value == selected){
           return option({value: opt.value, selected: 'selected'}, opt.label);
