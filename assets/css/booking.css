@@ -249,6 +249,10 @@ body.custom-modal-open {
   margin-right: 5px;
 }
 
+.booking-widget .select-date-section {
+  font-size: inherit;
+}
+
 .booking-widget .full-width {
   display: inline-block;
   box-sizing: border-box;
