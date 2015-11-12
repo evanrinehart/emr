@@ -67,7 +67,6 @@ function datepicker(config){
         h4(longMonthNames[month.getMonth()]," ",month.getFullYear()),
         table(
           tr(th('S'),th('M'),th('T'),th('W'),th('T'),th('F'),th('S')),
-          tr({class: 'space-row'},td(''),td(''),td(''),td(''),td(''),td(''),td('')),
           grid.map(function(row){
             return tr(row.map(function(n){
               if(!n) return td('');

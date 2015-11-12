@@ -601,11 +601,14 @@ body.custom-modal-open {
   color: gray;
 }
 
-.emr-datepicker .space-row td {
-  height: 5px;
+.emr-datepicker .calendar td {
+  padding-top: 13px;
 }
 
-.emr-datepicker .divider {
-  margin-top: 10px;
-  margin-bottom: 15px;
+.emr-datepicker .month-menu td {
+  padding-top: 10px;
+}
+
+.emr-datepicker .space-row td {
+  height: 0px;
 }
