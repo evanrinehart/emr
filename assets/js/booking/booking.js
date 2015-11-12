@@ -95,7 +95,7 @@ function bookingWidget(width, height, room, ticketCount, baseDate, rooms, availa
   var columnWidth = Math.floor((width - 50 - 50) / columnCount);
   var arrowWidth = (width - columnWidth*columnCount) / 2;
   var staticTitleHeight = 28;
-  var staticFiltersHeight = 42;
+  var staticFiltersHeight = 62;
   var staticHeadersHeight = 27;
   var listHeight = height - (staticTitleHeight + staticFiltersHeight + staticHeadersHeight + 10);
 
@@ -373,7 +373,8 @@ $(window).on('resize', function(e){
   if(main.length > 0){
     var screenW = $(window).width();
     var screenH = $(window).height();
-    main.parent().css('width', screenW+'px');
+    var width = computeDynamicLargePanelWidth(screenW);
+    main.parent().css('width', width+'px');
 //    main.parent().css('height', screenH+'px');
     if(main.find('.loading').length == 0){
       reloadBookingUI();
@@ -596,7 +597,8 @@ $(document).on('click', '.booking-widget .select-date', function(e){
 function reloadMainModalPanel(ctor){
   var panel = $('.booking-widget').parent();
   if(panel.length > 0){
-    var content = ctor($(window).width(), $(window).height());
+    var width = computeDynamicLargePanelWidth($(window).width());
+    var content = ctor(width, $(window).height());
     panel.empty();
     panel.append(content);
   }
@@ -608,7 +610,7 @@ function reloadMainModalPanel(ctor){
 /* use this to open the panel or reload it after something has changed */
 function reloadBookingUI(){
   var baseDate = state.baseDate;
-  var width = $(window).width();
+  var width = computeDynamicLargePanelWidth($(window).width());
   var columns = computeDynamicColumnCount(width);
   var tickets = state.ticketCount;
   var room = state.room;

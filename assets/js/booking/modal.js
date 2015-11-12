@@ -3,6 +3,10 @@
 var modalStack = [];
 var level = 10;
 
+function computeDynamicLargePanelWidth(winW){
+  return winW > 960 ? 960 : winW;
+}
+
 function probeHeight(content){
   var probe = $('<div class="custom-dialog modal-probe" style="visibility: hidden"></div>');
   probe.append(content);
@@ -38,15 +42,16 @@ function summonFullScreenModal(gui){
   $('body').addClass('custom-modal-open');
   var screenW = $(window).width(); 
   var screenH = $(window).height(); 
+  var width = computeDynamicLargePanelWidth(screenW);
   var overlay = $('<div class="modal-overlay"></div>');
   var panel = $('<div class="custom-fullscreen"></div>');
   modalStack.push(overlay);
-  panel.append(gui(screenW, screenH));
+  panel.append(gui(width, screenH));
   level++;
   overlay.css('z-index', level);
   level++;
   panel.css('z-index', level);
-  panel.css('width', screenW+'px');
+  panel.css('width', width+'px');
   //panel.css('height', screenH+'px');
   overlay.append(panel);
   $('body').append(overlay);
