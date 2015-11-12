@@ -536,3 +536,76 @@ body.custom-modal-open {
   background-color: white;
 }
 
+.dialog-panel .close-button {
+  font-size: 30px;
+  float: right;
+  margin-top: -4px;
+  margin-right: 3px;
+  cursor: pointer;
+  color: black;
+}
+
+.dialog-panel .close-button:hover {
+  color: white;
+}
+
+.dialog-panel .close-button:active {
+  color: black;
+}
+
+
+
+.emr-datepicker .dialog-body {
+  margin: 0;
+}
+
+.emr-datepicker table {
+  width: 100%;
+}
+
+.emr-datepicker th {
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+
+.emr-datepicker h4 {
+  color: white;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.emr-datepicker .month-button {
+  cursor: pointer;
+  margin-bottom: 2px;
+  transition: initial;
+}
+
+.emr-datepicker .month-button:hover {
+  color: yellow;
+}
+
+.emr-datepicker .month-button:active {
+  color: #808000;
+}
+
+.emr-datepicker .date-button {
+  cursor: pointer;
+/*  border: 1px solid white;*/
+}
+
+.emr-datepicker .date-button:hover {
+  color: yellow;
+}
+
+.emr-datepicker .disabled-date {
+  color: gray;
+}
+
+.emr-datepicker .space-row td {
+  height: 5px;
+}
+
+.emr-datepicker .divider {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}

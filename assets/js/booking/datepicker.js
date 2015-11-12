@@ -67,6 +67,7 @@ function datepicker(config){
         h4(longMonthNames[month.getMonth()]," ",month.getFullYear()),
         table(
           tr(th('S'),th('M'),th('T'),th('W'),th('T'),th('F'),th('S')),
+          tr({class: 'space-row'},td(''),td(''),td(''),td(''),td(''),td(''),td('')),
           grid.map(function(row){
             return tr(row.map(function(n){
               if(!n) return td('');
@@ -100,13 +101,14 @@ function datepicker(config){
           a({class: 'modal-dismiss close-button'}, i({class: 'fa fa-close'}))
         ),
         div({class: 'dialog-body'},
+          calendar(selectedMonth, selectedDate),
+          div({class: 'divider'}, '...'),
           div({class: 'month-menu'},
             table(
               tr(monthOptions.slice(0,4).map(function(m){ return td(monthButton(m)); })),
               tr(monthOptions.slice(4,8).map(function(m){ return td(monthButton(m)); }))
             )
-          ),
-          calendar(selectedMonth, selectedDate)
+          )
         )
       )
     );
