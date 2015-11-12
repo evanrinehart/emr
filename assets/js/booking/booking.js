@@ -110,10 +110,10 @@ function bookingWidget(width, height, room, ticketCount, baseDate, rooms, availa
           input({type: 'hidden', name: 'previous-hold-id', value: ''}),
           div({class: 'some-space-below'},
             span(roomSelect(room, rooms||[])),' ',
-            span(label('Tickets'), ' ', ticketSelect(ticketCount))
+            span(label('Tickets'), nbsp, ticketSelect(ticketCount))
           ),
           div({class: 'select-date-section'},
-            i({class: 'fa fa-calendar'}),' ',
+            i({class: 'fa fa-calendar'}),nbsp,
             a({class: "stylized-link summon-datepicker"},
               "Select Date ..."
             )

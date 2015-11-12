@@ -187,5 +187,6 @@ var HTML;
     option: option,
     form: form,
     selectWithConfig: selectWithConfig,
+    nbsp: '&nbsp;'
   };
 })();

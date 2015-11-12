@@ -211,7 +211,7 @@ body.custom-modal-open {
 
 .booking-widget .filter-section {
   padding: 5px;
-  font-size: 18px;
+  font-size: 12pt;
 }
 
 .booking-widget .filter-section .some-space-below {
@@ -250,7 +250,7 @@ body.custom-modal-open {
 }
 
 .booking-widget .select-date-section {
-  font-size: 18px;
+  font-size: 12pt;
   color: #f0f0f0;
 }
 
