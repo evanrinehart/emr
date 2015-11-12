@@ -93,7 +93,7 @@ body.custom-modal-open {
 
 .booking-widget .stylized-link {
   cursor: pointer;
-  color: white;
+  color: #f0f0f0;
   text-decoration: none;
   transition: initial;
 }
@@ -211,11 +211,11 @@ body.custom-modal-open {
 
 .booking-widget .filter-section {
   padding: 5px;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .booking-widget .filter-section .some-space-below {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .booking-widget .filter-control {
@@ -250,7 +250,8 @@ body.custom-modal-open {
 }
 
 .booking-widget .select-date-section {
-  font-size: inherit;
+  font-size: 18px;
+  color: #f0f0f0;
 }
 
 .booking-widget .full-width {
@@ -558,7 +559,7 @@ body.custom-modal-open {
 }
 
 .dialog-panel .close-button:hover {
-  color: white;
+  color: #f0f0f0;
 }
 
 .dialog-panel .close-button:active {
@@ -577,11 +578,11 @@ body.custom-modal-open {
 
 .emr-datepicker th {
   text-align: center;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .emr-datepicker h4 {
-  color: white;
+  color: #f0f0f0;
   margin: 0;
   letter-spacing: 1px;
 }
