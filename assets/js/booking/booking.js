@@ -348,7 +348,7 @@ $(document).on('click', '.modal-dismiss', function(e){
 
 $(document).on('click', '.modal-overlay', function(e){
   var overlay = $(this).closest('.modal-overlay')[0];
-  if(e.target == overlay){
+  if(e.target == overlay || $(e.target).hasClass('darkness')){
     dismissModalPanel();
   }
 });
