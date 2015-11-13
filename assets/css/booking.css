@@ -17,7 +17,7 @@ body.custom-modal-open {
   height: 100%;
   background-color: black;
   opacity: 0.66;
-  z-index: 0;
+  z-index: -1;
 }
 
 .overlay-scroll {

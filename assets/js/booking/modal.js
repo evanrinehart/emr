@@ -53,6 +53,7 @@ function summonFullScreenModal(gui){
   panel.css('z-index', level);
   panel.css('width', width+'px');
   //panel.css('height', screenH+'px');
+  overlay.append('<div class="darkness"></div>');
   overlay.append(panel);
   $('body').append(overlay);
 }
