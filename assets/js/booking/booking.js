@@ -511,12 +511,13 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
         event_id: field('event_id'),
         room_id: field('room_id'),
         hold_id: $('[name="previous-hold-id"]').val(),
-        ticket_count: ticket_count,
+        ticket_quantity: ticket_count,
         first_name: field('first_name'),
         last_name: field('last_name'),
         email: field('email'),
         phone: field('phone'),
         expecting_to_pay: field('total'),
+        promo_code: field('promo_code'),
         stripe_token: token
       };
       $.ajax({
