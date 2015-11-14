@@ -437,6 +437,8 @@ $(document).on('click', '.booking-widget .slot', function(e){
         panel.find('[name="total"]').val(total);
         panel.find('.total').text(money(total));
         panel.find('.total').show();
+
+        updateCardDisable();
       },
       error: function(problem){
         summonDialog(dialog('ERROR', problem, function(){
@@ -714,6 +716,8 @@ function recalculatePrice(){
         total_span.text('$'+total.toFixed(2));
         total_span.show();
         total_input.val(total);
+
+        updateCardDisable();
       },
       error: function(problem){
         loading.hide();
@@ -756,6 +760,8 @@ $(document).on('change', 'select[name="ticket_count"]', function(){
         total_span.text('$'+total.toFixed(2));
         total_span.show();
         total_input.val(total);
+
+        updateCardDisable();
       },
       error: function(problem){
         loading.hide();
@@ -768,3 +774,19 @@ $(document).on('change', 'select[name="ticket_count"]', function(){
   loading.show();
   total_span.hide();
 });
+
+
+function updateCardDisable(){
+  var total = parseFloat($('.checkout-panel [name="total"]').val());
+  console.log(total);
+  if(total == 0){
+    $('.checkout-panel .cc_field input').attr('disabled', 'disabled');
+    $('.checkout-panel .cc_field input').val('');
+    $('.checkout-panel .cc_field select').attr('disabled', 'disabled');
+    $('.checkout-panel .cc_field select').val('');
+  }
+  else{
+    $('.checkout-panel .cc_field input').attr('disabled', null);
+    $('.checkout-panel .cc_field select').attr('disabled', null);
+  }
+}
