@@ -176,11 +176,16 @@ function bookingWidget(width, height, room, ticketCount, baseDate, rooms, availa
 function checkoutPanel(data){
 
   with(HTML){
-    function row(lab, name, value, readonly){
+    function row(lab, name, value, readonly, card){
       with(HTML){
+        var cc_field = card ? {class:'cc_field'} : {};
         var attrs = {name: name, value: value||'', class: 'wide'};
         if(readonly) attrs.readonly = 'readonly';
-        return tr(td({class: 'sized-column'}, label(lab)), td({class: 'right'}, input(attrs)));
+        return tr(
+          cc_field,
+          td({class: 'sized-column'}, label(lab)),
+          td({class: 'right'}, input(attrs))
+        );
       }
     }
 
@@ -263,9 +268,9 @@ function checkoutPanel(data){
               span({class: 'total'}, '')
             )
           ),
-          row('Card Number', 'card_number'),
-          row('Card CVC', 'card_cvc'),
-          tr(
+          row('Card Number', 'card_number', undefined, undefined, true),
+          row('Card CVC', 'card_cvc', undefined, undefined, true),
+          tr({class: 'cc_field'},
             td(label('Card Expiration')),
             td({class: 'right'},
               selectWithConfig({
@@ -489,62 +494,35 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
   var loading = form.find('.processing-indicator');
   var field = function(name){ return form.find('[name="'+name+'"]').val(); };
   var ticket_count = parseInt(field('ticket_count'));
-  var stripe_form = form.find('.stripe-form');
-  stripe_form.find('[data-stripe="number"]').val(field('card_number'));
-  stripe_form.find('[data-stripe="cvc"]').val(field('card_cvc'));
-  stripe_form.find('[data-stripe="exp-month"]').val(field('card_month'));
-  stripe_form.find('[data-stripe="exp-year"]').val(field('card_year'));
-  Stripe.card.createToken(stripe_form, function(status, response){
-    if (response.error) {
-      summonDialog(dialog(
-        'ERROR',
-        response.error.message,
-        function(){ 
-          button.show();
-          loading.hide();
+
+  function book(token){ 
+    var data = {
+      event_id: field('event_id'),
+      room_id: field('room_id'),
+      hold_id: $('[name="previous-hold-id"]').val(),
+      ticket_quantity: ticket_count,
+      first_name: field('first_name'),
+      last_name: field('last_name'),
+      email: field('email'),
+      phone: field('phone'),
+      expecting_to_pay: field('total'),
+      promo_code: field('promo_code'),
+      stripe_token: token
+    };
+
+    $.ajax({
+      method: 'post',
+      url: 'https://booking.escapemyroom.com/api/book',
+      data: data,
+      success: function(response){
+        if(response.ok){
+          summonDialog(dialog(
+            'COMPLETE',
+            "Checkout Complete! Check your email for tickets and the receipt.",
+            function(){ dismissAllModals(); }
+          ));
         }
-      ));
-    }
-    else {
-      var token = response.id;
-      var data = {
-        event_id: field('event_id'),
-        room_id: field('room_id'),
-        hold_id: $('[name="previous-hold-id"]').val(),
-        ticket_quantity: ticket_count,
-        first_name: field('first_name'),
-        last_name: field('last_name'),
-        email: field('email'),
-        phone: field('phone'),
-        expecting_to_pay: field('total'),
-        promo_code: field('promo_code'),
-        stripe_token: token
-      };
-      $.ajax({
-        method: 'post',
-        url: 'https://booking.escapemyroom.com/api/book',
-        data: data,
-        success: function(response){
-          if(response.ok){
-            summonDialog(dialog(
-              'COMPLETE',
-              "Checkout Complete! Check your email for tickets and the receipt.",
-              function(){ dismissAllModals(); }
-            ));
-          }
-          else {
-            summonDialog(dialog(
-              'ERROR',
-              'Sorry, a problem occurred with your purchase. Try again later.',
-              function(){ 
-                button.show();
-                loading.hide();
-              }
-            ));
-          }
-        },
-        error: function(xhr){
-          console.log(xhr);
+        else {
           summonDialog(dialog(
             'ERROR',
             'Sorry, a problem occurred with your purchase. Try again later.',
@@ -554,14 +532,50 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
             }
           ));
         }
-      });
+      },
+      error: function(xhr){
+        console.log(xhr);
+        summonDialog(dialog(
+          'ERROR',
+          'Sorry, a problem occurred with your purchase. Try again later.',
+          function(){ 
+            button.show();
+            loading.hide();
+          }
+        ));
+      }
+    });
+  }
 
-    }
-  });
+  if(parseFloat(field('total')) > 0){
+    var stripe_form = form.find('.stripe-form');
+    stripe_form.find('[data-stripe="number"]').val(field('card_number'));
+    stripe_form.find('[data-stripe="cvc"]').val(field('card_cvc'));
+    stripe_form.find('[data-stripe="exp-month"]').val(field('card_month'));
+    stripe_form.find('[data-stripe="exp-year"]').val(field('card_year'));
+    Stripe.card.createToken(stripe_form, function(status, response){
+      if (response.error) {
+        summonDialog(dialog(
+          'ERROR',
+          response.error.message,
+          function(){ 
+            button.show();
+            loading.hide();
+          }
+        ));
+      }
+      else {
+        var token = response.id;
+        book(token);
+      }
+    });
+  }
+  else{
+    book(null);
+  }
 
   button.hide();
   loading.show();
-
 });
 
 $(document).on('change', '.checkout-panel [name="promo_code"]', function(e){
