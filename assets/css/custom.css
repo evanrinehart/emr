@@ -79,9 +79,17 @@ body {
 .main-header {
     padding: 0;
 }
+
+.main-crawl {
+  color: #f9f6eb!important;
+  font-family: Merriweather, Georgia, serif;
+  font-size: 18pt;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
 .page-title {
   color: #f9f6eb!important;
-  text-shadow:  2px 2px 0px #000;
   font-family: Merriweather, Georgia, serif;
   font-size: 28pt;
   letter-spacing: 3px;
@@ -124,14 +132,16 @@ body {
 .buy-tickets-button {
   color: #FCFAE2;
   background-color: #4F5496;
-  font-family: sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: bold;
   letter-spacing: 2px;
-  padding: 0.3em 1em;
+  padding: 0.4em 1.4em;
   text-decoration: none;
+/*
   -webkit-transition: .5s all ease-out;
   -moz-transition: .5s all ease-out;
   transition: .5s all ease-out;
+*/
 }
 
 .buy-tickets-button:hover {
@@ -221,13 +231,20 @@ body {
     text-decoration: none;
     border-top: 3px rgba(240, 232, 206, .9);
     /*font-size: 18px!important;*/
+    transition: none;
+/*
     -webkit-transition: .5s all ease-out;
     -moz-transition: .5s all ease-out;
     transition: .5s all ease-out;
+*/
 }
 
-#top-menu a.blood:hover {
-    color: #a11212;
+#top-menu a.link:hover {
+  text-decoration: underline !important;
+}
+
+#top-menu a.link:active {
+  color: #AB8326;
 }
 
 nav ol, nav ul {
@@ -338,7 +355,7 @@ section.alt-color h2 {
     color: #63696f;
 }
 .escape-overlay {
-    background: url(../img/overlay-sm.png) repeat-x;
+    background: url(../img/overlay.png) repeat-x;
     min-height: 100%;
     width: 100%
 }
@@ -759,7 +776,9 @@ section.module.parallax-sign-up {
   background-size: 100%;
   background-position: center center;
   background-repeat: no-repeat;
-  background-color: black;
+/*  background-color: black;*/
+  background-color: #404040;
+  background-blend-mode: overlay;
   padding: 40px 20px 105px 20px;
 }
 
@@ -936,9 +955,11 @@ section.module.parallax-sign-up {
   background-size: 100%;
   background-position: center center;
   background-repeat: no-repeat;
-  background-color: black;
   padding-top: 270px;
   padding-bottom: 180px;
+/*  background-color: black;*/
+  background-color: #404040;
+  background-blend-mode: overlay;
 }
 
 @media screen and (max-width:1000px) {
