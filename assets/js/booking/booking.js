@@ -239,7 +239,16 @@ function checkoutPanel(data){
           row('Last Name', 'last_name'),
           row('Email', 'email'),
           row('Phone', 'phone'),
-          row('Gift Code', 'promo_code'),
+          tr(
+            td({class: 'sized-column'},
+              label('Gift Code'),' ',
+              a({
+                class: 'my-tooltip',
+                title: "Gift codes are generated when gift cards are purchased. We don't offer any discounts or promotions at this time."
+              }, '?')
+            ),
+            td({class: 'right'}, input({class: 'wide', name:'promo_code'}))
+          ),
           horizontal_rule,
 /*
           tr(td('Price'), td({class: 'right'}, span({class: 'total'}, '$'+data.price.toFixed(2)))),
@@ -346,6 +355,12 @@ function validateCheckoutForm(form){
 $(document).on('click', '.activate-booking', function(e){
   e.preventDefault(); 
   reloadBookingUI();
+});
+
+$(document).on('click', '.my-tooltip', function(e){
+  e.preventDefault(); 
+  var msg = $(this).attr('title');
+  summonDialog(dialog('Gift Codes', msg));
 });
 
 //ww2

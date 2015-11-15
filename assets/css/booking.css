@@ -642,4 +642,7 @@ body.custom-modal-open {
 
 
 
-
+.checkout-panel a.my-tooltip {
+  color: #C3CAE1;
+  cursor: pointer;
+}
