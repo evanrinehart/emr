@@ -239,7 +239,7 @@ function checkoutPanel(data){
           row('Last Name', 'last_name'),
           row('Email', 'email'),
           row('Phone', 'phone'),
-          row('Promo Code', 'promo_code'),
+          row('Gift Code', 'promo_code'),
           horizontal_rule,
 /*
           tr(td('Price'), td({class: 'right'}, span({class: 'total'}, '$'+data.price.toFixed(2)))),
