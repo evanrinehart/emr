@@ -1,7 +1,7 @@
 var maxTicketCount = 7;
 var targetColumnWidth = 160;
 
-var old_ticket_quantity_kludge = 1;
+var old_ticket_quantity_kludge = 2;
 
 //developer test account
 //var stripePubkey = 'pk_test_lPTj3zvBP0Kl2DgWKguSzrmS';
@@ -16,7 +16,7 @@ Stripe.setPublishableKey(stripePubkey);
 var state = {
   baseDate: dateToday(),
   room: undefined,
-  ticketCount: 1
+  ticketCount: 2
 };
 
 function computeDynamicColumnCount(width){
