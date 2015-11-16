@@ -83,7 +83,7 @@ body {
 .main-crawl {
   color: #f9f6eb!important;
   font-family: Merriweather, Georgia, serif;
-  font-size: 18pt;
+  font-size: 20pt;
   letter-spacing: 1px;
   font-style: italic;
 }
@@ -251,9 +251,10 @@ nav ol, nav ul {
     list-style: none;
 }
 
-.inner {
-    margin: 0 auto;
-    padding: 0 1em;
+.main-header .inner {
+  margin: 0 auto;
+  padding: 0 1em;
+  width: 550px;
 }
 
 .main-nav.overlay {
