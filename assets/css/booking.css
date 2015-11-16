@@ -96,15 +96,22 @@ body.custom-modal-open {
   background-color: #26262c;
 }
 
+.booking-widget .select-date-section {
+  color: #C3CAE1 !important;
+  border: 1px solid #C3CAE1;
+  padding-left: 4px;
+  padding-right: 6px;
+}
+
 .booking-widget .stylized-link {
+  color: #C3CAE1 !important;
   cursor: pointer;
-  color: #f0f0f0;
   text-decoration: none;
   transition: initial;
 }
 
 .booking-widget .stylized-link:hover {
-  text-decoration: underline !important;
+/*  text-decoration: underline !important;*/
 }
 
 .booking-widget .arrow:hover {
@@ -171,8 +178,10 @@ body.custom-modal-open {
 .booking-widget .list-heading th {
   font-weight: normal;
   border-right: 1px solid #808080;
+  padding-top: 10px;
   padding-bottom: 5px;
   padding-left: 15px;
+  text-decoration: underline;
 }
 
 .booking-widget .inner-table {
