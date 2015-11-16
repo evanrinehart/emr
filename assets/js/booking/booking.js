@@ -824,7 +824,7 @@ function resetBookingTimeout(){
   }
 
   BookingTimeout.start(
-    15,
+    300,
     function(i){
       if($('.checkout-panel').length == 0){
         BookingTimeout.cancel();
