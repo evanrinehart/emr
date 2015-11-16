@@ -97,27 +97,28 @@ body.custom-modal-open {
 }
 
 .booking-widget .select-date-section {
-  color: #C3CAE1 !important;
-  border: 1px solid #C3CAE1;
   padding-left: 4px;
   padding-right: 6px;
   white-space: nowrap;
 }
 
 .booking-widget .select-date-section:active{
-  color: black;
-  background-color: white;
+  color: gray !important;
+}
+
+.booking-widget .stylized-link:active{
+  color: gray;
 }
 
 .booking-widget .stylized-link {
-  color: #C3CAE1 !important;
+  color: white;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: underline;
   transition: initial;
 }
 
-.booking-widget .stylized-link:hover {
-/*  text-decoration: underline !important;*/
+.booking-widget .stylized-link:hover{
+  text-decoration: underline !important;
 }
 
 .booking-widget .arrow:hover {
