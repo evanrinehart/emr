@@ -34,6 +34,7 @@ function summonDialog(content){
   level++;
   panel.css('z-index', level);
   panel.css('margin-top', offset+'px');
+  overlay.append('<div class="darkness"></div>');
   overlay.append(panel);
   $('body').append(overlay);
 }
