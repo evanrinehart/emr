@@ -104,6 +104,11 @@ body.custom-modal-open {
   white-space: nowrap;
 }
 
+.booking-widget .select-date-section:active{
+  color: black;
+  background-color: white;
+}
+
 .booking-widget .stylized-link {
   color: #C3CAE1 !important;
   cursor: pointer;
