@@ -289,6 +289,12 @@ function checkoutPanel(data){
               }),' ',
               input({class: 'narrow', name: 'card_year', placeholder: 'YYYY'})
             )
+          ),
+          tr(
+            td('Time Left'),
+            td({class: 'right'},
+              span({class: 'booking-timeout'}, '')
+            )
           )
         )
       ),
@@ -454,6 +460,8 @@ $(document).on('click', '.booking-widget .slot', function(e){
         panel.find('.total').show();
 
         updateCardDisable();
+
+        resetBookingTimeout();
       },
       error: function(problem){
         summonDialog(dialog('ERROR', problem, function(){
@@ -733,6 +741,7 @@ function recalculatePrice(){
         total_input.val(total);
 
         updateCardDisable();
+        resetBookingTimeout();
       },
       error: function(problem){
         loading.hide();
@@ -776,6 +785,7 @@ $(document).on('change', 'select[name="ticket_count"]', function(){
         total_span.show();
         total_input.val(total);
 
+        resetBookingTimeout();
         updateCardDisable();
       },
       error: function(problem){
@@ -804,4 +814,32 @@ function updateCardDisable(){
     $('.checkout-panel .cc_field input').attr('disabled', null);
     $('.checkout-panel .cc_field select').attr('disabled', null);
   }
+}
+
+
+function resetBookingTimeout(){
+  function pad(x){
+    if(x < 10){ return '0'+x; }
+    else return String(x);
+  }
+
+  BookingTimeout.start(
+    15,
+    function(i){
+      if($('.checkout-panel').length == 0){
+        BookingTimeout.cancel();
+      }
+      else{
+        var mins = Math.floor(i / 60);
+        var secs = i % 60;
+        var msg = mins + ':' + pad(secs);
+        $('.booking-timeout').text(msg);
+      }
+    },
+    function(){
+      dismissAllModals();
+      var msg = "Sorry, your temporary ticket reservation has expired."
+      summonDialog(dialog("TIME'S UP", msg));
+    }
+  );
 }
