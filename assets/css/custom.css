@@ -717,7 +717,6 @@ section.module.parallax-sign-up {
   margin-bottom: 15px;
 }
 
-/*
 @media screen and (max-width:768px) {
   #how-it-works {
     padding: 20px 10px;
@@ -726,28 +725,7 @@ section.module.parallax-sign-up {
   #how-it-works h2 {
     font-size: 24pt;
   }
-
-  #how-it-works table {
-    display: none;
-  }
-
-  #how-it-works .arrow-up {
-    left: 50%;
-  }
-
-  #how-it-works .small-heading {
-    display: block;
-  }
-
-  #how-it-works .small-icon {
-    display: block;
-  }
-
-  #how-it-works .hidden {
-    display: block !important;
-  }
 }
-*/
 
 #rooms {
   background-image: url(../img/mansion-2.jpg);
