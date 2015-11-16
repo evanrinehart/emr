@@ -654,10 +654,6 @@ section.module.parallax-sign-up {
   padding: 20px 80px;
 }
 
-#how-it-works .blurb-space {
-  min-height: 140px;
-}
-
 #how-it-works .blurb {
   padding: 10px 20px;
   background-color: #C3CAE1;
@@ -673,34 +669,17 @@ section.module.parallax-sign-up {
   margin: 0;
   width: 0;
   height: 0;
+  left: 50%;
   border-bottom: 22px solid #C3CAE1;
   border-left: 22px solid transparent;
   border-right: 22px solid transparent;
   margin-left: -22px;
 }
 
-#how-it-works .arrow-1 { left: 10%;  }
-#how-it-works .arrow-2 { left: 30%;  }
-#how-it-works .arrow-3 { left: 50%;  }
-#how-it-works .arrow-4 { left: 70%;  }
-#how-it-works .arrow-5 { left: 90%;  }
-
 #how-it-works h2 {
   font-size: 32pt;
   font-family: Merriweather, Georgia, serif;
   letter-spacing: 1px;
-}
-
-#how-it-works table {
-  width: 100%;
-  font-family: Roboto, sans-serif;
-  margin-bottom: 20px;
-}
-
-#how-it-works table td {
-  padding: 5px 0;
-  font-size: 16pt;
-  width: 20%;
 }
 
 #how-it-works table img {
@@ -728,18 +707,17 @@ section.module.parallax-sign-up {
   cursor: pointer;
 }
 
-#how-it-works .small-heading {
-  display: none;
+#how-it-works .heading {
   font-family: Roboto, sans-serif;
   font-size: 16pt;
   margin-bottom: 10px;
 }
 
-#how-it-works .small-icon {
-  display: none;
+#how-it-works .icon {
   margin-bottom: 15px;
 }
 
+/*
 @media screen and (max-width:768px) {
   #how-it-works {
     padding: 20px 10px;
@@ -769,7 +747,7 @@ section.module.parallax-sign-up {
     display: block !important;
   }
 }
-
+*/
 
 #rooms {
   background-image: url(../img/mansion-2.jpg);
