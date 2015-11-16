@@ -255,7 +255,7 @@ nav ol, nav ul {
 .main-header .inner {
   margin: 0 auto;
   padding: 0 1em;
-  width: 550px;
+  max-width: 550px;
 }
 
 .main-nav.overlay {
