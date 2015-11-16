@@ -101,6 +101,7 @@ body.custom-modal-open {
   border: 1px solid #C3CAE1;
   padding-left: 4px;
   padding-right: 6px;
+  white-space: nowrap;
 }
 
 .booking-widget .stylized-link {
