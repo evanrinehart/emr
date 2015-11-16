@@ -170,7 +170,7 @@ body.custom-modal-open {
 
 .booking-widget .list-heading th {
   font-weight: normal;
-  border-right: 1px solid #C3CAE1;
+  border-right: 1px solid #808080;
   padding-bottom: 5px;
 }
 
@@ -183,7 +183,7 @@ body.custom-modal-open {
 }
 
 .booking-widget .inner-table td {
-  border-right: 1px solid #C3CAE1;
+  border-right: 1px solid #808080;
 }
 
 .booking-widget .inner-container {
@@ -390,7 +390,7 @@ body.custom-modal-open {
 }
 
 .checkout-panel select {
-  font-size: 8pt;
+  font-size: 12pt;
   color: black;
 }
 
