@@ -156,7 +156,7 @@ body.custom-modal-open {
 }
 
 .booking-widget .lower-section th {
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .booking-widget table {
@@ -172,6 +172,7 @@ body.custom-modal-open {
   font-weight: normal;
   border-right: 1px solid #808080;
   padding-bottom: 5px;
+  padding-left: 15px;
 }
 
 .booking-widget .inner-table {
@@ -201,7 +202,7 @@ body.custom-modal-open {
 
 .booking-widget .result{
   margin-bottom: 20px;
-  margin-left: 5px;
+  margin-left: 15px;
   margin-right: 5px;
   border: 1px solid #26262c;
   padding-bottom: 5px;
