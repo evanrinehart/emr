@@ -114,7 +114,7 @@ function bookingWidget(width, height, room, ticketCount, baseDate, rooms, availa
             span({class: 'select-date-section'},
               i({class: 'fa fa-calendar'}),nbsp,
               a({class: "stylized-link summon-datepicker"},
-                "Select Date"
+                "Select&nbspDate"
               )
             )
           )
