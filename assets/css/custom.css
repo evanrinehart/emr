@@ -714,7 +714,13 @@ section.module.parallax-sign-up {
 }
 
 #how-it-works .icon {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+#how-it-works .step {
+  width: 50%;
+  float: left;
+  padding: 15px;
 }
 
 @media screen and (max-width:768px) {
@@ -724,6 +730,15 @@ section.module.parallax-sign-up {
 
   #how-it-works h2 {
     font-size: 24pt;
+  }
+
+  #how-it-works .step {
+    width: 100%;
+    padding: 0;
+  }
+
+  #how-it-works .icon {
+    margin-bottom: 15px;
   }
 }
 
