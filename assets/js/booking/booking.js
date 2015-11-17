@@ -365,7 +365,7 @@ function validateCheckoutForm(form){
   if(blank(field('email'))) return 'Email is required.';
   if(!field('email').match(/^\w+@\w+\.\w+$/)) return 'The email address looks invalid.';
   if(blank(field('phone'))) return 'A phone number is required.';
-  if(!field('phone').match(/^([0-9]|\(|\)|\s|-)+$/)) return 'The phone number looks invalid.';
+  if(!field('phone').match(/^([0-9]|\.|\(|\)|\s|-)+$/)) return 'The phone number looks invalid.';
   var total = parseFloat(field('total'));
   if(total == 0) return null;
   if(blank(field('card_number'))) return 'Please enter a valid credit card number.'; 
