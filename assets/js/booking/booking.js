@@ -151,8 +151,15 @@ function bookingWidget(width, height, room, ticketCount, baseDate, rooms, availa
                       return true;
                     });
                     var contents;
+
+                    function compare(s1, s2){
+                      var t1 = s1.time;
+                      var t2 = s2.time;
+                      return t1 > t2 ? 1 : (t1 < t2 ? -1 : 0);
+                    }
+
                     if(slots.length > 0){
-                      contents = slots.map(function(slot){
+                      contents = slots.sort(compare).map(function(slot){
                         return div(
                           {
                             'class': 'result slot '+roomColor(slot.room_name),
@@ -317,7 +324,7 @@ function checkoutPanel(data){
 function roomColor(room){
   switch(room){
     case 'Mardi Gras Study': return 'mardi-gras-study';
-    case 'Jazz Music Parlor': return 'jazz-music-parlor';
+    case 'Jazz Parlor': return 'jazz-parlor';
     default: return 'color4';
   }
 }
