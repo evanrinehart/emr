@@ -577,15 +577,23 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
         }
       },
       error: function(xhr){
-        console.log(xhr);
-        summonDialog(dialog(
-          'ERROR',
-          'Sorry, a problem occurred with your purchase. Try again later.',
-          function(){ 
+        if(xhr.status == 400){
+          summonDialog(dialog('ERROR', xhr.responseText, function(){
             button.show();
             loading.hide();
-          }
-        ));
+          }));
+        }
+        else{
+          console.log(xhr);
+          summonDialog(dialog(
+            'ERROR',
+            'Sorry, a problem occurred with your purchase. Try again later.',
+            function(){ 
+              button.show();
+              loading.hide();
+            }
+          ));
+        }
       }
     });
   }
