@@ -527,6 +527,11 @@ $(document).on('blur', '.booking-widget [name="select-ticket-count"]', function(
 
 $(document).on('click', '.checkout-panel .checkout-button', function(e){
   e.preventDefault();
+
+  if(isDefined('fbq')){
+    fbq('track', 'InitiateCheckout');
+  }
+
   var button = $(this);
   var form = $(this).closest('.checkout-panel');
   var problem = validateCheckoutForm(form);
@@ -564,6 +569,10 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
             "Checkout Complete! Check your email for tickets and the receipt.",
             function(){ dismissAllModals(); }
           ));
+
+          if(isDefined('fbq')){
+            fbq('track', 'Purchase', {value: expecting_to_pay, currency: 'USD'});
+          }
         }
         else {
           summonDialog(dialog(
@@ -826,6 +835,18 @@ $(document).on('change', 'select[name="ticket_count"]', function(){
   total_span.hide();
 });
 
+$('#mc-embedded-subscribe-form').on('submit', function(e){
+  e.preventDefault();
+  var form = $(this);
+  if(isDefined('fbq')){
+    fbq('track', 'Lead');
+  }
+  setTimeout(function(){
+    form.off('submit');
+    form.submit();
+  }, 1000);
+});
+
 
 function updateCardDisable(){
   var total = parseFloat($('.checkout-panel [name="total"]').val());
@@ -869,3 +890,6 @@ function resetBookingTimeout(){
     }
   );
 }
+
+
+

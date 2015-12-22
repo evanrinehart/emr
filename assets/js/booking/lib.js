@@ -113,3 +113,13 @@ function dateEq(d1,d2){
     d1.getMonth() == d2.getMonth() &&
     d1.getDate() == d2.getDate();
 }
+
+function isDefined(name){
+  try{
+    eval(name);
+    return true;
+  }
+  catch(x){ 
+    return false;
+  }
+}
