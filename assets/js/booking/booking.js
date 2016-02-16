@@ -3,6 +3,8 @@ var targetColumnWidth = 160;
 
 var old_ticket_quantity_kludge = 2;
 
+var theyUnderstandDisclaimer = false;
+
 //developer test account
 //var stripePubkey = 'pk_test_lPTj3zvBP0Kl2DgWKguSzrmS';
 
@@ -30,21 +32,9 @@ var monthOptions = range(1, 12).map(function(n){
   };
 });
 
-/*
-function filterWidget(fieldLabel, valueLabel, containerClass, buttonClass, icon){
-  with(HTML){
-    return span({class: 'filter-widget-group '+containerClass},
-      (fieldLabel ? label(fieldLabel) : ''),
-      span({class: 'filter-widget '+buttonClass},
-        valueLabel,' ',
-        span("▼")
-      )
-    );
-  }
-}
-*/
-
-function dialog(header, message, onClose){
+function dialog(header, message, onClose, buttonText){
+  console.log(buttonText);
+  if(!buttonText) buttonText = "OK";
   return function(mode, w, h){
     with(HTML){
       var e = element(
@@ -52,7 +42,7 @@ function dialog(header, message, onClose){
           div({class: 'title'}, h1({class: 'inline-block'}, header)),
           div({class: 'dialog-body'}, message),
           div({class: 'dialog-footer'},
-            a({class: 'dialog-button dialog-dismiss'}, 'OK')
+            a({class: 'dialog-button dialog-dismiss'}, buttonText)
           )
         )
       );
@@ -461,33 +451,63 @@ $(document).on('click', '.booking-widget .slot', function(e){
     time: data('time')
   }));
 
-  fetchPrice({
-    room_id: room_id,
-    event_id: event_id,
-    ticket_quantity: desired_ticket_count,
-    previous_hold_id: previous_hold_id,
-    callbacks: {
-      ok: function(result){
-        var total = result.total;
-        old_ticket_quantity_kludge = desired_ticket_count;
-        $('[name="previous-hold-id"]').val(result.hold_id);
-        var panel = $('.checkout-panel');
-        panel.find('.calculating-indicator').hide();
-        panel.find('[name="total"]').val(total);
-        panel.find('.total').text(money(total));
-        panel.find('.total').show();
+  function fetchPriceCallback(){
+    theyUnderstandDisclaimer = true;
+    fetchPrice({
+      room_id: room_id,
+      event_id: event_id,
+      ticket_quantity: desired_ticket_count,
+      previous_hold_id: previous_hold_id,
+      callbacks: {
+        ok: function(result){
+          var total = result.total;
+          old_ticket_quantity_kludge = desired_ticket_count;
+          $('[name="previous-hold-id"]').val(result.hold_id);
+          var panel = $('.checkout-panel');
+          panel.find('.calculating-indicator').hide();
+          panel.find('[name="total"]').val(total);
+          panel.find('.total').text(money(total));
+          panel.find('.total').show();
 
-        updateCardDisable();
+          updateCardDisable();
 
-        resetBookingTimeout();
-      },
-      error: function(problem){
-        summonDialog(dialog('ERROR', problem, function(){
-          dismissModalPanel();
-        }));
+          resetBookingTimeout();
+        },
+        error: function(problem){
+          summonDialog(dialog('ERROR', problem, function(){
+            dismissModalPanel();
+          }));
+        }
       }
-    }
-  });
+    });
+  }
+
+  if(!theyUnderstandDisclaimer){
+    summonDialog(dialog(
+      "DISCLAIMER",
+      "I understand that if I or my guests arrive intoxicated, I will not be allowed entry and tickets will be forfeited.",
+      function(){
+        summonDialog(dialog(
+          "DISCLAIMER",
+          "I understand that if I bring children under the age of 12, all 8 tickets must be reserved by members of my group.",
+          function(){
+            summonDialog(dialog(
+              "DISCLAIMER",
+              "I understand there are no refunds or cancellations after purchasing a ticket.",
+              fetchPriceCallback,
+              "I Understand"
+            ));
+          },
+          "I Understand"
+        ));
+      },
+      "I Understand"
+    ));
+  }
+  else{
+    fetchPriceCallback();
+  }
+
 });
 
 $(document).on('change', '.booking-widget [name="select-room"]', function(e){
