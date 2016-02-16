@@ -33,7 +33,6 @@ var monthOptions = range(1, 12).map(function(n){
 });
 
 function dialog(header, message, onClose, buttonText){
-  console.log(buttonText);
   if(!buttonText) buttonText = "OK";
   return function(mode, w, h){
     with(HTML){
