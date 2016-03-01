@@ -308,7 +308,7 @@ function checkoutPanel(data){
             )
           ),
           tr(
-            td({colspan: 2},space,
+            td({colspan: 2},
               input({type: 'checkbox', name: 'disclaim3'}),' ',
 "I understand there are no refunds or cancellations after purchasing a ticket."
             )
