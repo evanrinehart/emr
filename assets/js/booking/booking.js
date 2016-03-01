@@ -296,6 +296,24 @@ function checkoutPanel(data){
             )
           ),
           tr(
+            td({colspan: 2},
+              input({type: 'checkbox', name: 'disclaim1'}),space,
+"I understand that if I or my guests arrive intoxicated, I will not be allowed entry and tickets will be forfeited."
+            )
+          ),
+          tr(
+            td({colspan: 2},
+              input({type: 'checkbox', name: 'disclaim2'}),space,
+"I understand that if I bring children under the age of 12, all 8 tickets must be reserved by members of my group."
+            )
+          ),
+          tr(
+            td({colspan: 2},space,
+              input({type: 'checkbox', name: 'disclaim3'}),space,
+"I understand there are no refunds or cancellations after purchasing a ticket."
+            )
+          ),
+          tr(
             td('Time Left'),
             td({class: 'right'},
               span({class: 'booking-timeout'}, '')
@@ -481,6 +499,7 @@ $(document).on('click', '.booking-widget .slot', function(e){
     });
   }
 
+  theyUnderstandDisclaimer = true;
   if(!theyUnderstandDisclaimer){
     summonDialog(dialog(
       "DISCLAIMER",
