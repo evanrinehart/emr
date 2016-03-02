@@ -299,7 +299,7 @@ function checkoutPanel(data){
           tr({class: 'disclaimer-row'},
             td({colspan: 2},
               div({class: 'disclaimer-checkbox'}, input({type: 'checkbox', name: 'disclaim1'})),
-              div({class: 'disclaimer'}
+              div({class: 'disclaimer'},
 "I understand that if I or my guests arrive intoxicated, I will not be allowed entry and tickets will be forfeited."
               )
             )
