@@ -667,3 +667,18 @@ body.custom-modal-open {
   color: #C3CAE1;
   cursor: pointer;
 }
+
+.disclaimer-checkbox {
+  float: left;
+  width: 20px;
+}
+
+.disclaimer {
+  float: left;
+  width: 290px;
+}
+
+.disclaimer-row td {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}

@@ -295,24 +295,32 @@ function checkoutPanel(data){
               input({class: 'narrow', name: 'card_year', placeholder: 'YYYY'})
             )
           ),
-          tr(
+          horizontal_rule,
+          tr({class: 'disclaimer-row'},
             td({colspan: 2},
-              input({type: 'checkbox', name: 'disclaim1'}),' ',
+              div({class: 'disclaimer-checkbox'}, input({type: 'checkbox', name: 'disclaim1'})),
+              div({class: 'disclaimer'},
 "I understand that if I or my guests arrive intoxicated, I will not be allowed entry and tickets will be forfeited."
+              )
             )
           ),
-          tr(
+          tr({class: 'disclaimer-row'},
             td({colspan: 2},
-              input({type: 'checkbox', name: 'disclaim2'}),' ',
+              div({class: 'disclaimer-checkbox'},input({type: 'checkbox', name: 'disclaim2'})),
+              div({class: 'disclaimer'},
 "I understand that if I bring children under the age of 12, all 8 tickets must be reserved by members of my group."
+              )
             )
           ),
-          tr(
+          tr({class: 'disclaimer-row'},
             td({colspan: 2},
-              input({type: 'checkbox', name: 'disclaim3'}),' ',
+              div({class: 'disclaimer-checkbox'}, input({type: 'checkbox', name: 'disclaim3'})),
+              div({class: 'disclaimer'},
 "I understand there are no refunds or cancellations after purchasing a ticket."
+              )
             )
           ),
+          horizontal_rule,
           tr(
             td('Time Left'),
             td({class: 'right'},
@@ -367,6 +375,7 @@ function formatSlot(slot){
 function validateCheckoutForm(form){
   function field(f){ return form.find('[name="'+f+'"]').val(); }
   function blank(x){ return x.trim() == ''; }
+  function checked(f){ return form.find('[name="'+f+'"]').prop('checked'); }
   if(blank(field('first_name'))) return 'First name is required.';
   if(blank(field('last_name'))) return 'Last name is required.';
   if(blank(field('email'))) return 'Email is required.';
@@ -380,6 +389,8 @@ function validateCheckoutForm(form){
   if(blank(field('card_month'))) return 'Please select an expiration month.';
   if(blank(field('card_year'))) return "Please enter the card's expiration year.";
   if(!field('card_year').match(/^\d+$/)) return "Invalid expiration year.";
+  if(!checked('disclaim1') || !checked('disclaim2') || !checked('disclaim3'))
+    return "You must agree to all conduct guidelines.";
   return null;
 }
 
