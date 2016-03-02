@@ -212,8 +212,6 @@ function checkoutPanel(data){
       tr({class: 'space-row'}, td(), td())
     ];
 
-    var disclaimW = '90%';
-
     return element(div({class: 'checkout-panel',},
       div({class: 'title'},
         h1({class: 'inline-block'}, "CHECKOUT"),
@@ -301,7 +299,7 @@ function checkoutPanel(data){
           tr({class: 'disclaimer-row'},
             td({colspan: 2},
               div({class: 'disclaimer-checkbox'}, input({type: 'checkbox', name: 'disclaim1'})),
-              div({class: 'disclaimer', style: 'width: '+disclaimW+';'},
+              div({class: 'disclaimer'}
 "I understand that if I or my guests arrive intoxicated, I will not be allowed entry and tickets will be forfeited."
               )
             )
@@ -309,7 +307,7 @@ function checkoutPanel(data){
           tr({class: 'disclaimer-row'},
             td({colspan: 2},
               div({class: 'disclaimer-checkbox'},input({type: 'checkbox', name: 'disclaim2'})),
-              div({class: 'disclaimer', style: 'width: '+disclaimW+';'},
+              div({class: 'disclaimer'},
 "I understand that if I bring children under the age of 12, all 8 tickets must be reserved by members of my group."
               )
             )
@@ -317,7 +315,7 @@ function checkoutPanel(data){
           tr({class: 'disclaimer-row'},
             td({colspan: 2},
               div({class: 'disclaimer-checkbox'}, input({type: 'checkbox', name: 'disclaim3'})),
-              div({class: 'disclaimer', style: 'width: '+disclaimW+';'},
+              div({class: 'disclaimer'},
 "I understand there are no refunds or cancellations after purchasing a ticket."
               )
             )
