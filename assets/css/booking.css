@@ -675,7 +675,7 @@ body.custom-modal-open {
 
 .disclaimer {
   float: left;
-  width: 250px;
+  /* width set in javascript */
 }
 
 .disclaimer-row td {
