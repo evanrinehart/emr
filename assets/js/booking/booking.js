@@ -298,25 +298,31 @@ function checkoutPanel(data){
           horizontal_rule,
           tr({class: 'disclaimer-row'},
             td({colspan: 2},
-              div({class: 'disclaimer-checkbox'}, input({type: 'checkbox', name: 'disclaim1'})),
+              div({class: 'disclaimer-checkbox'}, input({type: 'checkbox', id:"disclaim1", name: 'disclaim1'})),
               div({class: 'disclaimer'},
+                label({for: 'disclaim1'},
 "I understand that if I or my guests arrive intoxicated, I will not be allowed entry and tickets will be forfeited."
+                )
               )
             )
           ),
           tr({class: 'disclaimer-row'},
             td({colspan: 2},
-              div({class: 'disclaimer-checkbox'},input({type: 'checkbox', name: 'disclaim2'})),
+              div({class: 'disclaimer-checkbox'},input({type: 'checkbox', id:"disclaim2", name: 'disclaim2'})),
               div({class: 'disclaimer'},
+                label({for: "disclaim2"},
 "I understand that if I bring children under the age of 12, all 8 tickets must be reserved by members of my group."
+                )
               )
             )
           ),
           tr({class: 'disclaimer-row'},
             td({colspan: 2},
-              div({class: 'disclaimer-checkbox'}, input({type: 'checkbox', name: 'disclaim3'})),
+              div({class: 'disclaimer-checkbox'}, input({type: 'checkbox', id:"disclaim3", name: 'disclaim3'})),
               div({class: 'disclaimer'},
+                label({for: 'disclaim3'},
 "I understand there are no refunds or cancellations after purchasing a ticket."
+                )
               )
             )
           ),
@@ -345,7 +351,8 @@ function roomColor(room){
 }
 
 function formatHeaderDate(d){
-  return [dayNames[d.getDay()], ' ', d.getMonth()+1, '/', d.getDate()];
+//Sat, March 12, 2016
+  return [lowercaseDayNames[d.getDay()], ', ', monthNames[d.getMonth()+1], ' ', d.getDate(), ', ', d.getFullYear()];
 }
 
 function formatTime(text){
