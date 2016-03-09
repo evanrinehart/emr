@@ -354,7 +354,7 @@ function formatHeaderDate(d){
 
 function formatCheckoutHeaderDate(d){
 //Sat, March 12, 2016
-  return [lowercaseDayNames[d.getDay()], ', ', monthNames[d.getMonth()+1], ' ', d.getDate(), ', ', d.getFullYear()];
+  return [lowercaseDayNames[d.getDay()], ', ', monthNames[d.getMonth()], ' ', d.getDate(), ', ', d.getFullYear()];
 }
 
 function formatTime(text){
