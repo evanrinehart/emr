@@ -5,14 +5,11 @@ var old_ticket_quantity_kludge = 2;
 
 var theyUnderstandDisclaimer = false;
 
-//developer test account
-//var stripePubkey = 'pk_test_lPTj3zvBP0Kl2DgWKguSzrmS';
-
 //emr test account
-var stripePubkey = 'pk_test_fU4QhTgnzPSFcdiKofY0z65J';
+//var stripePubkey = 'pk_test_ersJ7dsklDhpa4dOW6Wtw1Ky';
 
 //emr live account
-//var stripePubkey = 'pk_live_8dhr179Vis0HpJkvhB4LPyZd';
+var stripePubkey = 'pk_live_JTkZUM3uXH07zDBY5DYOaFtW';
 Stripe.setPublishableKey(stripePubkey);
 
 var state = {
