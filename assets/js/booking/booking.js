@@ -3,8 +3,6 @@ var targetColumnWidth = 160;
 
 var old_ticket_quantity_kludge = 2;
 
-var theyUnderstandDisclaimer = false;
-
 //emr test account
 //var stripePubkey = 'pk_test_ersJ7dsklDhpa4dOW6Wtw1Ky';
 
@@ -489,7 +487,6 @@ $(document).on('click', '.booking-widget .slot', function(e){
   }));
 
   function fetchPriceCallback(){
-    theyUnderstandDisclaimer = true;
     fetchPrice({
       room_id: room_id,
       event_id: event_id,
@@ -519,32 +516,7 @@ $(document).on('click', '.booking-widget .slot', function(e){
     });
   }
 
-  theyUnderstandDisclaimer = true;
-  if(!theyUnderstandDisclaimer){
-    summonDialog(dialog(
-      "DISCLAIMER",
-      "I understand that if I or my guests arrive intoxicated, I will not be allowed entry and tickets will be forfeited.",
-      function(){
-        summonDialog(dialog(
-          "DISCLAIMER",
-          "I understand that if I bring children under the age of 12, all 8 tickets must be reserved by members of my group.",
-          function(){
-            summonDialog(dialog(
-              "DISCLAIMER",
-              "I understand there are no refunds or cancellations after purchasing a ticket.",
-              fetchPriceCallback,
-              "I Understand"
-            ));
-          },
-          "I Understand"
-        ));
-      },
-      "I Understand"
-    ));
-  }
-  else{
-    fetchPriceCallback();
-  }
+  fetchPriceCallback();
 
 });
 
@@ -585,6 +557,10 @@ $(document).on('blur', '.booking-widget [name="select-ticket-count"]', function(
 
 $(document).on('click', '.checkout-panel .checkout-button', function(e){
   e.preventDefault();
+
+  if($('.calculating-indicator').is(':visible')){
+    return;
+  }
 
   if(isDefined('fbq')){
     fbq('track', 'InitiateCheckout');
