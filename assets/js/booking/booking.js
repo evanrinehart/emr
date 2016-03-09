@@ -229,7 +229,7 @@ function checkoutPanel(data){
         ),
         table({class: 'checkout-form'},
           tr(td(label('Room')), td({class: 'right'}, data.room_name)),
-          tr(td(label('Date')), td({class: 'right'}, formatHeaderDate(data.date))),
+          tr(td(label('Date')), td({class: 'right'}, formatCheckoutHeaderDate(data.date))),
           tr(td(label('Time')), td({class: 'right'}, formatTime(data.time))),
           horizontal_rule,
           tr(
@@ -351,6 +351,11 @@ function roomColor(room){
 }
 
 function formatHeaderDate(d){
+//SAT 3/12
+  return [dayNames[d.getDay()], ' ', d.getMonth()+1, '/', d.getDate()];
+}
+
+function formatCheckoutHeaderDate(d){
 //Sat, March 12, 2016
   return [lowercaseDayNames[d.getDay()], ', ', monthNames[d.getMonth()+1], ' ', d.getDate(), ', ', d.getFullYear()];
 }
