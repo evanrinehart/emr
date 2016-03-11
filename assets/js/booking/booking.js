@@ -2,6 +2,7 @@ var maxTicketCount = 7;
 var targetColumnWidth = 160;
 
 var old_ticket_quantity_kludge = 2;
+var previous_hold_id_kludge = '';
 
 //emr test account
 //var stripePubkey = 'pk_test_ersJ7dsklDhpa4dOW6Wtw1Ky';
@@ -470,7 +471,8 @@ $(window).on('resize', function(e){
 
 $(document).on('click', '.booking-widget .slot', function(e){
   e.preventDefault();
-  var previous_hold_id = $('[name="previous-hold-id"]').val();
+  //var previous_hold_id = $('[name="previous-hold-id"]').val();
+  var previous_hold_id = previous_hold_id_kludge;
   var desired_ticket_count = $('[name="select-ticket-count"]').val();
   var ele = $(this);
   function data(name){ return ele.attr('data-'+name); }
@@ -496,7 +498,8 @@ $(document).on('click', '.booking-widget .slot', function(e){
         ok: function(result){
           var total = result.total;
           old_ticket_quantity_kludge = desired_ticket_count;
-          $('[name="previous-hold-id"]').val(result.hold_id);
+          //$('[name="previous-hold-id"]').val(result.hold_id);
+          previous_hold_id_kludge = result.hold_id;
           var panel = $('.checkout-panel');
           panel.find('.calculating-indicator').hide();
           panel.find('[name="total"]').val(total);
@@ -581,7 +584,8 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
     var data = {
       event_id: field('event_id'),
       room_id: field('room_id'),
-      hold_id: $('[name="previous-hold-id"]').val(),
+      //hold_id: $('[name="previous-hold-id"]').val(),
+      hold_id: previous_hold_id_kludge,
       ticket_quantity: ticket_count,
       first_name: field('first_name'),
       last_name: field('last_name'),
@@ -781,7 +785,8 @@ $(document).on('click', '.dialog-dismiss', function(e){
 });
 
 function recalculatePrice(){
-  var previous_hold_id = $('[name="previous-hold-id"]').val();
+  //var previous_hold_id = $('[name="previous-hold-id"]').val();
+  var previous_hold_id = previous_hold_id_kludge;
   var form = $('.checkout-panel');
   var loading = form.find('.calculating-indicator');
   var button = form.find('.checkout-button');
@@ -800,7 +805,8 @@ function recalculatePrice(){
     callbacks: {
       ok: function(result){
         console.log(result);
-        $('[name="previous-hold-id"]').val(result.hold_id);
+        //$('[name="previous-hold-id"]').val(result.hold_id);
+        previous_hold_id_kludge = result.hold_id;
         var total = result.total;
         old_ticket_quantity_kludge = ticket_count;
         loading.hide();
@@ -826,7 +832,8 @@ function recalculatePrice(){
 
 
 $(document).on('change', 'select[name="ticket_count"]', function(){
-  var previous_hold_id = $('[name="previous-hold-id"]').val();
+  //var previous_hold_id = $('[name="previous-hold-id"]').val();
+  var previous_hold_id = previous_hold_id_kludge;
   var form = $(this).closest('.checkout-panel');
   var loading = form.find('.calculating-indicator');
   var button = form.find('.checkout-button');
@@ -845,7 +852,8 @@ $(document).on('change', 'select[name="ticket_count"]', function(){
     callbacks: {
       ok: function(result){
         console.log(result);
-        $('[name="previous-hold-id"]').val(result.hold_id);
+        //$('[name="previous-hold-id"]').val(result.hold_id);
+        previous_hold_id_kludge = result.hold_id;
         var total = result.total;
         old_ticket_quantity_kludge = ticket_count;
         loading.hide();
