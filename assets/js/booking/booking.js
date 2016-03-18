@@ -617,6 +617,7 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
 
   var button = $(this);
   var form = $(this).closest('.checkout-panel');
+  var field = function(name){ return form.find('[name="'+name+'"]').val(); };
   var problem = validateCheckoutForm(form);
   if(problem){
     summonDialog(dialog('ERROR', problem));
