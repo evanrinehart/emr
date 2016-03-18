@@ -558,6 +558,51 @@ $(document).on('blur', '.booking-widget [name="select-ticket-count"]', function(
   this.value = state.ticketCount;
 });
 
+function getCheckoutFormData(form){
+  if(!form || form.length == 0){
+    throw new Error("getCheckoutFormData bad argument: " + form);
+  }
+  var field = function(name){ return form.find('[name="'+name+'"]').val(); };
+  var ticket_count = parseInt(field('ticket_count'));
+  var problem = validateCheckoutForm(form);
+  return {
+    event_id: field('event_id'),
+    room_id: field('room_id'),
+    //hold_id: $('[name="previous-hold-id"]').val(),
+    hold_id: previous_hold_id_kludge,
+    ticket_quantity: ticket_count,
+    first_name: field('first_name'),
+    last_name: field('last_name'),
+    email: field('email'),
+    phone: field('phone'),
+    expecting_to_pay: field('total'),
+    promo_code: field('promo_code'),
+    problem: problem
+  };
+}
+
+function getClientStateVariables(){
+  return {
+    maxTicketCount: maxTicketCount,
+    targetColumnWidth: targetColumnWidth,
+    old_ticket_quantity_kludge: old_ticket_quantity_kludge,
+    previous_hold_id_kludge: previous_hold_id_kludge,
+    stripePubkey: stripePubkey,
+    state: state
+  };
+}
+
+function getCurrentDialogText(){
+  var dialog = $('.dialog-panel');
+  if(dialog.length > 0){
+    return dialog.html();
+  }
+  else{
+    return null;
+  }
+}
+
+
 $(document).on('click', '.checkout-panel .checkout-button', function(e){
   e.preventDefault();
 
@@ -577,24 +622,10 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
     return;
   }
   var loading = form.find('.processing-indicator');
-  var field = function(name){ return form.find('[name="'+name+'"]').val(); };
-  var ticket_count = parseInt(field('ticket_count'));
 
   function book(token){ 
-    var data = {
-      event_id: field('event_id'),
-      room_id: field('room_id'),
-      //hold_id: $('[name="previous-hold-id"]').val(),
-      hold_id: previous_hold_id_kludge,
-      ticket_quantity: ticket_count,
-      first_name: field('first_name'),
-      last_name: field('last_name'),
-      email: field('email'),
-      phone: field('phone'),
-      expecting_to_pay: field('total'),
-      promo_code: field('promo_code'),
-      stripe_token: token
-    };
+    var data = getCheckoutFormData(form);
+    data.stripe_token = token;
 
     $.ajax({
       method: 'post',
