@@ -22,6 +22,24 @@ schema for global variable `rooms'
 */
 var rooms = null;
 
+function nameOfRoom(room_id){
+  if(rooms){
+    for(var i=0; i<rooms.length; i++){
+      if(rooms.room_id == room_id) return rooms.name;
+    }
+  }
+  return null;
+}
+
+function timeOfEvent(event_id){
+  for(var d in db){
+    for(var i=0; i<db[d].length; i++){
+      if(db[d][i].event_id == event_id) return d + ' ' + db[d][i].time;
+    }
+  }
+  return null;
+}
+
 
 /* the users current hold, if any */
 var my_hold_id = null;
