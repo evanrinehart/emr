@@ -567,6 +567,8 @@ function getCheckoutFormData(form){
   var ticket_count = parseInt(field('ticket_count'));
   var problem = validateCheckoutForm(form);
   return {
+    event_id: field('event_id'),
+    room_id: field('room_id'),
     event_time: timeOfEvent(field('event_id')),
     room_name: nameOfRoom(field('room_id')),
     //hold_id: $('[name="previous-hold-id"]').val(),
