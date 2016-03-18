@@ -514,6 +514,7 @@ $(document).on('click', '.booking-widget .slot', function(e){
           summonDialog(dialog('ERROR', problem, function(){
             dismissModalPanel();
           }));
+          postDebugInfoNow('fetch-price-failed-initially');
         }
       }
     });
@@ -652,6 +653,7 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
               loading.hide();
             }
           ));
+          postDebugInfoNow('booking-failed-200');
         }
       },
       error: function(xhr){
@@ -660,6 +662,7 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
             button.show();
             loading.hide();
           }));
+          postDebugInfoNow('booking-failed-400');
         }
         else{
           console.log(xhr);
@@ -671,6 +674,7 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
               loading.hide();
             }
           ));
+          postDebugInfoNow('booking-failed-other');
         }
       }
     });
@@ -692,6 +696,7 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
             loading.hide();
           }
         ));
+        postDebugInfoNow('stripe-card-submit-failed');
       }
       else {
         var token = response.id;
@@ -802,6 +807,7 @@ function reloadBookingUI(){
       console.log(message);
       with(HTML){
         summonDialog(dialog('ERROR', message));
+        postDebugInfoNow('fetch-availabilities-failed');
       }
     }
   });
@@ -854,6 +860,7 @@ function recalculatePrice(){
         total_span.show();
         form.find('[name="ticket_count"]').val(old_ticket_quantity_kludge);
         summonDialog(dialog('ERROR', problem));
+        postDebugInfoNow('fetch-price-failed-recalculate');
       }
     }
   });
@@ -901,6 +908,7 @@ $(document).on('change', 'select[name="ticket_count"]', function(){
         total_span.show();
         form.find('[name="ticket_count"]').val(old_ticket_quantity_kludge);
         summonDialog(dialog('ERROR', problem));
+        postDebugInfoNow('fetch-price-failed-change-tickets');
       }
     }
   });

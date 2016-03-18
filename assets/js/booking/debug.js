@@ -1,4 +1,13 @@
-function compileDebugInfo(){
+var _clientActionHistory = [];
+function logClientActionHistory(action, value){
+  row = {action: action, actionTime: String(new Date())};
+  for(var k in (value||{})){
+    row[k] = value[k];
+  }
+  _clientActionHistory.push(row);
+}
+
+function compileDebugInfo(reason){
   var form = $('.checkout-panel');
   if(form.length > 0){
     var checkoutFormData = getCheckoutFormData(form);
@@ -21,6 +30,7 @@ function compileDebugInfo(){
   }
   
   return {
+    reason: reason,
     browser: browser,
     isMobile: isMobile,
     viewport: {
@@ -29,12 +39,13 @@ function compileDebugInfo(){
     },
     checkoutFormData: checkoutFormData,
     state: state,
-    dialogText: getCurrentDialogText()
+    dialogText: getCurrentDialogText(),
+    actionHistory: _clientActionHistory
   };
 }
 
-function postDebugInfoNow(){
-  var data = compileDebugInfo();
+function postDebugInfoNow(reason){
+  var data = compileDebugInfo(reason);
   $.ajax({
     method: 'post',
     url: "https://booking.escapemyroom.com/api/debug",
