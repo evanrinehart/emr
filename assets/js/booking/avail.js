@@ -25,7 +25,7 @@ var rooms = null;
 function nameOfRoom(room_id){
   if(rooms){
     for(var i=0; i<rooms.length; i++){
-      if(rooms.room_id == room_id) return rooms.name;
+      if(rooms[i].room_id == room_id) return rooms[i].name;
     }
   }
   return null;
