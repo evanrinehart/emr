@@ -7,6 +7,11 @@ function computeDynamicLargePanelWidth(winW){
   return winW > 960 ? 960 : winW;
 }
 
+function titleOfTopModal(){
+  if(modalStack.length == 0) return null;
+  return modalStack[modalStack.length-1].find('.title h1').text();
+}
+
 function probeHeight(content){
   var probe = $('<div class="custom-dialog modal-probe" style="visibility: hidden"></div>');
   probe.append(content);

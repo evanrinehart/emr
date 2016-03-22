@@ -1,8 +1,8 @@
 var _clientActionHistory = [];
-function logClientActionHistory(action, value){
+function logClientActionHistory(action, data){
   row = {action: action, actionTime: String(new Date())};
-  for(var k in (value||{})){
-    row[k] = value[k];
+  for(var k in data || {}){
+    row[k] = data[k];
   }
   _clientActionHistory.push(row);
 }
@@ -40,7 +40,8 @@ function compileDebugInfo(reason){
     checkoutFormData: checkoutFormData,
     state: state,
     dialogText: getCurrentDialogText(),
-    actionHistory: _clientActionHistory
+    actionHistory: _clientActionHistory,
+    holdIdHistory: HoldIdManager.holdIdHistory()
   };
 }
 
@@ -58,3 +59,46 @@ function postDebugInfoNow(reason){
     }
   });
 }
+
+
+
+var HoldIdManager = new (function(){
+  // stack of {hold_id: 'aaaa', valid: true, event: 'quote succeeded'}
+  var stack = [];
+  function HoldId(hold_id, event, valid){
+    if(valid !== true && valid !== false) throw new Error("bool required");
+    this.hold_id = hold_id;
+    this.event = event;
+    this.valid = valid;
+  }
+
+  this.currentHoldId = function(){
+    if(stack.length > 0){
+      var h = stack[stack.length - 1];
+      if(h.valid) return h.hold_id;
+      else return '';
+    }
+    else{
+      return '';
+    }
+  }
+
+  this.pushHoldId = function(hold_id, event){
+    if(!event) throw new Error("reason required");
+    stack.push(new HoldId(hold_id, event, true));
+  }
+
+  this.invalidateHoldId = function(event){
+    if(!event) throw new Error("reason required");
+    if(stack.length > 0){
+      stack.push(new HoldId(this.currentHoldId(), event, false));
+    }
+    else{
+      stack.push(new HoldId(null, event, false));
+    }
+  }
+
+  this.holdIdHistory = function(){
+    return stack;
+  }
+});

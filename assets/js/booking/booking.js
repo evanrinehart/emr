@@ -403,6 +403,7 @@ function validateCheckoutForm(form){
 }
 
 $(document).on('click', '.activate-booking', function(e){
+  logClientActionHistory('open-booking-ui');
   e.preventDefault(); 
   reloadBookingUI();
 });
@@ -415,6 +416,7 @@ $(document).on('click', '.my-tooltip', function(e){
 
 //ww2
 $(document).on('click', '.booking-widget .summon-datepicker', function(e){
+  logClientActionHistory('open-datepicker');
   e.preventDefault();
   if(booking_loading_flag) return;
   summonDialog(datepicker({
@@ -422,6 +424,7 @@ $(document).on('click', '.booking-widget .summon-datepicker', function(e){
     selectedDate: state.baseDate,
     currentMonth: firstOfMonth(dateToday()),
     ok: function(date){
+      logClientActionHistory('select-date',{date: String(date)});
       state.baseDate = date;
       reloadBookingUI();
     }
@@ -429,6 +432,8 @@ $(document).on('click', '.booking-widget .summon-datepicker', function(e){
 });
 
 $(document).on('click', '.modal-dismiss', function(e){
+  var title = $(this).closest('.title').find('h1').text();
+  logClientActionHistory('dismiss-modal',{title: title});
   e.preventDefault();
   dismissModalPanel();
 });
@@ -436,6 +441,8 @@ $(document).on('click', '.modal-dismiss', function(e){
 $(document).on('click', '.modal-overlay', function(e){
   var overlay = $(this).closest('.modal-overlay')[0];
   if(e.target == overlay || $(e.target).hasClass('darkness')){
+    var title = titleOfTopModal();
+    logClientActionHistory('dismiss-modal-via-overlay',{title: title});
     dismissModalPanel();
   }
 });
@@ -460,6 +467,7 @@ $(window).on('resize', function(e){
   if(main.length > 0){
     var screenW = $(window).width();
     var screenH = $(window).height();
+    logClientActionHistory('window-resize',{dimensions: [screenW,screenH]});
     var width = computeDynamicLargePanelWidth(screenW);
     main.parent().css('width', width+'px');
 //    main.parent().css('height', screenH+'px');
@@ -472,12 +480,22 @@ $(window).on('resize', function(e){
 $(document).on('click', '.booking-widget .slot', function(e){
   e.preventDefault();
   //var previous_hold_id = $('[name="previous-hold-id"]').val();
-  var previous_hold_id = previous_hold_id_kludge;
+  //var previous_hold_id = previous_hold_id_kludge;
+  var previous_hold_id = HoldIdManager.currentHoldId();
   var desired_ticket_count = $('[name="select-ticket-count"]').val();
   var ele = $(this);
   function data(name){ return ele.attr('data-'+name); }
   var room_id = data('room-id');
   var event_id = data('event-id');
+  logClientActionHistory('click-time-slot',{
+    room: data('room-name'),
+    desired: desired_ticket_count,
+    remaining: data('remaining-tickets'),
+    date: data('date'),
+    time: data('time'),
+    currentHoldId: HoldIdManager.currentHoldId()
+  });
+
   summonTallModal(checkoutPanel({
     room_id: data('room-id'),
     event_id: data('event-id'),
@@ -499,7 +517,12 @@ $(document).on('click', '.booking-widget .slot', function(e){
           var total = result.total;
           old_ticket_quantity_kludge = desired_ticket_count;
           //$('[name="previous-hold-id"]').val(result.hold_id);
-          previous_hold_id_kludge = result.hold_id;
+          //previous_hold_id_kludge = result.hold_id;
+          logClientActionHistory('open-slot-price-fetch-complete',{
+            total: result.total,
+            hold_id: result.hold_id
+          });
+          HoldIdManager.pushHoldId(result.hold_id, 'slot-price-fetched');
           var panel = $('.checkout-panel');
           panel.find('.calculating-indicator').hide();
           panel.find('[name="total"]').val(total);
@@ -514,6 +537,8 @@ $(document).on('click', '.booking-widget .slot', function(e){
           summonDialog(dialog('ERROR', problem, function(){
             dismissModalPanel();
           }));
+          releaseHold(HoldIdManager.currentHoldId());
+          HoldIdManager.invalidateHoldId('fetch-price-failed-initially');
           postDebugInfoNow('fetch-price-failed-initially');
         }
       }
@@ -527,6 +552,8 @@ $(document).on('click', '.booking-widget .slot', function(e){
 $(document).on('change', '.booking-widget [name="select-room"]', function(e){
   e.preventDefault();
   var roomId = $(this).val();
+  var text = $(this).find('option:selected').text();
+  logClientActionHistory('select-room', {room: text, room_id: roomId});
   if(roomId == 'any-room'){
     delete state.room;
   }
@@ -539,6 +566,7 @@ $(document).on('change', '.booking-widget [name="select-room"]', function(e){
 $(document).on('change', '.booking-widget [name="select-ticket-count"]', function(e){
   e.preventDefault();
   var n = $(this).val();
+  logClientActionHistory('select-ticket-count', {n: n});
   if(n == 'too-many'){
     this.value = state.ticketCount;
     summonDialog(dialog(
@@ -572,7 +600,8 @@ function getCheckoutFormData(form){
     event_time: timeOfEvent(field('event_id')),
     room_name: nameOfRoom(field('room_id')),
     //hold_id: $('[name="previous-hold-id"]').val(),
-    hold_id: previous_hold_id_kludge,
+    //hold_id: previous_hold_id_kludge,
+    hold_id: HoldIdManager.currentHoldId(),
     ticket_quantity: ticket_count,
     first_name: field('first_name'),
     last_name: field('last_name'),
@@ -605,9 +634,16 @@ function getCurrentDialogText(){
   }
 }
 
+$(document).on('click', '.checkout-panel .close-button', function(e){
+  releaseHold(HoldIdManager.currentHoldId());
+  HoldIdManager.invalidateHoldId('closed-checkout-panel');
+});
+
 
 $(document).on('click', '.checkout-panel .checkout-button', function(e){
   e.preventDefault();
+
+  logClientActionHistory('click-checkout');
 
   if($('.calculating-indicator').is(':visible')){
     return;
@@ -637,10 +673,14 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
       data: data,
       success: function(response){
         if(response.ok){
+          logClientActionHistory('checkout-complete');
           summonDialog(dialog(
             'COMPLETE',
             "Checkout Complete! Check your email for tickets and the receipt.",
-            function(){ dismissAllModals(); }
+            function(){ 
+              HoldIdManager.invalidateHoldId('checkout-complete');
+              dismissAllModals();
+            }
           ));
 
           if(isDefined('fbq')){
@@ -717,6 +757,7 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
 
 $(document).on('change', '.checkout-panel [name="promo_code"]', function(e){
   var code = $(this).val();
+  logClientActionHistory('change-promo-code',{promo_code: code});
   $(this).val(code.toUpperCase());
   recalculatePrice();
 });
@@ -762,11 +803,6 @@ function calendarWidget(d){
     }
   }
 }
-
-$(document).on('click', '.booking-widget .select-date', function(e){
-  e.preventDefault();
-//  summonModalPanel(calendarWidget(state.baseDate));
-});
 
 function reloadMainModalPanel(ctor){
   var panel = $('.booking-widget').parent();
@@ -819,14 +855,17 @@ function reloadBookingUI(){
 
 $(document).on('click', '.dialog-dismiss', function(e){
   e.preventDefault();
+  var text = $('.dialog-body').text();
   var onClose = $(this).closest('.dialog-panel')[0].onClose;
   dismissModalPanel();
   if(onClose) onClose();
+  logClientActionHistory('close-dialog',{text: text});
 });
 
 function recalculatePrice(){
   //var previous_hold_id = $('[name="previous-hold-id"]').val();
-  var previous_hold_id = previous_hold_id_kludge;
+  //var previous_hold_id = previous_hold_id_kludge;
+  var previous_hold_id = HoldIdManager.currentHoldId();
   var form = $('.checkout-panel');
   var loading = form.find('.calculating-indicator');
   var button = form.find('.checkout-button');
@@ -846,8 +885,13 @@ function recalculatePrice(){
       ok: function(result){
         console.log(result);
         //$('[name="previous-hold-id"]').val(result.hold_id);
-        previous_hold_id_kludge = result.hold_id;
+        //previous_hold_id_kludge = result.hold_id;
         var total = result.total;
+        logClientActionHistory('recalc-price-fetch-complete',{
+          total: result.total,
+          hold_id: result.hold_id
+        });
+        HoldIdManager.pushHoldId(result.hold_id, 'recalc-price-fetched');
         old_ticket_quantity_kludge = ticket_count;
         loading.hide();
         button.show();
@@ -874,7 +918,8 @@ function recalculatePrice(){
 
 $(document).on('change', 'select[name="ticket_count"]', function(){
   //var previous_hold_id = $('[name="previous-hold-id"]').val();
-  var previous_hold_id = previous_hold_id_kludge;
+  //var previous_hold_id = previous_hold_id_kludge;
+  var previous_hold_id = HoldIdManager.currentHoldId();
   var form = $(this).closest('.checkout-panel');
   var loading = form.find('.calculating-indicator');
   var button = form.find('.checkout-button');
@@ -894,8 +939,13 @@ $(document).on('change', 'select[name="ticket_count"]', function(){
       ok: function(result){
         console.log(result);
         //$('[name="previous-hold-id"]').val(result.hold_id);
-        previous_hold_id_kludge = result.hold_id;
+        //previous_hold_id_kludge = result.hold_id;
         var total = result.total;
+        logClientActionHistory('select-tickets-price-fetch-complete',{
+          total: result.total,
+          hold_id: result.hold_id
+        });
+        HoldIdManager.pushHoldId(result.hold_id, 'select-tickets-price-fetched');
         old_ticket_quantity_kludge = ticket_count;
         loading.hide();
         button.show();
@@ -970,10 +1020,18 @@ function resetBookingTimeout(){
     function(){
       dismissAllModals();
       var msg = "Sorry, your temporary ticket reservation has expired."
+      logClientActionHistory('expired', {hold_id: HoldIdManager.currentHoldId()});
+      HoldIdManager.invalidateHoldId('expired');
       summonDialog(dialog("TIME'S UP", msg));
     }
   );
 }
 
 
-
+function releaseHold(hold_id){
+  $.ajax({
+      method: 'post',
+      url: 'https://booking.escapemyroom.com/api/release',
+      data: {hold_id: hold_id}
+  });
+}
