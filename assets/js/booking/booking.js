@@ -493,7 +493,7 @@ $(document).on('click', '.booking-widget .slot', function(e){
     remaining: data('remaining-tickets'),
     date: data('date'),
     time: data('time'),
-    currentHoldId: HoldIdManager.currentHoldId()
+    current_hold_id: HoldIdManager.currentHoldId()
   });
 
   summonTallModal(checkoutPanel({

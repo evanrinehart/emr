@@ -1,6 +1,6 @@
 var _clientActionHistory = [];
 function logClientActionHistory(action, data){
-  row = {action: action, actionTime: String(new Date())};
+  row = {action: action, action_time: String(new Date())};
   for(var k in data || {}){
     row[k] = data[k];
   }
@@ -40,8 +40,8 @@ function compileDebugInfo(reason){
     checkoutFormData: checkoutFormData,
     state: state,
     dialogText: getCurrentDialogText(),
-    actionHistory: _clientActionHistory,
-    holdIdHistory: HoldIdManager.holdIdHistory()
+    actionLog: _clientActionHistory,
+    holdIdLog: HoldIdManager.holdIdHistory()
   };
 }
 
