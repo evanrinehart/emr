@@ -707,6 +707,9 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
         if(xhr.status == 400){
           var response = JSON.parse(xhr.responseText);
           var hold_id = response.hold_id;
+          if(hold_id){
+            HoldIdManager.pushHoldId(hold_id, 'booking-failed');
+          }
           if(response.abort){
             closeCheckoutPanel();
           }
