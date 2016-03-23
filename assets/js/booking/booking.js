@@ -634,6 +634,10 @@ function getCurrentDialogText(){
   }
 }
 
+function closeCheckoutPanel(){
+  $('.checkout-panel .close-button').click();
+}
+
 $(document).on('click', '.checkout-panel .close-button', function(e){
   releaseHold(HoldIdManager.currentHoldId());
   HoldIdManager.invalidateHoldId('closed-checkout-panel');
@@ -701,14 +705,19 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
       },
       error: function(xhr){
         if(xhr.status == 400){
-          summonDialog(dialog('ERROR', xhr.responseText, function(){
+          var response = JSON.parse(xhr.responseText);
+          var hold_id = response.hold_id;
+          if(response.abort){
+            closeCheckoutPanel();
+          }
+          summonDialog(dialog('ERROR', response.message, function(){
             button.show();
             loading.hide();
           }));
           postDebugInfoNow('booking-failed-400');
         }
         else{
-          console.log(xhr);
+          closeCheckoutPanel();
           summonDialog(dialog(
             'ERROR',
             'Sorry, a problem occurred with your purchase. Try again later.',
