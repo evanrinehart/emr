@@ -278,6 +278,10 @@ function checkoutPanel(data){
               span({class: 'total'}, '')
             )
           ),
+          tr(
+            td(''),
+            td({class: 'right', style: 'font-size: 10pt;'}, i('(price includes sales tax)'))
+          ),
           row('Card Number', 'card_number', undefined, undefined, true),
           row('Card CVC', 'card_cvc', undefined, undefined, true),
           tr({class: 'cc_field'},
