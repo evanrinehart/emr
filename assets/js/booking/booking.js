@@ -140,7 +140,9 @@ function bookingWidget(width, height, room, ticketCount, baseDate, rooms, availa
                     function compare(s1, s2){
                       var t1 = s1.time;
                       var t2 = s2.time;
-                      return t1 > t2 ? 1 : (t1 < t2 ? -1 : 0);
+                      var n1 = s1.room_name;
+                      var n2 = s2.room_name;
+                      return t1 > t2 ? 1 : (t1 < t2 ? -1 : (n1 < n2 ? -1 : (n1==n2 ? 0 : 1)));
                     }
 
                     if(slots.length > 0){
