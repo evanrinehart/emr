@@ -412,7 +412,8 @@ function validateCheckoutForm(form){
 $(document).on('click', '.activate-booking', function(e){
   logClientActionHistory('open-booking-ui');
   e.preventDefault(); 
-  reloadBookingUI();
+  var room = $(this).attr('data-room');
+  reloadBookingUI(room || 'any');
 });
 
 $(document).on('click', '.my-tooltip', function(e){
@@ -840,11 +841,13 @@ function reloadMainModalPanel(ctor){
 }
 
 /* use this to open the panel or reload it after something has changed */
-function reloadBookingUI(){
+function reloadBookingUI(initialRoom){
   var baseDate = state.baseDate;
   var width = computeDynamicLargePanelWidth($(window).width());
   var columns = computeDynamicColumnCount(width);
   var tickets = state.ticketCount;
+  if(initialRoom === 'any') state.room = undefined;
+  else if(initialRoom) state.room = initialRoom;
   var room = state.room;
   withAvailabilities(baseDate, dateAdd(baseDate, columns), {
     now: function(rooms, availabilities){
