@@ -223,7 +223,8 @@ function checkoutPanel(data){
           input({type: 'hidden', 'data-stripe': 'number'}),
           input({type: 'hidden', 'data-stripe': 'cvc'}),
           input({type: 'hidden', 'data-stripe': 'exp-month'}),
-          input({type: 'hidden', 'data-stripe': 'exp-year'})
+          input({type: 'hidden', 'data-stripe': 'exp-year'}),
+          input({type: 'hidden', 'data-stripe': 'name'})
         ),
         table({class: 'checkout-form'},
           tr(td(label('Room')), td({class: 'right'}, data.room_name)),
@@ -747,6 +748,9 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
     stripe_form.find('[data-stripe="cvc"]').val(field('card_cvc'));
     stripe_form.find('[data-stripe="exp-month"]').val(field('card_month'));
     stripe_form.find('[data-stripe="exp-year"]').val(field('card_year'));
+    var first_name = field('first_name');
+    var last_name = field('last_name');
+    stripe_form.find('[data-stripe="name"]').val(first_name+' '+last_name);
     Stripe.card.createToken(stripe_form, function(status, response){
       if (response.error) {
         summonDialog(dialog(
