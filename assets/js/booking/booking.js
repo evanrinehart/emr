@@ -64,8 +64,8 @@ function ticketSelect(ticketCount){
   with(HTML){
     return selectWithConfig({
       options: [].concat(
-        range(1,7).map(function(n){ return {value: n, label: n}; }),
-        [{value: 'too-many', label: '8+'}]
+        range(1,8).map(function(n){ return {value: n, label: n}; }),
+        [{value: 'too-many', label: '9+'}]
       ),
       selected: ticketCount,
       attributes: {name: 'select-ticket-count'}
@@ -578,8 +578,8 @@ $(document).on('change', '.booking-widget [name="select-ticket-count"]', functio
   if(n == 'too-many'){
     this.value = state.ticketCount;
     summonDialog(dialog(
-      '8+ TICKETS',
-      'Please call for more information on booking 8 or more tickets at a time.'
+      '9+ TICKETS',
+      'Please call for more information on booking 9 or more tickets at a time.'
     ));
   }
   else{
@@ -588,7 +588,7 @@ $(document).on('change', '.booking-widget [name="select-ticket-count"]', functio
   }
 });
 
-// To reset the box in case they choose 8+ on iOS which does not allow
+// To reset the box in case they choose 9+ on iOS which does not allow
 // updating the value during the change handler. iOS happens to execute
 // the blur event immediately after change.
 $(document).on('blur', '.booking-widget [name="select-ticket-count"]', function(e){
