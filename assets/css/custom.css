@@ -929,6 +929,11 @@ section.module.parallax-sign-up {
 }
 
 @media screen and (max-width:768px) {
+  .container-room {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
   .container-room ul.stats {
     float: none;
     width: 100%;
