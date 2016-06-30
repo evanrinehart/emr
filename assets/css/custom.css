@@ -174,7 +174,6 @@ body {
 
 #top-menu-container .menu-banner {
   position: fixed;
-  top: 9px;
   left: 1em;
 }
 
@@ -803,36 +802,105 @@ section.module.parallax-sign-up {
   }
 }
 
-#mardi-gras-study {
+.clear-both {
+  clear: both;
+}
+
+.container-room {
   background-color: #D8DAE9;
-  font-size: 12pt;
-  padding: 40px 0;
-  margin: auto;
+  padding: 20px 40px;
+  padding-left: 80px;
 }
 
-#mardi-gras-study h3 {
+.container-room .icon {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin-bottom: -12px;
+}
+
+.container-room .room-duration-icon {
+  background: url("../img/room-duration-icon.svg");
+  background-size: 32px 32px;
+}
+
+.container-room .price-per-person-icon {
+  background: url("../img/price-per-person-icon.svg");
+  background-size: 32px 32px;
+  background-size: 38px 38px;
+  background-position: -2px -3px;
+}
+
+.container-room .exit-percentage-icon {
+  background: url("../img/exit-percentage-icon.svg");
+  background-size: 60px 50px;
+  background-position: -7px -7px;
+  margin-right: 5px;
+}
+
+.container-room .group-size-icon {
+  background: url("../img/group-size-icon.svg");
+  background-size: 60px 57px;
+  background-position: -16px -12px;
+}
+
+.container-room h3 {
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
   color: #2F2F30;
+  font-variant: small-caps;
+  letter-spacing: 3px;
+  font-size: 22pt;
 }
 
-#mardi-gras-study .copy {
-  text-align: left;
+.container-room .stats {
+  float: left;
+  font-family: Roboto;
+  font-weight: 100;
+  list-style-type: none;
+  padding: 0;
+  margin-right: 20px;
+  width: 200px;
 }
 
-#mardi-gras-study .picture {
-  text-align: center;
+.container-room .review-quote {
+  font-size: 12pt;
 }
 
-#mardi-gras-study img {
-  width: 75%;
+.container-room .review-quote a {
+  font-weight: bold;
 }
 
-#mardi-gras-study p {
-  line-height: 2.0;
-  margin-bottom: 1em;
+.container-room .review-quote .quote-text {
+  font-style: italic;
+  margin-bottom: 0;
+  line-height: 20pt;
+}
+
+.container-room .review-quote .quote-text .jumbo {
+  font-size: 18pt;
+}
+
+.container-room .review-quote .attribution {
+  margin-left: 250px;
+}
+
+.container-room .picture {
+  float: right;
+  margin-left: 60px;
+  margin-bottom: 20px;
+}
+
+.container-room img {
+  width: 300px;
+}
+
+.container-room .blurb {
+  font-family: Roboto, sans;
   font-weight: 100;
 }
 
-#mardi-gras-study .buy-tickets {
+.container-room .buy-tickets {
   background-color: #4D5895;
   color: #FFFCE4;
   padding: 6px 17px;
@@ -844,10 +912,13 @@ section.module.parallax-sign-up {
   font-size: 14pt;
 }
 
-#mardi-gras-study .buy-tickets:hover {
+.container-room .buy-tickets:hover {
   background-color: #363966;
 }
 
+#jazz-parlor {
+  background-color: #FFFCE9;
+}
 
 #jazz-music-parlor {
   background-color: #D8DAE9;
