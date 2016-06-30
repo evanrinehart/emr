@@ -696,16 +696,21 @@ section.module.parallax-sign-up {
   margin-bottom: 10px;
 }
 
-#how-it-works .nav-button a {
+.nav-button {
+  text-align: center;
+}
+
+.nav-button a {
   text-decoration: none;
   background-color: white;
   font-family: Roboto, sans-serif;
   font-weight: bold;
   color: #2F2F30;
   border: 1px solid #2F2F30;
-  padding: 5px 25px;
-  letter-spacing: 1px;
+  padding: 8px 40px;
+  letter-spacing: 2px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 #how-it-works .heading {
@@ -766,6 +771,7 @@ section.module.parallax-sign-up {
   background-color: #404040;
   background-blend-mode: overlay;
   padding: 40px 20px 105px 20px;
+  color: #404040;
 }
 
 @media screen and (max-width:1000px) {
@@ -779,6 +785,8 @@ section.module.parallax-sign-up {
   font-family: Merriweather, Georgia, serif;
   letter-spacing: 1px;
   margin: 0;
+  color: #404040;
+  text-align: left;
 }
 
 #rooms p {
@@ -787,12 +795,11 @@ section.module.parallax-sign-up {
 }
 
 #rooms .copy {
-  float: right;
   width: 50%;
   background-color: #D9DAE8;
   opacity: 0.9;
-  padding: 20px;
-  margin: 0 25px;
+  padding: 20px 40px;
+  margin: auto;
 }
 
 @media screen and (max-width:768px) {
@@ -1166,42 +1173,46 @@ section.module.parallax-sign-up {
 }
 
 
-
-#tips-faq .modal-content {
+.old-style-popup .modal-content {
   background-color: #cac8b6;
   color: #353535;
 }
 
-#tips-faq .modal-header {
+.old-style-popup .modal-header {
   border-bottom-color: #a4a989;
   min-height: 42px;
 }
 
-#tips-faq .modal-body {
+.old-style-popup .modal-body {
   overflow-y: scroll;
   padding: 20px 32px;
 }
 
-#tips-faq h4 {
+.old-style-popup h4 {
   font-size: 28pt;
   text-align: center;
+  margin-bottom: 15px;
 }
 
-#tips-faq ul {
+.old-style-popup blockquote {
+  border-color: #503535;
+}
+
+.old-style-popup ul {
 /*  list-style: none;*/
   padding: 0;
 }
 
-#tips-faq h5 {
+.old-style-popup h5 {
   font-size: 16pt;
   font-weight: bold;
 }
 
-#tips-faq .modal-footer {
+.old-style-popup .modal-footer {
   border-top-color: #a4a989;
 }
 
-#tips-faq .modal-footer button {
+.old-style-popup .modal-footer button {
   font-family: Roboto, sans-serif;
   letter-spacing: 1px;
   color: #353535;
