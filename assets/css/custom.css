@@ -1234,3 +1234,14 @@ section.module.parallax-sign-up {
   top: -40px;
 }
 
+
+p#privacy-policy {
+  margin-top: 20px;
+}
+
+#privacy-policy a {
+  text-decoration: underline;
+  font-size: smaller;
+  text-transform: lowercase;
+  color: #bcba56;
+}
