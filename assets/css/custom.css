@@ -1245,3 +1245,71 @@ p#privacy-policy {
   text-transform: lowercase;
   color: #bcba56;
 }
+
+
+.room-comparison-section {
+  background-color: #D8DAE9;
+  font-family: Roboto, sans-serif;
+  padding-top: 30px;
+}
+
+.room-comparison-section h3 {
+  color: #404040;
+  font-variant: small-caps;
+  letter-spacing: 1px;
+}
+
+.room-comparison-section p.blurb {
+  font-weight: 300;
+}
+
+.room-comparison-section .squeeze {
+  max-width: 900px;
+  margin: auto;
+}
+
+.room-comparison-section .listing {
+  width: 430px;
+  text-align: center;
+}
+
+.room-comparison-section .listing .header {
+  background-color: #656ca0;
+  color: whitesmoke;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  font-size: 16pt;
+}
+
+.room-comparison-section .listing ul {
+  padding: 0;
+  display: table;
+}
+
+.room-comparison-section .listing li {
+  height: 80px;
+  list-style-type: none;
+  margin: 0;
+  display: table-row;
+  background-color: #bac0de;
+  font-size: 12pt;
+}
+
+.room-comparison-section .listing li span {
+  border-top: 1px solid #848ab7;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 20px 0 20px;
+}
+
+.room-comparison-section .listing li span.last {
+  border-radius: 0 0 10px 10px;
+}
+
+.room-comparison-section .listing.left {
+  float: left;
+}
+
+.room-comparison-section .listing.right {
+  float: right;
+}
