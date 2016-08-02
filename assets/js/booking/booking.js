@@ -388,7 +388,7 @@ function formatSlot(slot){
 }
 
 function validateCheckoutForm(form){
-  function field(f){ return form.find('[name="'+f+'"]').val(); }
+  function field(f){ return form.find('[name="'+f+'"]').val().trim(); }
   function blank(x){ return x.trim() == ''; }
   function checked(f){ return form.find('[name="'+f+'"]').prop('checked'); }
   if(blank(field('first_name'))) return 'First name is required.';
