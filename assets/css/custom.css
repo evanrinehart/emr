@@ -1251,6 +1251,9 @@ p#privacy-policy {
   background-color: #D8DAE9;
   font-family: Roboto, sans-serif;
   padding-top: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 30px;
 }
 
 .room-comparison-section h3 {
@@ -1283,6 +1286,7 @@ p#privacy-policy {
 
 .room-comparison-section .listing ul {
   padding: 0;
+  margin: 0;
   display: table;
 }
 
@@ -1312,4 +1316,28 @@ p#privacy-policy {
 
 .room-comparison-section .listing.right {
   float: right;
+}
+
+@media screen and (max-width:1000px) {
+  .room-comparison-section .listing.left {
+    float: none;
+  }
+
+  .room-comparison-section .listing.right {
+    float: none;
+  }
+
+  .room-comparison-section .listing {
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  .room-comparison-section .listing ul {
+    width: 100%;
+  }
+
+  .room-comparison-section .listing li {
+    font-size: 14pt;
+  }
+  .
 }
