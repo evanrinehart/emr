@@ -1339,5 +1339,9 @@ p#privacy-policy {
   .room-comparison-section .listing li {
     font-size: 14pt;
   }
+
+  .room-comparison-section .listing li span {
+    padding: 20px;
+  }
   .
 }
