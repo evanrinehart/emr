@@ -613,7 +613,7 @@ function getCheckoutFormData(form){
     ticket_quantity: ticket_count,
     first_name: field('first_name'),
     last_name: field('last_name'),
-    email: field('email'),
+    email: field('email').trim(),
     phone: field('phone'),
     expecting_to_pay: field('total'),
     promo_code: field('promo_code'),
