@@ -690,7 +690,7 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
           logClientActionHistory('checkout-complete');
 
           if(isDefined('fbq')){
-            fbq('track', 'Purchase', {value: expecting_to_pay, currency: 'USD'});
+            //fbq('track', 'Purchase', {value: expecting_to_pay, currency: 'USD'});
           }
 
           setTimeout(
