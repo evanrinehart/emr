@@ -687,22 +687,7 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
         if(!response.error){
           var booking_number = response.booking_number;
 
-          /* new! response.ok == true is no more. now response.booking_number
-             contains the customers confirmed booking number from bookeo.
-             after getting this, and logging action history, and posting to
-             facebook, redirect to booking.emr.com/confirmation/<number> */
-
           logClientActionHistory('checkout-complete');
-/*
-          summonDialog(dialog(
-            'COMPLETE',
-            "Checkout Complete! Check your email for tickets and the receipt.",
-            function(){ 
-              HoldIdManager.invalidateHoldId('checkout-complete');
-              dismissAllModals();
-            }
-          ));
-*/
 
           if(isDefined('fbq')){
             fbq('track', 'Purchase', {value: expecting_to_pay, currency: 'USD'});
