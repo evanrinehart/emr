@@ -684,8 +684,16 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
       url: 'https://booking.escapemyroom.com/api/book',
       data: data,
       success: function(response){
-        if(response.ok){
+        if(!response.error){
+          var booking_number = response.booking_number;
+
+          /* new! response.ok == true is no more. now response.booking_number
+             contains the customers confirmed booking number from bookeo.
+             after getting this, and logging action history, and posting to
+             facebook, redirect to booking.emr.com/confirmation/<number> */
+
           logClientActionHistory('checkout-complete');
+/*
           summonDialog(dialog(
             'COMPLETE',
             "Checkout Complete! Check your email for tickets and the receipt.",
@@ -694,10 +702,18 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
               dismissAllModals();
             }
           ));
+*/
 
           if(isDefined('fbq')){
             fbq('track', 'Purchase', {value: expecting_to_pay, currency: 'USD'});
           }
+
+          setTimeout(
+            function(){
+              window.location.href = 'https://booking.escapemyroom.com/confirmation/'+booking_number;
+            },
+            2000
+          );
         }
         else {
           summonDialog(dialog(
