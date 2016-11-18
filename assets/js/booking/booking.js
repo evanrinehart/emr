@@ -909,7 +909,6 @@ function recalculatePrice(){
     promo_code: promo_code,
     callbacks: {
       ok: function(result){
-        console.log(result);
         //$('[name="previous-hold-id"]').val(result.hold_id);
         //previous_hold_id_kludge = result.hold_id;
         var total = result.total;
@@ -963,7 +962,6 @@ $(document).on('change', 'select[name="ticket_count"]', function(){
     promo_code: promo_code,
     callbacks: {
       ok: function(result){
-        console.log(result);
         //$('[name="previous-hold-id"]').val(result.hold_id);
         //previous_hold_id_kludge = result.hold_id;
         var total = result.total;
@@ -1010,7 +1008,6 @@ $('#mc-embedded-subscribe-form').on('submit', function(e){
 
 function updateCardDisable(){
   var total = parseFloat($('.checkout-panel [name="total"]').val());
-  console.log(total);
   if(total == 0){
     $('.checkout-panel .cc_field input').attr('disabled', 'disabled');
     $('.checkout-panel .cc_field input').val('');
