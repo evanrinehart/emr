@@ -175,7 +175,7 @@ h1 {
 }
 
 #top-menu-container .return-link {
-  top: 4px;
+  top: 0px;
 }
 
 .giftcards {
@@ -199,7 +199,7 @@ h1 {
 }
 
 .giftcards h1 {
-  font-size: 22pt;
+  font-size: 20pt;
 }
 
 .giftcards #quoted-price-section {
