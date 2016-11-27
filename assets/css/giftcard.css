@@ -173,9 +173,17 @@ h1 {
   font-size: 9pt;
 }
 
+#top-menu-container .return-link {
+  top: 4px;
+}
+
 .giftcards {
   margin-top: 0;
   width: 320px;
+}
+
+.giftcards hr {
+  width: 300px;
 }
 
 .giftcards .field {
