@@ -81,8 +81,8 @@ function initiateGetQuote(ticketQuantity){
     data: {ticket_quantity: ticketQuantity},
     success: function(data, textStatus, jqXHR){
       globalQuoteTask = null;
-      globalQuote = data.price;
-      updateDisplayQuote(data.price);
+      globalQuote = data.total;
+      updateDisplayQuote(data.total);
       enableSubmitButton();
       //console.log(data, textStatus, jqXHR);
     },
@@ -128,7 +128,7 @@ $(document).on('change', '[name="ticket_quantity"]', function(e){
 
 $(document).on('click', '#javascripted-submit-button input', function(e){
   e.preventDefault();
-  if(globalQuote === null){
+  if(globalQuote === null || globalQuote === undefined){
     throw new Error('bug, trying to submit without a quote');
   }
 
