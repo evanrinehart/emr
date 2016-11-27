@@ -12,17 +12,16 @@ h1 {
 
 #top-menu-container {
   color: #FCFAE2;
-  padding: 10px;
   padding-left: 15px;
   background-color: #323133;
-  width: 100%;
+  height: 45px;
 }
 
 #top-menu-container .return-link {
-  float: right;
+  position: absolute;
+  top: 6px;
+  right: 15px;
   font-size: 24pt;
-  margin-top: -5px;
-  margin-right: 20px;
 }
 
 #top-menu-container .title {
@@ -30,6 +29,11 @@ h1 {
   font-weight: 400;
   font-size: 15pt;
   margin-right: 10px;
+  margin-top: 10px;
+}
+
+#top-menu-container .banner {
+  padding-top: 9px;
 }
 
 #top-menu-container a {
@@ -147,4 +151,62 @@ h1 {
 
 #stripe-form {
   display: none;
+}
+
+
+/* magic mobile mode */
+@media only screen and (max-width:500px) {
+
+#top-menu-container .banner {
+  padding-top: 7px;
+}
+
+#top-menu-container .title {
+  display: block;
+  margin: 0;
+  font-size: 11pt;
+}
+
+#top-menu-container .city {
+  display: block;
+  margin: 0;
+  font-size: 9pt;
+}
+
+.giftcards {
+  margin-top: 0;
+  width: 320px;
+}
+
+.giftcards .field {
+  margin-bottom: 10px;
+}
+
+.giftcards label {
+  display: block;
+  width: auto;
+}
+
+.giftcards h1 {
+  font-size: 22pt;
+}
+
+.giftcards #quoted-price-section {
+  width: auto;
+  height: 50px;
+}
+
+.giftcards #quoted-price-section label {
+  margin-bottom: 3px;
+}
+
+.giftcards img.loading {
+  float: none;
+}
+
+.giftcards .quoted-price {
+  float: none;
+}
+
+
 }
