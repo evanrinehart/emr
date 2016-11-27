@@ -1,6 +1,7 @@
 body {
   background-color: #101010;
   margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
 
@@ -178,12 +179,14 @@ h1 {
 }
 
 .giftcards {
+  margin: 0;
   margin-top: 0;
-  width: 320px;
+  width: 100%;
+  display: table-cell;
 }
 
 .giftcards hr {
-  width: 300px;
+  width: 100%;
 }
 
 .giftcards .field {
@@ -201,7 +204,7 @@ h1 {
 
 .giftcards #quoted-price-section {
   width: auto;
-  height: 50px;
+  height: 36px;
 }
 
 .giftcards #quoted-price-section label {
