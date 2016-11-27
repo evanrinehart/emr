@@ -1,0 +1,126 @@
+body {
+  background-color: #101010;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 32pt;
+  font-family: Merriweather;
+  margin: 0;
+}
+
+.giftcards .blurb {
+  font-style: italic;
+  font-size: 12pt;
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+.menu-banner.large .title {
+  margin-right: 10px;
+}
+
+#top-menu-container {
+  margin: 0;
+  padding-top: 10px;
+  height: 32px;
+}
+
+.giftcards {
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+  color: #ebefe3;
+  margin: auto;
+  width: 460px;
+  margin-top: 90px;
+  margin-bottom: 60px;
+  padding: 30px;
+  background-color: #1e1f1f;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px black;
+}
+
+.giftcards form {
+}
+
+.giftcards label {
+  display: inline-block;
+  width: 200px;
+}
+
+.giftcards hr {
+  border: 0;
+  border-bottom: 1px solid gray;
+  margin: 0;
+  width: 420px;
+}
+
+.giftcards .wide-input {
+  width: 209px;
+  background-color: #f0f0f0;
+}
+
+.giftcards select[name="ticket_quantity"] {
+  width: 215px;
+}
+
+.giftcards [name="card_month"] {
+  width: 150px;
+  margin-right: 4px;
+}
+
+.giftcards [name="card_year"] {
+  width: 50px;
+}
+
+.giftcards .section {
+  margin: 15px 0;
+}
+
+.giftcards .field {
+  margin-bottom: 3px;
+}
+
+.giftcards .section-header {
+  margin-bottom: 6px;
+  font-size: 18pt;
+}
+
+.giftcards #quoted-price-section {
+  width: 420px;
+}
+
+.giftcards img.loading {
+  float: right;
+}
+
+.giftcards .quoted-price {
+  float: right;
+  display: none;
+}
+
+#javascripted-submit-button {
+  display: none;
+  height: 25px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#javascripted-submit-button img {
+  display: none;
+}
+
+#javascripted-submit-button input {
+  font-size: 12pt;
+  color: black;
+  width: 200px;
+}
+
+#javascripted-submit-button input[disabled] {
+  color: #505050;
+}
+
+#stripe-form {
+  display: none;
+}
