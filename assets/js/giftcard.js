@@ -104,9 +104,13 @@ function validateForm(){
   pr = pr || notBlank('Purchaser first name', field('purchaser_first_name'));
   pr = pr || notBlank('Purchaser last name', field('purchaser_last_name'));
   pr = pr || notBlank('Purchaser email', field('purchaser_email'));
-  if(!field('purchaser_email').match(emailPattern)) return 'The purchaser email address looks invalid.';
+  if(!field('purchaser_email').match(emailPattern)){
+    pr = pr || 'The purchaser email address looks invalid.';
+  }
   if(field('recipient_email').trim() != ''){
-    if(!field('recipient_email').match(emailPattern)) return 'The recipient email address looks invalid.';
+    if(!field('recipient_email').match(emailPattern)){
+      pr = pr || 'The recipient email address looks invalid.';
+    }
   }
   pr = pr || notBlank('Card number', field('card_number'));
   pr = pr || notBlank('Card CVC', field('card_cvc'));
