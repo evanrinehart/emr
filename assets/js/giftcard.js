@@ -2,10 +2,10 @@ var globalQuoteTask = null;
 var globalQuote = null;
 
 //emr test account
-var stripePubkey = 'pk_test_ersJ7dsklDhpa4dOW6Wtw1Ky';
+//var stripePubkey = 'pk_test_ersJ7dsklDhpa4dOW6Wtw1Ky';
 
 //emr live account
-//var stripePubkey = 'pk_live_JTkZUM3uXH07zDBY5DYOaFtW';
+var stripePubkey = 'pk_live_JTkZUM3uXH07zDBY5DYOaFtW';
 Stripe.setPublishableKey(stripePubkey);
 
 function clearDisplayQuote(){
