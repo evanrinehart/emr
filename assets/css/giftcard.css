@@ -10,21 +10,43 @@ h1 {
   margin: 0;
 }
 
+#top-menu-container {
+  color: #FCFAE2;
+  padding: 10px;
+  padding-left: 15px;
+  background-color: #323133;
+}
+
+#top-menu-container .return-link {
+  float: right;
+  font-size: 24pt;
+  margin-top: -5px;
+}
+
+#top-menu-container .title {
+  font-family: Merriweather, Georgia, serif;
+  font-weight: 400;
+  font-size: 15pt;
+  margin-right: 10px;
+}
+
+#top-menu-container a {
+  text-decoration: none;
+  color: #FCFAE2;
+}
+
+#top-menu-container .city {
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  font-size: 14pt;
+}
+
 .giftcards .blurb {
   font-style: italic;
   font-size: 12pt;
   font-family: sans-serif;
   line-height: 1.4;
-}
-
-.menu-banner.large .title {
-  margin-right: 10px;
-}
-
-#top-menu-container {
-  margin: 0;
-  padding-top: 10px;
-  height: 32px;
 }
 
 .giftcards {
