@@ -3,15 +3,15 @@ body {
 }
 
 a.purchase-gift-card-link {
-  color: white;
+  color: #e8e8e8;
   font-family: sans-serif;
-  font-size: 11pt;
+  font-size: 15pt;
   cursor: pointer;
   font-weight: bold;
 }
 
 .space-below {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .container-fluid {
