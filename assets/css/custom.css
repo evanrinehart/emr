@@ -173,11 +173,12 @@ a.purchase-gift-card-link {
   left: 0;
   right: 0;
   top: 0;
-  height: 42px;
+  height: 45px;
   /*text-align: center;*/
   z-index: 5;
   padding: 0;
-  padding-top: 0.2em;
+  padding-top: 6px;
+  padding-left: 15px;
 }
 
 #top-menu-container a {
@@ -187,7 +188,6 @@ a.purchase-gift-card-link {
 
 #top-menu-container .menu-banner {
   position: fixed;
-  left: 1em;
 }
 
 .menu-banner.small {
@@ -205,7 +205,7 @@ a.purchase-gift-card-link {
 
 .menu-banner.large .title {
   font-size: 15pt;
-  margin-right: 1rem;
+  margin-right: 10px;
 }
 
 .menu-banner.large .city {
