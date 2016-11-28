@@ -206,6 +206,7 @@ a.purchase-gift-card-link {
 .menu-banner.large .title {
   font-size: 15pt;
   margin-right: 10px;
+  letter-spacing: normal;
 }
 
 .menu-banner.large .city {
