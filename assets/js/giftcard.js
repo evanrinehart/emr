@@ -166,7 +166,13 @@ $(document).on('click', '#javascripted-submit-button input', function(e){
         error: function(jqXHR, textStatus, errorThrown){
           console.log(jqXHR, textStatus, errorThrown);
           enableSubmitButton();
-          nicePopup("Sorry, the purchase failed. Please try again later.");
+          if(jqXHR.statusCode == 400){
+            var response = JSON.parse(jqXHR.responseText);
+            nicePopup(response.error);
+          }
+          else{
+            nicePopup("Sorry, the purchase failed. Please contact us for assistance.");
+          }
         }
       });
     },
