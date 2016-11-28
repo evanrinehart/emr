@@ -2,6 +2,18 @@ body {
     overflow: scroll;
 }
 
+a.purchase-gift-card-link {
+  color: white;
+  font-family: sans-serif;
+  font-size: 11pt;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.space-below {
+  margin-bottom: 10px;
+}
+
 .container-fluid {
     padding-left: 0;
     padding-right: 0;
@@ -148,6 +160,7 @@ body {
 .buy-tickets-button:hover {
   color: #FCFAE2;
   background-color: #363966;
+  text-decoration: none;
 }
 
 
@@ -463,10 +476,6 @@ h2 {
 }
 a {
     color: #263363;
-}
-a:focus, a:hover {
-    color: #6c0c0c;
-    text-decoration: none!important;
 }
 
 .btn-lg {
