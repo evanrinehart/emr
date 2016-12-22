@@ -30,25 +30,26 @@
 
     <link rel="canonical" href="index.html">
 
-    <!-- Facebook Pixel Code -->
 
-    <script>
-/*
+<!-- Facebook Pixel Code -->
+<script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','//connect.facebook.net/en_US/fbevents.js');
-*/
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1016142188416147', {
+//em: 'insert_email_variable,'
+});
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1016142188416147&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
 
-//fbq('init', '1016142188416147');
-//fbq('track', 'PageView');
-    </script>
-<!--
-    <noscript>
-<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1016142188416147&ev=PageView&noscript=1">
-    </noscript>
--->
+
 </head>
 
 <body>
@@ -60,6 +61,19 @@ document,'script','//connect.facebook.net/en_US/fbevents.js');
   </div>
   <div class="return-link">
     <a class="link" href="/">✕</a>
+  </div>
+</div>
+
+<div class="carousel">
+  <div class="images">
+    <img data-index="1" src="local-jam-1.jpg">
+    <img data-index="2" src="local-jam-2.jpg">
+    <img data-index="3" src="local-jam-3.jpg">
+  </div>
+  <div class="indicators">
+    <span data-index="1" class="indicator">O</span>
+    <span data-index="2" class="indicator">O</span>
+    <span data-index="3" class="indicator">O</span>
   </div>
 </div>
 
@@ -194,6 +208,7 @@ the optional recipient information.
 <script src="public/jquery.js"></script>
 <script src="https://js.stripe.com/v2/"></script>
 <script src="assets/js/giftcard.js"></script>
+<script src="assets/js/carousel.js"></script>
 
 <form id="stripe-form">
   <input type="hidden" data-stripe="number">

@@ -8,6 +8,16 @@ var globalQuote = null;
 var stripePubkey = 'pk_live_JTkZUM3uXH07zDBY5DYOaFtW';
 Stripe.setPublishableKey(stripePubkey);
 
+function isDefined(name){
+  try{
+    eval(name);
+    return true;
+  }
+  catch(x){ 
+    return false;
+  }
+}
+
 function clearDisplayQuote(){
   $('#quoted-price-section img').hide();
   $('#quoted-price-section .quoted-price').hide();
@@ -146,6 +156,7 @@ $(document).on('click', '#javascripted-submit-button input', function(e){
   makeSubmitButtonSpinny();
   submitCardInfoToStripe({
     success: function(stripeToken){
+      total_usd = parseFloat(globalQuote);
       $.ajax({
         url: 'https://booking.escapemyroom.com/gift_codes/purchase',
         method: 'post',
@@ -161,6 +172,11 @@ $(document).on('click', '#javascripted-submit-button input', function(e){
           stripe_token:         stripeToken
         },
         success: function(data, textStatus, jqXHR){
+          if(isDefined('fbq')){
+            fbq('track', 'GiftCardPurchase', {
+              total_usd: total_usd
+            });
+          }
           window.location = data.location;
         },
         error: function(jqXHR, textStatus, errorThrown){

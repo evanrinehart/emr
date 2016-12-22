@@ -314,7 +314,8 @@ function checkoutPanel(data){
               div({class: 'disclaimer-checkbox'},input({type: 'checkbox', id:"disclaim2", name: 'disclaim2'})),
               div({class: 'disclaimer'},
                 label({for: "disclaim2"},
-"I understand that if I bring children under the age of 12, all 8 tickets must be reserved by members of my group."
+//"I understand that if I bring children under the age of 12, all 8 tickets must be reserved by members of my group."
+"I understand that children under the age of 16 will not be allowed admission unless supervised by a parent or guardian. If bringing children under the age of 12, all 8 tickets must be purchased by members of my group."
                 )
               )
             )
