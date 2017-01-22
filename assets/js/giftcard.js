@@ -177,6 +177,20 @@ $(document).on('click', '#javascripted-submit-button input', function(e){
               total_usd: total_usd
             });
           }
+/*
+          try{
+            AnalyticsEcommerce.trackGiftCardPurchase({
+              name: field('purchaser_first_name')+' '+field('purchaser_last_name'),
+              datetime: (new Date()),
+              quantity: field('ticket_quantity'),
+              total: globalQuote
+            });
+          }
+          catch(error){
+            console.error(error);
+//            postDebugInfoNow('analytics-ecommerce-tracking-failed');
+          }
+*/
           window.location = data.location;
         },
         error: function(jqXHR, textStatus, errorThrown){

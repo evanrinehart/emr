@@ -697,6 +697,21 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
             });
           }
 
+/*
+          try{
+            AnalyticsEcommerce.trackTicketPurchase({
+              name: data.first_name + ' ' + data.last_name,
+              datetime: (new Date()),
+              quantity: data.ticket_quantity,
+              total: data.expecting_to_pay
+            });
+          }
+          catch(error){
+            console.error(error);
+            postDebugInfoNow('analytics-ecommerce-tracking-failed');
+          }
+*/
+      
           setTimeout(
             function(){
               window.location.href = 'https://booking.escapemyroom.com/confirmation/'+booking_number;
