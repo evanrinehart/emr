@@ -697,7 +697,6 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
             });
           }
 
-/*
           try{
             AnalyticsEcommerce.trackTicketPurchase({
               name: data.first_name + ' ' + data.last_name,
@@ -710,7 +709,6 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
             console.error(error);
             postDebugInfoNow('analytics-ecommerce-tracking-failed');
           }
-*/
       
           setTimeout(
             function(){
