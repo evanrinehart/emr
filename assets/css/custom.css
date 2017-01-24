@@ -684,23 +684,23 @@ section.module.parallax-sign-up {
 }
 */
 
-#how-it-works {
+#how-to-play {
   text-align: center;
-  background-color: #FFFCE4;
+  background-color: #5F567C;
   padding: 20px 80px;
 }
 
-#how-it-works .blurb {
+#how-to-play .blurb {
   padding: 10px 20px;
   background-color: #C3CAE1;
   margin-bottom: 40px;
-  font-size: 12pt;
+  font-size: 9pt;
   font-weight: 100;
   line-height: 2.0;
   text-align: left;
 }
 
-#how-it-works .arrow-up {
+#how-to-play .arrow-up {
   position: relative;
   margin: 0;
   width: 0;
@@ -712,21 +712,23 @@ section.module.parallax-sign-up {
   margin-left: -22px;
 }
 
-#how-it-works h2 {
-  font-size: 32pt;
+#how-to-play h2 {
   font-family: Merriweather, Georgia, serif;
   letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #D5C87D;
+  font-size: 42pt;
 }
 
-#how-it-works table img {
+#how-to-play table img {
 }
 
-#how-it-works .tip {
+#how-to-play .tip {
   font-size: 14pt;
   font-style: italic;
 }
 
-#how-it-works .nav-button {
+#how-to-play .nav-button {
   margin: 0;
   margin-bottom: 10px;
 }
@@ -748,51 +750,53 @@ section.module.parallax-sign-up {
   text-transform: uppercase;
 }
 
-#how-it-works .heading {
+#how-to-play .heading {
   font-family: Roboto, sans-serif;
   font-size: 16pt;
   margin-bottom: 10px;
+  white-space: nowrap;
 }
 
-#how-it-works .icon {
+#how-to-play .icon {
   margin-bottom: 30px;
 }
 
-#how-it-works .step {
-  width: 50%;
-  float: left;
+#how-to-play .step {
+  width: 220px;
   padding: 15px;
+  display: inline-block;
+  vertical-align: top;
 }
 
-#how-it-works .clear {
+#how-to-play .clear {
   clear: both;
 }
 
 @media screen and (max-width:768px) {
-  #how-it-works {
+  #how-to-play {
     padding: 20px 10px;
   }
 
-  #how-it-works h2 {
+  #how-to-play h2 {
     font-size: 24pt;
   }
 
-  #how-it-works .step {
+  #how-to-play .step {
     width: 100%;
     padding: 0;
   }
 
-  #how-it-works .icon {
+  #how-to-play .icon {
     margin-bottom: 15px;
   }
 }
 
 @media screen and (min-width: 1600px) {
-  #how-it-works .step {
+  #how-to-play .step {
     width: 20%;
   }
 
-  #how-it-works .clear {
+  #how-to-play .clear {
     clear: none;
   }
 }
@@ -1238,8 +1242,8 @@ section.module.parallax-sign-up {
 }
 
 
-#how-it-works { position: relative; }
-#how-it-works-nav {
+#how-to-play { position: relative; }
+#how-to-play-nav {
   position: absolute;
   top: -40px;
 }
