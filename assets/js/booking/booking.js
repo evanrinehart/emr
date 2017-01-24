@@ -693,7 +693,9 @@ $(document).on('click', '.checkout-panel .checkout-button', function(e){
           if(isDefined('fbq')){
             fbq('track', 'Purchase', {
               value: field('total'),
-              currency: 'USD'
+              currency: 'USD',
+              content_name: 'Tickets',
+              num_items: data.ticket_quantity
             });
           }
 

@@ -173,8 +173,11 @@ $(document).on('click', '#javascripted-submit-button input', function(e){
         },
         success: function(data, textStatus, jqXHR){
           if(isDefined('fbq')){
-            fbq('track', 'GiftCardPurchase', {
-              total_usd: total_usd
+            fbq('track', 'Purchase', {
+              value: total_usd,
+              currency: 'USD',
+              content_name: 'Gift Card',
+              num_items: field('ticket_quantity')
             });
           }
 
