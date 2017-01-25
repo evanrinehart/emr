@@ -1207,21 +1207,23 @@ section.module.parallax-sign-up {
 }
 
 #footer {
-  background-color: #262951;
+  background-color: #3D2000;
   color: #FFFCE4;
-  font-size: 12pt;
+  font-size: 15pt;
   font-family: Roboto, sans-serif;
-  font-weight: 400;
+  font-weight: bold;
   padding: 30px 70px;
+  line-height:1;
 }
 
 #footer p {
   margin: 0;
 }
 
-#footer a {
-  text-decoration: none;
+#footer .email-link {
   color: #FFFCE4;
+  text-decoration: none;
+
 }
 
 
@@ -1303,17 +1305,19 @@ section.module.parallax-sign-up {
 }
 
 
-p#privacy-policy {
+.privacy-policy-link {
   margin-top: 20px;
 }
 
-#privacy-policy a {
+.privacy-policy-link {
   text-decoration: underline;
-  font-size: smaller;
-  text-transform: lowercase;
   color: #bcba56;
 }
 
+.privacy-policy-link:hover {
+  text-decoration: underline;
+  color: #8c8a26;
+}
 
 .room-comparison-section {
   background-color: #D8DAE9;
