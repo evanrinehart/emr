@@ -802,43 +802,73 @@ section.module.parallax-sign-up {
 }
 
 #rooms {
-  background-image: url(../img/mansion-2.jpg);
-  background-size: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-/*  background-color: black;*/
-  background-color: #404040;
-  background-blend-mode: overlay;
-  padding: 40px 20px 105px 20px;
+  padding: 0;
   color: #404040;
+  position: relative;
+  overflow: hidden;
+  height: 861px;
+  background-image: url("../img/bg-rooms.jpg");
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1447px) {
+
   #rooms {
-    background-size: auto;
+    background-size: auto 100%;
   }
 }
+
+
+#rooms img {width:100%;
+}
+
 
 #rooms h2 {
   font-size: 32pt;
   font-family: Merriweather, Georgia, serif;
   letter-spacing: 1px;
   margin: 0;
-  color: #404040;
-  text-align: left;
+  color: #D5C87D;
+  text-transform: uppercase;
+
 }
 
 #rooms p {
   line-height: 2.0;
-  margin-bottom: 1em;
+  font-size: 10pt;
+  margin: 0;
 }
 
 #rooms .copy {
-  width: 50%;
-  background-color: #D9DAE8;
-  opacity: 0.9;
-  padding: 20px 40px;
-  margin: auto;
+  width: 400px;
+  background-color: #6C3B4A;
+  position: absolute;
+  top: 275px;
+  left: 25%;
+  text-align: center;
+  color: #D5C87D;
+  padding: 47px 69px 22px 69px;
+}
+
+
+#rooms hr {
+  border-color: #D5C87D;
+  width: 170px;
+
+}
+
+#rooms hr.line-one {
+    margin-top: 0;
+    margin-bottom: 6px
+
+}
+
+#rooms hr.line-two {
+    margin-top: 6px;
+    margin-bottom: 29px
+
 }
 
 @media screen and (max-width:768px) {
