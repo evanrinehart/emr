@@ -502,6 +502,10 @@ h2 {
 a {
     color: #263363;
 }
+h6 {font-size:24pt;
+    font-weight:bold;
+    text-align:center;
+}
 
 .btn-lg {
     color: #d3dbf7;
@@ -691,14 +695,15 @@ section.module.parallax-sign-up {
 }
 
 #how-to-play .blurb {
-  padding: 10px 20px;
+  padding: 10px 13px;
   background-color: #FFFCDF;
   margin-bottom: 40px;
-  font-size: 9pt;
-  font-weight: 100;
+  font-size: 10pt;
+  font-weight: normal;
   line-height: 2.0;
   text-align: left;
-  height: 257px;
+  height: 273px;
+  font-family:sans-serif;
 }
 
 
@@ -718,6 +723,7 @@ section.module.parallax-sign-up {
   padding-top: 52px;
   color: #CBCDCE;
   letter-spacing:1pt;
+  font-family:sans-serif;
 }
 
 #how-to-play .nav-button {
@@ -788,9 +794,8 @@ section.module.parallax-sign-up {
   }
 @media screen and (min-width: 1600px) {
   #how-to-play .step {
-    width: 20%;
-    background-color:#FFFCDF;
-}
+   background-color:#FFFCDF;
+  }
 
   #how-to-play .clear {
     clear: none;
@@ -1317,23 +1322,113 @@ section.module.parallax-sign-up {
   color: #8c8a26;
 }
 
+.vertical-divider{
+  clear: both;
+  position: relative;
+}
+
+.vertical-divider p {
+  line-height:1.2;
+}
+
+.vertical-divider:after {
+  clear: both;
+  content: " ";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+
+}
+
+
+
+/* Very simple grid for example */
+.container { position: relative; width: 960px; margin: 20px auto; padding: 0; }
+
+.container .column, .container .columns { 
+  float: left; 
+  display: inline; 
+  margin-left: 10px; 
+  margin-right: 10px; 
+  border-right: 2px solid black;
+}
+
+.container .one-third.column { 
+  width: 300px; 
+  text-align:center;
+  padding-right:29px;
+  font-size:26px;
+  
+  }
+
+.container .two-thirds.column { 
+  width: 300px;
+  text-align:center; 
+  border-right:0px; 
+  padding-right:29px;
+  font-size:26px;
+  line-height:1;
+}
+
+.container .one-third.column p.para {
+  height: 18pt;
+}
+.container .two-thirds.column p.para {
+  height: 18pt;
+}
+
+.container .one-third.column p.para-two {
+  height: 57pt;
+}
+.container .two-thirds.column p.para-two {
+  height: 57pt;
+}
+
+.container .one-third.column p.para-three {
+  height: 21pt;
+}
+.container .two-thirds.column p.para-three {
+  height: 21pt;
+}
+
+.container .one-third.column p.para-four {
+  height: 53pt;
+}
+.container .two-thirds.column p.para-four {
+  height: 53pt;
+}
+
+.container .two-thirds.column p.para-five {
+  height: 52pt;
+  margin-top: 54pt;
+}
+
+.container .two-thirds.column p.para-six {
+  height: 78pt;
+}
+
 .room-comparison-section {
-  background-color: #D8DAE9;
+  background-color: #E1E0ED;
   font-family: Roboto, sans-serif;
   padding-top: 30px;
-  padding-left: 40px;
+  padding-left: 133px;
   padding-right: 40px;
-  padding-bottom: 30px;
+  padding-bottom: 100px;
 }
 
 .room-comparison-section h3 {
   color: #404040;
   font-variant: small-caps;
-  letter-spacing: 1px;
+  letter-spacing: 4px;
+  font-size:32pt;
 }
 
 .room-comparison-section p.blurb {
-  font-weight: 300;
+  font-weight: 200;
+  font-size:30px;
+  width:629px;
 }
 
 .room-comparison-section .squeeze {
@@ -1353,7 +1448,7 @@ section.module.parallax-sign-up {
   border-radius: 10px 10px 0 0;
   font-size: 16pt;
 }
-
+paracolumn
 .room-comparison-section .listing ul {
   padding: 0;
   margin: 0;
@@ -1378,40 +1473,4 @@ section.module.parallax-sign-up {
 
 .room-comparison-section .listing li span.last {
   border-radius: 0 0 10px 10px;
-}
-
-.room-comparison-section .listing.left {
-  float: left;
-}
-
-.room-comparison-section .listing.right {
-  float: right;
-}
-
-@media screen and (max-width:1000px) {
-  .room-comparison-section .listing.left {
-    float: none;
-  }
-
-  .room-comparison-section .listing.right {
-    float: none;
-  }
-
-  .room-comparison-section .listing {
-    width: auto;
-    margin-bottom: 20px;
-  }
-
-  .room-comparison-section .listing ul {
-    width: 100%;
-  }
-
-  .room-comparison-section .listing li {
-    font-size: 14pt;
-  }
-
-  .room-comparison-section .listing li span {
-    padding: 20px;
-  }
-  .
 }
