@@ -194,21 +194,10 @@ a.purchase-gift-card-link {
   position: fixed;
 }
 
-.menu-banner.small {
-  line-height: 14px;
-  margin-top: 3px;
-}
-
 .menu-banner.large {
   margin-top:5px;
 }
-.menu-banner.small .title {
-  font-size: 10pt;
-}
 
-.menu-banner.small .city {
-  font-size: 8pt;
-}
 
 .menu-banner.large .title {
   font-size: 15pt;
@@ -307,9 +296,6 @@ nav ol, nav ul {
   #top-menu {
     display: inline;
   }
-  .menu-banner.small {
-    display: none;
-  }
   .menu-banner.large {
     display: inline;
   }
@@ -333,12 +319,12 @@ nav ol, nav ul {
   }
   #top-menu.open {
     opacity: 1.0;
-    top: 42px;
+    top: 75px;
   }
   #top-menu li {
     display: block;
     list-style-type: square;
-    background-color: #424143;
+    background-color: #8f5300;
     margin: 4px 0;
     padding: 0;
     font-size: 14pt;
@@ -347,12 +333,6 @@ nav ol, nav ul {
     display: block;
     width: 100%;
     padding: 5px 0;
-  }
-  .menu-banner.small {
-    display: inline;
-  }
-  .menu-banner.large {
-    display: none;
   }
 }
 
@@ -586,10 +566,10 @@ h2, h3, h4 {
 
 #mobile-hamburger {
   position: fixed;
-  top: 9px;
-  right: 9px;
+  top:14px;
+  right: 11px;
   cursor: pointer;
-  width: 35px;
+  width: 51px;
   height: 35px;
 }
 
@@ -597,9 +577,9 @@ h2, h3, h4 {
   position: absolute;
   display: block;
   left: 0%;
-  height: 5px;
+  height: 9px;
   width: 100%;
-  background-color: #FCFAE2;
+  background-color: #D5C87D;
   opacity: 1;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -616,19 +596,20 @@ h2, h3, h4 {
 }
 
 #mobile-hamburger span:nth-child(2){
-  top: 10px;
+  top: 19px;
+
 }
 
 #mobile-hamburger span:nth-child(3){
-  top: 20px;
+  top: 38px;
 }
 
 #mobile-hamburger span:nth-child(4){
-  top: 10px;
+  top: 19px;
 }
 
 #mobile-hamburger span:nth-child(5){
-  top: 10px;
+  top: 19px;
 }
 
 #mobile-hamburger.open span:nth-child(1){
@@ -1280,31 +1261,25 @@ section.module.parallax-sign-up {
 #how-to-play { position: relative; }
 #how-to-play-nav {
   position: absolute;
-  top: -40px;
+  top: -75px;
 }
 
 #rooms { position: relative; }
 #rooms-nav {
   position: absolute;
-  top: -40px;
-}
-
-#tickets { position: relative; }
-#tickets-nav {
-  position: absolute;
-  top: -40px;
+  top: -75px;
 }
 
 #location { position: relative; }
 #location-nav {
   position: absolute;
-  top: 200px;
+  top: 180px;
 }
 
 #newsletter { position: relative; }
 #newsletter-nav {
   position: absolute;
-  top: -40px;
+  top: -75px;
 }
 
 
