@@ -180,11 +180,6 @@ a.purchase-gift-card-link {
   padding-left: 15px;
 }
 
-#top-menu-container .menu-banner p {
-  margin:0;
-}
-
-
 #top-menu-container a {
   text-decoration: none;
   color: #FCFAE2;
@@ -195,7 +190,7 @@ a.purchase-gift-card-link {
 }
 
 .menu-banner.large {
-  margin-top:5px;
+  margin-top:9px;
 }
 
 
@@ -218,6 +213,10 @@ a.purchase-gift-card-link {
   font-family: Roboto, sans-serif;
   font-weight: 100;
   letter-spacing: 1.5px;
+}
+
+#top-menu-container .title-wrapper {
+  margin-bottom:-5px;
 }
 
 #top-menu {
