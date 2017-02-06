@@ -57,6 +57,8 @@ a.purchase-gift-card-link {
     border-color: #610b0b;
     color: #d3dbf7;
 }
+
+
 @media only screen and (min-width:992px) {
   .main-nav {
     padding: 0;
@@ -99,6 +101,31 @@ a.purchase-gift-card-link {
   letter-spacing: 1px;
   font-style: italic;
   margin-bottom: 20px;
+}
+
+.title-page-title {
+    font-family: Merriweather, Georgia, serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #D5C87D;
+    font-size: 42pt;
+    margin-bottom: -4px;
+}
+
+.title-page-city {
+    text-transform: uppercase;
+    color: ;
+    font-size: 20pt;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    letter-spacing: 2.0px;
+    color: #CFCECE;
+    margin-bottom: 18px;
+}
+custom.css:222
+.menu-banner.large .city {
+    font-size: 14pt;
+
 }
 
 .page-title {
@@ -157,12 +184,31 @@ a.purchase-gift-card-link {
 */
 }
 
+.buy-tickets-button-two {
+  color: #FCFAE2;
+  background-color: #901e21;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 0.6em 1.8em;
+  text-decoration: none;
+  font-size:11pt;
+  border-radius:4pt;
+  border: 2px solid gray;
+}
+
 .buy-tickets-button:hover {
   color: #FCFAE2;
   background-color: #363966;
   text-decoration: none;
 }
 
+.buy-tickets-button-two:hover {
+  color: #FCFAE2;
+  background-color: #363966;
+  text-decoration: none;
+  font-size:11pt;
+}
 
 #top-menu-container {
   display: block;
