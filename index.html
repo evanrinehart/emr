@@ -17,6 +17,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/screen.css?v=304d580990" />
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
     <link rel="stylesheet" type="text/css" href="assets/css/booking.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/flexslider.css">
+
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,700italic,300italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Droid+Sans:400,700" rel="stylesheet" type="text/css" />
@@ -208,11 +210,11 @@ into storage.
           </li>
           <li>
             <i class="icon price-per-person-icon"></i> $30/Person
-            <i class="icon exit-percentage-icon"></i> 32% Escape Rate
+            <i class="icon exit-percentage-icon"></i> 37% Escape Rate
           </li>
         </ul> 
       </div>
-      <div class="right-side">
+      <div class="mgs-right">
         <div class="review-quote">
           <p class="quote-text"> 
             <span class="jumbo">“</span>GREAT experience! The storyline is creative, and the decor is hauntingly
@@ -227,13 +229,25 @@ into storage.
       <div class="clear-both"></div>
 
     <p class="extra-button">
+    <c
       <a href="#tickets-nav" data-room="41552J7MHUA150CDE4C67F" class="activate-booking buy-tickets-button">BUY TICKETS</a>
     </p>
 
-    <div class="picture">
-      <img src="assets/img/statuette.jpg">
+    <div class="carousel">
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <img src="assets/img/EMR_rooms-mardi-gras-study-1.jpg">
+          </li>
+          <li>
+            <img src="assets/img/EMR_rooms-mardi-gras-study-2.jpg">
+          </li>
+          <li>
+            <img src="assets/img/EMR_rooms-mardi-gras-study-3.jpg">
+          </li>
+        </ul>
+      </div>
     </div>
-
     <div class="blurb">
    <p>
 Travel back in time to the scene of
@@ -248,7 +262,7 @@ the answers be lost forever?
       </p>
     </div>
     <p class="normal-button">
-        <a href="#tickets-nav" data-room="41552J7MHUA150CDE4C67F" class="activate-booking buy-tickets-button">BUY TICKETS</a>
+        <a href="#tickets-nav" data-room="41552J7MHUA150CDE4C67F" class="big activate-booking buy-tickets-button">BUY TICKETS</a>
       </p>
     <p class="extra-button">
       <a href="#tickets-nav" data-room="41552J7MHUA150CDE4C67F" class="activate-booking buy-tickets-button">BUY TICKETS</a>
@@ -331,10 +345,10 @@ which connects all of our escape rooms, but they don’t need to be played in
 order to understand it.
     </p>
 
-    <div class="container vertical-divider">
+    <div class="vertical-divider">
  
 
-<div class="container vertical-divider">
+<div class="vertical-divider">
   <div class="column one-third">
     <h6>Mardi Gras Study</h6>
     <p class=para>Opened June 2015</p>
@@ -800,6 +814,7 @@ interested in and the total party size.
   <script type="text/javascript" src="assets/js/how-it-works.js"></script>
   <script type="text/javascript" src="assets/js/isMobile.js"></script>
   <script type="text/javascript" src="assets/js/sayswho.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.flexslider.js"></script>
 
   <script src="assets/js/booking/html.js"></script>
   <script src="assets/js/booking/lib.js"></script>
@@ -832,6 +847,10 @@ interested in and the total party size.
     $('#tips-faq').on('show.bs.modal', function(){
       var screenH = $(window).height();
       $('#tips-faq .modal-body').height(screenH*0.666);
+    });
+
+    $('.flexslider').flexslider({
+      animation: "slide"
     });
   </script>
 
