@@ -882,7 +882,7 @@ section.module.parallax-sign-up {
 
 #rooms hr {
   border-color: #D5C87D;
-  width: 170px;
+  width: 170px; 
 
 }
 
@@ -916,8 +916,10 @@ section.module.parallax-sign-up {
 }
 
 .container-room .clamp {
-  max-width: 1100px;
+  /*width: 1000px; */
   margin: auto;
+  margin-top:52px;
+  margin-left:140px;
 }
 
 .container-room .icon {
@@ -961,14 +963,24 @@ section.module.parallax-sign-up {
   font-size: 22pt;
 }
 
+.left-box-one {
+  float:left;
+}
+
+.left-box-one h3 {
+  font-size:26pt;
+  font-weight:500;
+  margin-bottom:-6px;
+}
+
 .container-room .stats {
-  float: left;
   font-family: Roboto;
   font-weight: 300;
   list-style-type: none;
   padding: 0;
   margin-right: 20px;
-  width: 200px;
+  text-transform: uppercase;
+  font-size:14pt;
 }
 
 .container-room .review-quote {
@@ -983,14 +995,21 @@ section.module.parallax-sign-up {
   font-style: italic;
   margin-bottom: 0;
   line-height: 20pt;
+  padding-top:20px;
+  padding-right:20px;
+  font-size:14pt;
 }
 
 .container-room .review-quote .quote-text .jumbo {
   font-size: 18pt;
+  width:200px;
 }
 
 .container-room .review-quote .attribution {
-  margin-left: 250px;
+  margin-right: 25px;
+  text-align:left;
+  text-indent:50px;
+
 }
 
 .container-room .picture {
@@ -1006,6 +1025,7 @@ section.module.parallax-sign-up {
 .container-room .blurb {
   font-family: Roboto, sans;
   font-weight: 300;
+  width: 300px;
 }
 
 .container-room .buy-tickets {
@@ -1035,9 +1055,10 @@ section.module.parallax-sign-up {
   }
 
   .container-room ul.stats {
-    float: none;
+    float: left;
     width: 100%;
     margin-right: 0;
+
   }
 
   .container-room ul.stats li {
