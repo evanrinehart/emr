@@ -1036,6 +1036,12 @@ section.module.parallax-sign-up {
   width: 300px;
 }
 
+.container-room .blurb-two {
+  font-family: Roboto, sans;
+  font-weight: 300;
+  width: 300px;
+}
+
 .container-room .carousel {
     width: 500px;
     float: right;
