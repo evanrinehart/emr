@@ -1143,14 +1143,13 @@ section.module.parallax-sign-up {
 }
 
 #location {
-  background-image: url(../img/mansion-1.jpg);
   background-size: 100%;
   background-position: center center;
   background-repeat: no-repeat;
-  padding-top: 270px;
-  padding-bottom: 180px;
+  padding-top: 135px;
+  padding-bottom: 135px;
 /*  background-color: black;*/
-  background-color: #404040;
+  background-color: #63527C;
   background-blend-mode: overlay;
 }
 
@@ -1168,22 +1167,41 @@ section.module.parallax-sign-up {
 #location .copy {
   width: 45%;
   float: left;
-  background-color: #D9DAE8;
+  background-color: #63527C;
   opacity: 0.9;
   padding: 20px;
   margin: 0 25px;
 }
 
 #location .copy p {
-  line-height: 2.0;
+  line-height: 1.5;
   margin-bottom: 1em;
 }
 
 #location .copy h2 {
-  text-align: left;
-  font-size: 32pt;
-  font-family: Merriweather, Georgia, serif;
-  letter-spacing: 1px;
+    font-size: 32pt;
+    font-family: Merriweather, Georgia, serif;
+    letter-spacing: 1px;
+    margin: 0;
+    color: #D5C87D;
+    text-transform: uppercase;
+}
+
+hr.loca-line {
+  color:#D5C87D;
+  border-color:#D5C87D;
+  margin-top:0px;
+  margin-bottom:18px;
+  width:464px;
+}
+
+p.loca-blurb {
+    font-size: 14pt;
+    font-family: Merriweather, Georgia, serif;
+    letter-spacing: 1px;
+    margin: 0;
+    color: #D5C87D;
+    font-weight:100;
 }
 
 #newsletter {
@@ -1197,6 +1215,7 @@ section.module.parallax-sign-up {
   font-size: 32pt;
   font-family: Merriweather, Georgia, serif;
   letter-spacing: 1px;
+
 }
 
 #newsletter p {
