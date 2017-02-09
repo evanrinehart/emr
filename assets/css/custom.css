@@ -1505,6 +1505,18 @@ p.loca-blurb {
   padding-bottom: 100px;
 }
 
+.room-comparison-section table {
+  float:center;
+  border-spacing: 0.5rem;
+  font-size:18pt;
+  width:520px;
+  text-align:center;
+  line-height:1.2;
+  font-weight:300;
+  paddingright:20px;
+}
+
+
 .room-comparison-section h3 {
   color: #404040;
   font-variant: small-caps;
