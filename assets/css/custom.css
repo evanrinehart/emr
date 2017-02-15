@@ -1253,7 +1253,7 @@ p.loca-blurb {
 
 #newsletter .form-button {
   color: #FFFCE4;
-  background-color: #4D5895;
+  background-color: #901E21;
   font-family: Roboto, sans-serif;
   letter-spacing: 1px;
   font-weight: bold;
@@ -1396,6 +1396,14 @@ p.loca-blurb {
   top: -75px;
 }
 
+#updates {
+    background-color: #6C3B4A;
+    height: 285px;
+    width: 667px;
+    margin: 115px;
+    color: #D5CC79;
+    position:relative;
+}
 
 .privacy-policy-link {
   margin-top: 20px;
