@@ -1146,7 +1146,7 @@ section.module.parallax-sign-up {
   background-size: 100%;
   background-position: center center;
   background-repeat: no-repeat;
-  padding-top: 104px;
+  padding-top: 42px;
   padding-bottom: 135px;
 /*  background-color: black;*/
   background-color: #63527C;
@@ -1601,4 +1601,5 @@ paracolumn
     background-image: url(../img/EMR_waiting-room-above-location.jpg);
     background-size: 1213px;
     background-position: -20px -169px;
+    position:relative;
 }
