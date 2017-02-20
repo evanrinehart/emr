@@ -1205,12 +1205,13 @@ p.loca-blurb {
 }
 
 #newsletter {
-  background-image: url(../img/EMR_perfume-shop-above-updates.jpg);
-  background-position:-150px -67px;
-  background-color: #FFFCE4;
-  text-align: center;
-  padding-top: 40px;
-  padding-bottom: 30px;
+    background-image: url(../img/EMR_perfume-shop-above-updates.jpg);
+    background-position: 0px -203px;
+    background-size: 1443px;
+    background-color: #FFFCE4;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
 }
 
 #newsletter h2 {
