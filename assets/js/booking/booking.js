@@ -1077,3 +1077,45 @@ function releaseHold(hold_id){
       data: {hold_id: hold_id}
   });
 }
+
+function submitGroupContactForm(params){
+  $.ajax({
+    method: 'post',
+    url: 'https://booking.escapemyroom.com/groups',
+    data: params.data,
+    success: function(response){
+      params.success(response);
+    },
+    error: function(xhr){
+      params.failure(xhr.status, xhr.responseText);
+    }
+  });
+}
+
+$(document).on('submit', '.large-group-contact-form', function(ev){
+  ev.preventDefault();
+  var form = $(this)[0];
+  var data = {
+    first_name: form.first_name.value,
+    last_name: form.last_name.value,
+    email: form.email.value,
+    phone: form.phone.value,
+    size: form.size.value,
+    comment: form.comment.value
+  };
+
+  /* DEBUG MESSAGE */
+  console.log('submitting data: ', data);
+
+  submitGroupContactForm({
+    data: data,
+    success: function(response){
+      /* PUT SUCCESS CODE HERE */
+      console.log('success: ', response);
+    },
+    failure: function(code, response){
+      /* PUT ERROR CODE HERE */
+      console.log('failure code=', code, ':', response);
+    }
+  });
+});
