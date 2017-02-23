@@ -970,6 +970,7 @@ section.module.parallax-sign-up {
   padding-left: 80px;
 }
 
+
 .container-room .clamp {
   max-width: 1000px;
   margin: auto;
@@ -1071,6 +1072,7 @@ section.module.parallax-sign-up {
   margin-right: 25px;
   text-align:left;
   text-indent:50px;
+  white-space: nowrap;
 
 }
 
@@ -1085,12 +1087,6 @@ section.module.parallax-sign-up {
 }
 
 .container-room .blurb {
-  font-family: Roboto, sans;
-  font-weight: 300;
-  width: 300px;
-}
-
-.container-room .blurb-two {
   font-family: Roboto, sans;
   font-weight: 300;
   width: 300px;
@@ -1122,10 +1118,6 @@ section.module.parallax-sign-up {
   font-size:18pt;
   border:2px solid gray;
   border-radius:5px;
-}
-
-.container-room .extra-button {
-  display: none;
 }
 
 #rooms .mobile-bg {
@@ -1163,12 +1155,8 @@ section.module.parallax-sign-up {
     width: 100%;
   }
 
-  .container-room .extra-button {
-    display: block;
-  }
-
   .container-room .normal-button {
-    display: none;
+    text-align: center;
   }
 
   #rooms .mobile-bg {
@@ -1180,6 +1168,31 @@ section.module.parallax-sign-up {
     height:auto;
   }
 }
+
+@media screen and (max-width:1050px) {
+  .container-room .mgs-right {
+    width: auto;
+    float: none;
+    margin: auto;
+    clear: both;
+  }
+
+
+  .container-room .carousel {
+     width: auto;
+     float: none;
+     margin: auto;
+  }
+
+  .container-room .blurb {
+    width: auto;
+  }
+
+  .container-room .normal-button {
+    text-align: center;
+  }
+}
+
 
 #jazz-parlor {
   background-color: #FFFCE9;
@@ -1688,11 +1701,39 @@ paracolumn
   font-weight: normal;
   font-style: normal;
 }
-
+    
 #waiting-room {
-     height: 480px;
     background-image: url(../img/EMR_waiting-room-above-location.jpg);
-    background-size: 1213px;
-    background-position: -20px -169px;
-    position:relative;
+    padding: 0;
+    color: #404040;
+    position: relative;
+    overflow: hidden;
+    height: 861px;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width:1250px){
+  #waiting-room {
+    background-size: auto 100%;
+  }
+
+}
+
+@media screen and (max-width:768px){
+  #waiting-room {
+    background-size: auto 100%;
+    background-position: -400px top; }
+
+}
+
+@media screen and (max-width:600px){
+  #waiting-room {
+    background-size: auto 100%;
+    background-position: -660px top; }
+  
+  #footer {
+    padding-left:40px;
+  }  
 }
