@@ -918,31 +918,47 @@ section.module.parallax-sign-up {
 
 }
 
+#rooms .room-parallelogram {
+    background-color: #6C3B4A;
+    height: 100px;
+    width: 400px;
+    position: absolute;
+}
+
+#rooms .room-parallelogram.top {
+    top: 238px;
+    left: 25%;
+    transform: skew(0deg,-5deg);
+}
+
+#rooms .room-parallelogram.bottom {
+    top: 631px;
+    left: 25%;
+    transform: skew(0deg,5deg);
+}
+
 @media screen and (max-width:768px) {
   
-#rooms {
+  #rooms {
     height: 1144px;
     background-size: auto 100%
-}
+  }
 
-.background-image{
-}
 
   #rooms .copy {
-   margin: auto;
-    top: 716px;
-    left: 0%;
+    margin: auto;
     width: 100%;
-    /* height: 350px; */
-    height: 432px;
+    position:relative;
+    left:0;
+    top: 0;
  }
 
-#rooms .mobile {
-  height:0px;
-  width:0px;
-  margin-top: 500px;
+  #rooms .room-parallelogram { 
+    display:none;
+  }
+
 }
-}
+
 
 .clear-both {
   clear: both;
@@ -1112,6 +1128,10 @@ section.module.parallax-sign-up {
   display: none;
 }
 
+#rooms .mobile-bg {
+  display: none;
+}
+
 @media screen and (max-width:768px) {
   .container-room {
     padding-left: 40px;
@@ -1149,6 +1169,15 @@ section.module.parallax-sign-up {
 
   .container-room .normal-button {
     display: none;
+  }
+
+  #rooms .mobile-bg {
+    display: block;
+  }
+
+  #rooms {
+    background:none;
+    height:auto;
   }
 }
 
@@ -1436,7 +1465,7 @@ p.loca-blurb {
 #location { position: relative; }
 #location-nav {
   position: absolute;
-  top: 180px;
+  top: -70px;
 }
 
 #newsletter { position: relative; }
