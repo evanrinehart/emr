@@ -794,24 +794,42 @@ section.module.parallax-sign-up {
   vertical-align: top;
   background-color:#FFFCDF;
   border-radius:15px;
-  margin-left:55px;
+  margin-left:28px;
+  margin-right:28px;
 }
 
 #how-to-play .clear {
   clear: both;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1100px) {
   #how-to-play {
-    padding: 20px 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  } 
+
+#how-to-play .step {
+  margin: auto;
+  margin-bottom:24px;
+  width:auto;
+  display: block;
+  max-width: 300px;
   }
 
-  #how-to-play h2 {
+  #how-to-play .blurb {
+    height:auto;
+  }
+
+
+
+}
+
+  /*
+   #how-to-play h2 {
     font-size: 24pt;
   }
 
   #how-to-play .step {
-        /* width: 100%; */
     padding: 0;
     margin-left: 0;
     margin-top: 20px;
@@ -829,7 +847,7 @@ section.module.parallax-sign-up {
   #how-to-play .clear {
     clear: none;
   }
-}
+} */
 
 #rooms {
   padding: 0;
@@ -846,7 +864,7 @@ section.module.parallax-sign-up {
 @media screen and (max-width:1447px) {
 
   #rooms {
-    background-size: auto 100%;
+     background-size: auto 100%;
   }
 }
 
@@ -882,7 +900,6 @@ section.module.parallax-sign-up {
   padding: 47px 69px 22px 69px;
 }
 
-
 #rooms hr {
   border-color: #D5C87D;
   width: 170px; 
@@ -902,10 +919,29 @@ section.module.parallax-sign-up {
 }
 
 @media screen and (max-width:768px) {
+  
+#rooms {
+    height: 1144px;
+    background-size: auto 100%
+}
+
+.background-image{
+}
+
   #rooms .copy {
+   margin: auto;
+    top: 716px;
+    left: 0%;
     width: 100%;
-    margin: auto;
-  }
+    /* height: 350px; */
+    height: 432px;
+ }
+
+#rooms .mobile {
+  height:0px;
+  width:0px;
+  margin-top: 500px;
+}
 }
 
 .clear-both {
@@ -919,7 +955,7 @@ section.module.parallax-sign-up {
 }
 
 .container-room .clamp {
-  width: 1000px;
+  max-width: 1000px;
   margin: auto;
   margin-top:52px;
 }
@@ -1091,8 +1127,7 @@ section.module.parallax-sign-up {
   }
 
   .container-room ul.stats li {
-    white-space: nowrap;
-    display: inline;
+    /*white-space: nowrap; */
   }
 
   .container-room .review-quote .attribution {
@@ -1194,7 +1229,7 @@ hr.loca-line {
   border-color:#D5C87D;
   margin-top:0px;
   margin-bottom:18px;
-  width:464px;
+  max-width:464px;
 }
 
 p.loca-blurb {
@@ -1278,6 +1313,9 @@ p.loca-blurb {
   #newsletter .hide-on-mobile {
     display: none;
   }
+  #newsletter .update-parallelogram {
+  display: none;
+}
 
   #newsletter .undo-bootstrap-corners-on-mobile {
     border-radius: 2px;
@@ -1290,6 +1328,12 @@ p.loca-blurb {
   #newsletter .show-on-mobile {
     display: block;
   }
+
+  #newsletter p {
+    width: auto;
+    margin-left: auto;
+  }
+
 }
 
 #newsletter a {
@@ -1304,6 +1348,8 @@ p.loca-blurb {
 #newsletter .links {
   margin-top: 20px;
 }
+
+
 
 #footer {
   background-color: #3D2000;
@@ -1402,7 +1448,7 @@ p.loca-blurb {
 #updates {
     background-color: #6C3B4A;
     height: 285px;
-    width: 667px;
+    max-width: 667px;
     margin: 115px;
     color: #D5CC79;
     position:relative;
@@ -1522,7 +1568,7 @@ p.loca-blurb {
   float:center;
   border-spacing: 0.5rem;
   font-size:18pt;
-  width:520px;
+  max-width:520px;
   text-align:center;
   line-height:1.2;
   font-weight:300;
@@ -1540,7 +1586,7 @@ p.loca-blurb {
 .room-comparison-section p.blurb {
   font-weight: 200;
   font-size:30px;
-  width:629px;
+  max-width:629px;
 }
 
 .room-comparison-section .squeeze {
@@ -1587,6 +1633,21 @@ paracolumn
   border-radius: 0 0 10px 10px;
 }
 
+@media screen and (max-width:1000px) {
+  .room-comparison-section h3 {
+      margin-left: 24px;
+      font-size: 28pt
+  }
+
+  .room-comparison-section {
+    padding-left:0px; }
+
+  .room-comparison-section p.blurb {
+    font-weight: 300;
+    font-size: 17px;
+    margin-left: 24px;
+    max-width: 629px }
+  }
 /* This is for FlexSlider Font CSS */
 @font-face {
   font-family: 'flexslider-icon';
