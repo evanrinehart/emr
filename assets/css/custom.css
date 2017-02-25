@@ -1285,8 +1285,7 @@ p.loca-blurb {
 
 #newsletter {
     background-image: url(../img/EMR_perfume-shop-above-updates.jpg);
-    background-position: 0px -203px;
-    background-size: 1443px;
+    background-size: 100% auto;
     background-color: #FFFCE4;
     text-align: center;
     padding-top: 40px;
@@ -1304,6 +1303,11 @@ p.loca-blurb {
   font-size: 14pt;
   font-family: Merriweather, Georgia, serif;
   font-style: italic;
+  max-width: 353px;
+  text-align: center;
+  float: center;
+  margin-left: 151px;
+
 }
 
 #newsletter form {
@@ -1349,33 +1353,6 @@ p.loca-blurb {
 
 #newsletter .show-on-mobile {
   display: none;
-}
-
-@media screen and (max-width:768px) {
-  #newsletter .hide-on-mobile {
-    display: none;
-  }
-  #newsletter .update-parallelogram {
-  display: none;
-}
-
-  #newsletter .undo-bootstrap-corners-on-mobile {
-    border-radius: 2px;
-  }
-
-  #newsletter .undo-bootstrap-table-on-mobile {
-    display: block;
-  }
-
-  #newsletter .show-on-mobile {
-    display: block;
-  }
-
-  #newsletter p {
-    width: auto;
-    margin-left: auto;
-  }
-
 }
 
 #newsletter a {
@@ -1481,10 +1458,47 @@ p.loca-blurb {
   top: -70px;
 }
 
-#newsletter { position: relative; }
+#newsletter { 
+  position: relative; 
+  height:1000px;
+  }
 #newsletter-nav {
   position: absolute;
   top: -75px;
+}
+
+@media screen and (max-width:768px) {
+  
+  #newsletter {
+    background-size: 100% auto;
+    height: 530px
+  }
+
+  #newsletter .hide-on-mobile {
+    display: none;
+  }
+  #newsletter .update-parallelogram {
+  display: none;
+}
+
+  #newsletter .undo-bootstrap-corners-on-mobile {
+    border-radius: 2px;
+  }
+
+  #newsletter .undo-bootstrap-table-on-mobile {
+    display: block;
+  }
+
+  #newsletter .show-on-mobile {
+    display: block;
+  }
+
+  #newsletter p {
+    width: auto;
+    margin-left: 0px;
+    max-width: none;
+  }
+
 }
 
 #updates {
