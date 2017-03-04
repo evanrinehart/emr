@@ -210,6 +210,12 @@ custom.css:222
   font-size:18pt;
 }
 
+
+@media screen and (max-width:325px) {
+  .buy-tickets-button {
+    padding: 0.4em 1.3em;}
+  }
+
 #top-menu-container {
   display: block;
   position: fixed;
@@ -1076,6 +1082,11 @@ section.module.parallax-sign-up {
 
 }
 
+@media screen and (max-width:325px) {
+  .container-room .review-quote .attribution {
+    text-indent:0px;}
+  }
+
 .container-room .picture {
   float: right;
   margin-left: 60px;
@@ -1142,7 +1153,11 @@ section.module.parallax-sign-up {
     /*white-space: nowrap; */
   }
 
-  .container-room .review-quote .attribution {
+  @media screen and (max-width: 414px) {
+    .container-room ul.stats li {
+      font-size:8pt;
+  }
+.container-room .review-quote .attribution {
     margin-left: 50px;
   }
 
@@ -1727,6 +1742,38 @@ paracolumn
     background-repeat: no-repeat;
 }
 
+@media screen and (max-width:435px){
+  .table-left {
+    font-size:16pt;
+  }
+
+  .table-right {
+    font-size:16pt; }
+  }
+
+@media screen and (max-width:380px){
+  .table-left {
+    font-size:14pt;
+  }
+
+  .table-right {
+    font-size:14pt; }
+  tr {
+    font-size:14pt;}
+
+  }
+
+@media screen and (max-width:380px){
+    .table-left {
+      font-size:12pt;
+    }
+
+    .table-right {
+      font-size:12pt;
+    }
+  }
+
+
 @media screen and (max-width:1250px){
   #waiting-room {
     background-size: auto 100%;
@@ -1750,3 +1797,9 @@ paracolumn
     padding-left:40px;
   }  
 }
+
+@media screen and (max-width:325px){ 
+  #waiting-room {
+    background-position: -758px top;
+  }
+ } 
