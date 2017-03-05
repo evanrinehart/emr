@@ -114,7 +114,6 @@ a.purchase-gift-card-link {
 
 .title-page-city {
     text-transform: uppercase;
-    color: ;
     font-size: 20pt;
     font-family: Roboto, sans-serif;
     font-weight: 300;
@@ -122,7 +121,7 @@ a.purchase-gift-card-link {
     color: #CFCECE;
     margin-bottom: 18px;
 }
-custom.css:222
+
 .menu-banner.large .city {
     font-size: 14pt;
 
@@ -1152,7 +1151,7 @@ section.module.parallax-sign-up {
   .container-room ul.stats li {
     /*white-space: nowrap; */
   }
-
+}
   @media screen and (max-width: 414px) {
     .container-room ul.stats li {
       font-size:8pt;
@@ -1676,7 +1675,7 @@ p.loca-blurb {
   border-radius: 10px 10px 0 0;
   font-size: 16pt;
 }
-paracolumn
+
 .room-comparison-section .listing ul {
   padding: 0;
   margin: 0;
