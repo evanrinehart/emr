@@ -213,7 +213,10 @@ a.purchase-gift-card-link {
 @media screen and (max-width:325px) {
   .buy-tickets-button {
     padding: 0.4em 1.3em;}
-  }
+  
+  .buy-tickets-button-two {
+    padding: 0.4em 1.1em;}
+}
 
 #top-menu-container {
   display: block;
@@ -294,7 +297,7 @@ a.purchase-gift-card-link {
   font-size:18pt;
   text-align: center;
   height: 69px;
-  padding-top: 7px;
+  padding-top: 4px;
 
 
 }
@@ -617,7 +620,7 @@ h2, h3, h4 {
 
 #mobile-hamburger {
   position: fixed;
-  top:14px;
+  top:11px;
   right: 11px;
   cursor: pointer;
   width: 51px;
@@ -956,6 +959,7 @@ section.module.parallax-sign-up {
     position:relative;
     left:0;
     top: 0;
+    padding-bottom: 44px;
  }
 
   #rooms .room-parallelogram { 
@@ -1152,7 +1156,7 @@ section.module.parallax-sign-up {
     /*white-space: nowrap; */
   }
 }
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 768px) {
     .container-room ul.stats li {
       font-size:8pt;
   }
@@ -1456,19 +1460,19 @@ p.loca-blurb {
 #how-to-play { position: relative; }
 #how-to-play-nav {
   position: absolute;
-  top: -75px;
+  top: -69px;
 }
 
 #rooms { position: relative; }
 #rooms-nav {
   position: absolute;
-  top: -75px;
+  top: -69px;
 }
 
 #location { position: relative; }
 #location-nav {
   position: absolute;
-  top: -70px;
+  top: -68px;
 }
 
 #newsletter { 
@@ -1512,6 +1516,11 @@ p.loca-blurb {
     max-width: none;
   }
 
+}
+
+@media screen and (max-width: 320px) {
+#newsletter {
+    height: 480px;}
 }
 
 #updates {
