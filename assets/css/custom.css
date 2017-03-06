@@ -737,7 +737,7 @@ section.module.parallax-sign-up {
   font-weight: normal;
   line-height: 2.0;
   text-align: left;
-  height: 273px;
+  height: 299px;
   font-family:sans-serif;
 }
 
@@ -745,9 +745,24 @@ section.module.parallax-sign-up {
 #how-to-play h2 {
   font-family: Merriweather, Georgia, serif;
   letter-spacing: 1px;
-  text-transform: uppercase;
   color: #D5C87D;
   font-size: 42pt;
+  white-space: nowrap;
+}
+
+#how-to-play hr {
+   text-align: center;
+   margin-top: -18px;
+   width: 285px;
+   border-color: #D5C87D;
+}
+
+@media only screen and (max-width:498px) {
+  #how-to-play h2 {
+    font-size:32pt;
+    }
+    #how-to-play hr {
+      width: 225px;}
 }
 
 #how-to-play table img {
@@ -801,9 +816,12 @@ section.module.parallax-sign-up {
   display: inline-block;
   vertical-align: top;
   background-color:#FFFCDF;
-  border-radius:15px;
+  border-radius:3px;
   margin-left:28px;
   margin-right:28px;
+  padding-right: 18px;
+  padding-left: 18px;
+  padding-top: 40px;
 }
 
 #how-to-play .clear {
@@ -887,8 +905,7 @@ section.module.parallax-sign-up {
   letter-spacing: 1px;
   margin: 0;
   color: #D5C87D;
-  text-transform: uppercase;
-
+  
 }
 
 #rooms p {
@@ -1035,7 +1052,7 @@ section.module.parallax-sign-up {
   font-size:26pt;
   font-weight:500;
   margin-bottom:-6px;
-  color:#4D4D4D;
+  color:#303030;
 }
 
 .mgs-right {
@@ -1140,8 +1157,8 @@ section.module.parallax-sign-up {
 
 @media screen and (max-width:768px) {
   .container-room {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .container-room ul.stats {
@@ -1266,7 +1283,6 @@ section.module.parallax-sign-up {
   float: left;
   background-color: #63527C;
   opacity: 0.9;
-  padding: 20px;
   margin: 0 25px;
 }
 
@@ -1281,7 +1297,6 @@ section.module.parallax-sign-up {
     letter-spacing: 1px;
     margin: 0;
     color: #D5C87D;
-    text-transform: uppercase;
 }
 
 hr.loca-line {
@@ -1654,7 +1669,7 @@ p.loca-blurb {
 
 
 .room-comparison-section h3 {
-  color: #404040;
+  color: #303030;
   font-variant: small-caps;
   letter-spacing: 4px;
   font-size:32pt;
