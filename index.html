@@ -99,7 +99,7 @@ src="https://www.facebook.com/tr?id=1016142188416147&ev=PageView&noscript=1"
   <div id="how-to-play">
     <span id="how-to-play-nav"></span>
     <h2>How To Play</h2>
-    <hr> </hr>
+    <hr> </hr>\
     <div class="steps">
     <div class="step">
       <div class="heading">1. Invite friends</div>
@@ -909,7 +909,13 @@ interested in and the total party size.
           var newW = w / 2 - 2 * l;
         }
         iframe.width(newW);
-        $('#location .copy').width(newW - 40);
+        if(small) {
+          $('#location .copy').width('auto');
+        }
+        else{
+          $('#location .copy').width(newW - 40);
+        }
+
       }
 
       $(window).resize(function(){
