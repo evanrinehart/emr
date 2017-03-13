@@ -731,7 +731,7 @@ section.module.parallax-sign-up {
 
 #how-to-play .blurb {
   padding: 10px 13px;
-  background-color: #FFFCDF;
+  background-color: ;
   margin-bottom: 40px;
   font-size: 10pt;
   font-weight: normal;
@@ -815,7 +815,7 @@ section.module.parallax-sign-up {
   padding: 15px;
   display: inline-block;
   vertical-align: top;
-  background-color:#FFFCDF;
+  background-color:#E6E7E9;
   border-radius:3px;
   margin-left:28px;
   margin-right:28px;
@@ -880,8 +880,7 @@ section.module.parallax-sign-up {
   color: #404040;
   position: relative;
   overflow: hidden;
-  height: 861px;
-  background-image: url("../img/bg-rooms.jpg");
+  height: 1683px
   background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -900,11 +899,12 @@ section.module.parallax-sign-up {
 
 
 #rooms h2 {
-  font-size: 32pt;
-  font-family: Merriweather, Georgia, serif;
-  letter-spacing: 1px;
-  margin: 0;
-  color: #D5C87D;
+    font-size: 32pt;
+    font-family: Merriweather, Georgia, serif;
+    letter-spacing: 1px;
+    margin: 0;
+    color: #D5C87D;
+    z-index: 0;
   
 }
 
@@ -912,6 +912,7 @@ section.module.parallax-sign-up {
   line-height: 2.0;
   font-size: 10pt;
   margin: 0;
+  margin-top: 6px
 }
 
 #rooms .copy {
@@ -943,20 +944,21 @@ section.module.parallax-sign-up {
 
 }
 
-#rooms .room-parallelogram {
+  .room-parallelogram {
     background-color: #6C3B4A;
-    height: 100px;
-    width: 400px;
     position: absolute;
 }
 
-#rooms .room-parallelogram.top {
-    top: 238px;
-    left: 25%;
-    transform: skew(0deg,-5deg);
+  .room-parallelogram.top {
+    transform: skew(0deg,-6deg);
+    z-index: -1;
+    top: -75px;
+    width: 100%;
+    height: 155px;
+    position: absolute;
 }
 
-#rooms .room-parallelogram.bottom {
+  .room-parallelogram.bottom {
     top: 631px;
     left: 25%;
     transform: skew(0deg,5deg);
@@ -979,20 +981,20 @@ section.module.parallax-sign-up {
     padding-bottom: 44px;
  }
 
-  #rooms .room-parallelogram { 
-    display:none;
+  #rooms .room-parallelogram.top { 
+    top: -28px;
+    left:0%;
   }
 
 }
-
 
 .clear-both {
   clear: both;
 }
 
 .container-room {
-  background-color: #E1E0ED;
-  padding: 20px 40px;
+  background-color:#6C3B4A;
+  padding: 18px 40px;
   padding-left: 80px;
 }
 
@@ -1000,7 +1002,7 @@ section.module.parallax-sign-up {
 .container-room .clamp {
   max-width: 1000px;
   margin: auto;
-  margin-top:52px;
+  background-color: #E1E0ED;
 }
 
 .container-room .icon {
@@ -1046,6 +1048,7 @@ section.module.parallax-sign-up {
 
 .left-box-one {
   float:left;
+  background-color:#E1E0ED;
 }
 
 .left-box-one h3 {
@@ -1053,6 +1056,12 @@ section.module.parallax-sign-up {
   font-weight:500;
   margin-bottom:-6px;
   color:#303030;
+}
+
+@media screen and (max-width:340px) {
+  .left-box-one h3 {
+  font-size:16pt;
+  }
 }
 
 .mgs-right {
@@ -1121,6 +1130,7 @@ section.module.parallax-sign-up {
   font-family: Roboto, sans;
   font-weight: 300;
   width: 300px;
+  background-color:#E1E0ED;
 }
 
 .container-room .carousel {
@@ -1149,10 +1159,10 @@ section.module.parallax-sign-up {
   font-size:18pt;
   border:1px solid gray;
   border-radius:5px;
+  white-space:nowrap;
 }
 
-#rooms .mobile-bg {
-  display: none;
+.rooms-intro-bg {
 }
 
 @media screen and (max-width:768px) {
@@ -1172,7 +1182,7 @@ section.module.parallax-sign-up {
   .container-room ul.stats li {
     /*white-space: nowrap; */
   }
-}
+} 
   @media screen and (max-width: 768px) {
     .container-room ul.stats li {
       font-size:8pt;
@@ -1194,7 +1204,7 @@ section.module.parallax-sign-up {
     text-align: center;
   }
 
-  #rooms .mobile-bg {
+ .rooms-intro-bg {
     display: block;
   }
 
@@ -1230,7 +1240,6 @@ section.module.parallax-sign-up {
 
 
 #jazz-parlor {
-  background-color: #FFFCE9;
 }
 
 
@@ -1478,7 +1487,10 @@ p.loca-blurb {
   top: -69px;
 }
 
-#rooms { position: relative; }
+#rooms { 
+  position: relative;
+  background-color:#6C3B4A;
+ }
 #rooms-nav {
   position: absolute;
   top: -69px;
