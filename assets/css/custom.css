@@ -194,7 +194,7 @@ a.purchase-gift-card-link {
     font-size: 18pt;
     border-radius: 5px;
     border: 1px solid gray;
-}
+    }
 
 .buy-tickets-button:hover {
   color: #FCFAE2;
@@ -912,7 +912,9 @@ section.module.parallax-sign-up {
   line-height: 2.0;
   font-size: 10pt;
   margin: 0;
-  margin-top: 6px
+  margin-top: 6px;
+  padding-right: 14px;
+  padding-left: 14px;
 }
 
 #rooms .copy {
@@ -1056,6 +1058,7 @@ section.module.parallax-sign-up {
   font-weight:500;
   margin-bottom:-6px;
   color:#303030;
+  margin-left: 10px;
 }
 
 @media screen and (max-width:340px) {
@@ -1176,6 +1179,7 @@ section.module.parallax-sign-up {
     width: 100%;
     margin-right: 0;
     color:#4D4D4D;
+    margin-left: 9px
 
   }
 
@@ -1241,7 +1245,6 @@ section.module.parallax-sign-up {
 
 #jazz-parlor {
 }
-
 
 #tickets {
   background-color: #FFFCE4;
@@ -1661,7 +1664,7 @@ p.loca-blurb {
 }
 
 .room-comparison-section {
-  background-color: #E1E0ED;
+  background-color: #6C3B4A;
   font-family: Roboto, sans-serif;
   padding-top: 30px;
   padding-left: 133px;
@@ -1691,12 +1694,15 @@ p.loca-blurb {
   font-weight: 200;
   font-size:30px;
   max-width:629px;
+  padding-bottom: 20px;
 }
 
 .room-comparison-section .squeeze {
-  max-width: 900px;
-  margin: auto;
+    max-width: 90%;
+    margin: auto;
+    background-color: #E1E0ED;
 }
+
 
 .room-comparison-section .listing {
   width: 430px;

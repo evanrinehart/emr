@@ -85,6 +85,7 @@ html[xmlns] .flexslider .slides {
   -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
   -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
   box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding-bottom: 3px;
 }
 .flexslider .slides {
   zoom: 1;
@@ -198,6 +199,8 @@ html[xmlns] .flexslider .slides {
   position: absolute;
   text-align: center;
   background-color: #E1E0ED;
+  padding-top: 9px;
+
 }
 .flex-control-nav li {
   margin: 0 6px;
