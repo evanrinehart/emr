@@ -209,15 +209,6 @@ a.purchase-gift-card-link {
   font-size:18pt;
 }
 
-
-@media screen and (max-width:325px) {
-  .buy-tickets-button {
-    padding: 0.4em 1.3em;}
-  
-  .buy-tickets-button-two {
-    padding: 0.4em 1.1em;}
-}
-
 #top-menu-container {
   display: block;
   position: fixed;
@@ -957,7 +948,7 @@ section.module.parallax-sign-up {
     z-index: -1;
     top: 0px;
     width: 100%;
-    height: 230px;
+    height:258px;
     position: absolute;
     transform-origin: left;
 }
@@ -1006,7 +997,6 @@ section.module.parallax-sign-up {
 
 
 .container-room .clamp {
-  max-width: 1000px;
   margin: auto;
   background-color: #E1E0ED;
 }
@@ -1053,7 +1043,6 @@ section.module.parallax-sign-up {
 }
 
 .left-box-one {
-  float:left;
   background-color:#E1E0ED;
 }
 
@@ -1063,6 +1052,26 @@ section.module.parallax-sign-up {
   margin-bottom:-6px;
   color:#303030;
   margin-left: 10px;
+}
+
+.left-section {
+  float:left;
+}
+
+@media screen and (max-width:325px) {
+  .buy-tickets-button {
+    padding: 0.4em 1.3em;
+    font-size:12pt;
+  }
+  
+  .buy-tickets-button-two {
+    padding: 0.4em 1.1em;
+    font-size:12pt;
+  }
+
+  .left-section {
+    float:none;
+  } 
 }
 
 @media screen and (max-width:340px) {
@@ -1773,6 +1782,12 @@ p.loca-blurb {
     margin-left: 40px;
   }
 }
+
+@media screen and (max-width:370px) {
+  .room-comparison-section tr {
+  font-size:12pt;}
+}
+
 
 /* This is for FlexSlider Font CSS */
 @font-face {
