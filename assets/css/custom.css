@@ -959,6 +959,7 @@ section.module.parallax-sign-up {
     transform: skew(0deg,5deg);
 }
 
+
 @media screen and (max-width:768px) {
   
   #rooms {
@@ -999,6 +1000,7 @@ section.module.parallax-sign-up {
 .container-room .clamp {
   margin: auto;
   background-color: #E1E0ED;
+  width:1200px;
 }
 
 .container-room .icon {
@@ -1044,6 +1046,8 @@ section.module.parallax-sign-up {
 
 .left-box-one {
   background-color:#E1E0ED;
+  float:left;
+  width:400px;
 }
 
 .left-box-one h3 {
@@ -1054,11 +1058,56 @@ section.module.parallax-sign-up {
   margin-left: 10px;
 }
 
-.left-section {
-  float:left;
+.mgs-right {
+  float: right;
+  width:760px;
+  }
+
+@media screen and (max-width:1400px) {
+  .container-room .clamp {
+    width:1000px;
+  }
+
+  .left-box-one {
+    width:381px;
+  }
+
+  .mgs-right {
+    width:500px;
+
+  }
 }
 
-@media screen and (max-width:325px) {
+@media screen and (max-width:1200px) {
+  .container-room .clamp {
+    width:auto;
+    float:none;
+  }
+
+  .left-box-one {
+    width:auto;
+    float:none;
+  }
+
+  .mgs-right {
+    width:auto;
+    float:none;
+  }
+
+  .carousel.desktop {
+    display:none;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .carousel.mobile {
+    display:none;
+  }
+}
+
+
+
+@media screen and (max-width:400px) {
   .buy-tickets-button {
     padding: 0.4em 1.3em;
     font-size:12pt;
@@ -1068,22 +1117,12 @@ section.module.parallax-sign-up {
     padding: 0.4em 1.1em;
     font-size:12pt;
   }
-
-  .left-section {
-    float:none;
-  } 
 }
 
 @media screen and (max-width:340px) {
   .left-box-one h3 {
   font-size:16pt;
   }
-}
-
-.mgs-right {
-  width: 461px;
-  float: right;
-  margin-right: 99px;
 }
 
 .container-room .stats {
@@ -1145,14 +1184,10 @@ section.module.parallax-sign-up {
 .container-room .blurb {
   font-family: Roboto, sans;
   font-weight: 300;
-  width: 300px;
   background-color:#E1E0ED;
 }
 
 .container-room .carousel {
-    width: 500px;
-    float: right;
-    margin-right: 100px;
   }
 
 .container-room .buy-tickets {
@@ -1188,7 +1223,6 @@ section.module.parallax-sign-up {
   }
 
   .container-room ul.stats {
-    float: left;
     width: 100%;
     margin-right: 0;
     color:#4D4D4D;
@@ -1230,31 +1264,6 @@ section.module.parallax-sign-up {
     height:auto;
   }
 }
-
-@media screen and (max-width:1050px) {
-  .container-room .mgs-right {
-    width: auto;
-    float: none;
-    margin: auto;
-    clear: both;
-  }
-
-
-  .container-room .carousel {
-     width: auto;
-     float: none;
-     margin: auto;
-  }
-
-  .container-room .blurb {
-    width: auto;
-  }
-
-  .container-room .normal-button {
-    text-align: center;
-  }
-}
-
 
 #jazz-parlor {
 }
