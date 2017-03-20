@@ -739,6 +739,8 @@ section.module.parallax-sign-up {
   color: #D5C87D;
   font-size: 42pt;
   white-space: nowrap;
+  margin-bottom:20px;
+  line-height:normal;
 }
 
 #how-to-play hr {
