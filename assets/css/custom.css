@@ -743,7 +743,7 @@ section.module.parallax-sign-up {
 
 #how-to-play hr {
    text-align: center;
-   margin-top: -25px;
+   margin-top: -15px;
    width: 285px;
    border-color: #D5C87D;
 }
@@ -1239,7 +1239,7 @@ section.module.parallax-sign-up {
 
   @media screen and (max-width: 768px) {
     .container-room ul.stats li {
-      font-size:14pt;
+      font-size:10pt;
   }
 .container-room .review-quote .attribution {
     margin-left: 50px;
