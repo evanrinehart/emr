@@ -288,7 +288,7 @@ a.purchase-gift-card-link {
   font-size:18pt;
   text-align: center;
   height: 69px;
-  padding-top: 4px;
+  padding-top: 5px;
 
 
 }
@@ -743,7 +743,7 @@ section.module.parallax-sign-up {
 
 #how-to-play hr {
    text-align: center;
-   margin-top: -18px;
+   margin-top: -25px;
    width: 285px;
    border-color: #D5C87D;
 }
@@ -901,8 +901,8 @@ section.module.parallax-sign-up {
 
 #rooms p {
   line-height: 2.0;
-  font-size: 10pt;
-  margin: 0;
+  font-size: 12pt;
+  margin: auto;
   margin-top: 6px;
   padding-right: 14px;
   padding-left: 14px;
@@ -923,6 +923,7 @@ section.module.parallax-sign-up {
 #rooms hr {
   border-color: #D5C87D;
   width: 130px; 
+  margin-top: 0px;
 
 }
 
@@ -991,8 +992,8 @@ section.module.parallax-sign-up {
   background-color:#E1E0ED;
   padding: 18px 40px;
   padding-left: 80px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
     margin-bottom: 40px;
 }
 
@@ -1055,7 +1056,6 @@ section.module.parallax-sign-up {
   font-weight:500;
   margin-bottom:-6px;
   color:#303030;
-  margin-left: 10px;
 }
 
 .mgs-right {
@@ -1107,21 +1107,10 @@ section.module.parallax-sign-up {
 
 
 
-@media screen and (max-width:400px) {
-  .buy-tickets-button {
-    padding: 0.4em 1.3em;
-    font-size:12pt;
-  }
-  
-  .buy-tickets-button-two {
-    padding: 0.4em 1.1em;
-    font-size:12pt;
-  }
-}
 
-@media screen and (max-width:340px) {
+@media screen and (max-width:400px) {
   .left-box-one h3 {
-  font-size:16pt;
+  font-size:18pt;
   }
 }
 
@@ -1226,7 +1215,7 @@ section.module.parallax-sign-up {
     width: 100%;
     margin-right: 0;
     color:#4D4D4D;
-    margin-left: 9px
+    white-space:nowrap;
 
   }
 
@@ -1234,9 +1223,23 @@ section.module.parallax-sign-up {
     /*white-space: nowrap; */
   }
 } 
+
+
+@media screen and (max-width:400px) {
+  .buy-tickets-button.big {
+    padding: 0.4em 1.3em;
+    font-size:12pt;
+  }
+  
+  .buy-tickets-button-two {
+    padding: 0.4em 1.1em;
+    font-size:12pt;
+  }
+}
+
   @media screen and (max-width: 768px) {
     .container-room ul.stats li {
-      font-size:8pt;
+      font-size:14pt;
   }
 .container-room .review-quote .attribution {
     margin-left: 50px;
@@ -1299,6 +1302,7 @@ section.module.parallax-sign-up {
 /*  background-color: black;*/
   background-color: #63527C;
   background-blend-mode: overlay;
+  z-index: 1;
 }
 
 @media screen and (max-width:1000px) {
@@ -1689,8 +1693,8 @@ p.loca-blurb {
   background-color: #6C3B4A;
   font-family: Roboto, sans-serif;
   padding-top: 30px;
-  padding-left: 133px;
-  padding-right: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 100px;
 }
 
@@ -1702,6 +1706,7 @@ p.loca-blurb {
   line-height:1.2;
   font-weight:300;
   padding-right:20px;
+  margin:auto;
 }
 
 
@@ -1710,6 +1715,8 @@ p.loca-blurb {
   font-variant: small-caps;
   letter-spacing: 4px;
   font-size:32pt;
+  margin:auto;
+  text-align:center;
 }
 
 .room-comparison-section p.blurb {
@@ -1720,9 +1727,10 @@ p.loca-blurb {
 }
 
 .room-comparison-section .squeeze {
-    max-width: 90%;
     margin: auto;
     background-color: #E1E0ED;
+    padding-bottom:50px;
+    padding-top:20px;
 }
 
 
@@ -1767,13 +1775,8 @@ p.loca-blurb {
 
 @media screen and (max-width:1000px) {
   .room-comparison-section h3 {
-      margin-left: 24px;
       font-size: 26pt
   }
-
-  .room-comparison-section {
-    padding-left:0px;
-    padding-right:0px; }
 
   .room-comparison-section p.blurb {
     font-weight: 300;
@@ -1785,10 +1788,9 @@ p.loca-blurb {
 
 @media screen and (max-width:860px) {
   .room-comparison-section .squeeze {
-    max-width: 90%;
     /* margin: auto; */
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-right: 0px;
+    margin-left: 0px;
   }
 }
 
