@@ -110,6 +110,7 @@ a.purchase-gift-card-link {
     color: #D5C87D;
     font-size: 42pt;
     margin-bottom: -4px;
+    font-weight:bold;
 }
 
 .title-page-city {
@@ -991,12 +992,15 @@ section.module.parallax-sign-up {
 }
 
 .container-room {
-  background-color:#E1E0ED;
-  padding: 18px 40px;
-  padding-left: 80px;
-  margin-left: 20px;
-  margin-right: 20px;
-    margin-bottom: 40px;
+  background-color: #E1E0ED;
+    padding: 18px 40px;
+    padding-left: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 3px;
+    margin: auto;
+    width: 1271px;
+     margin-bottom: 40px;
 }
 
 
@@ -1066,6 +1070,13 @@ section.module.parallax-sign-up {
   }
 
 @media screen and (max-width:1400px) {
+
+  .container-room {
+    width: 1080px;
+    border-radius: 3px;
+    margin-bottom: 40px;
+  }
+
   .container-room .clamp {
     width:1000px;
   }
@@ -1081,6 +1092,14 @@ section.module.parallax-sign-up {
 }
 
 @media screen and (max-width:1200px) {
+  .container-room {
+   width: auto;
+   border-radius: 3px;
+   margin-left:20px;
+   margin-right:20px;
+   
+}
+ 
   .container-room .clamp {
     width:auto;
     float:none;
@@ -1099,6 +1118,11 @@ section.module.parallax-sign-up {
   .carousel.desktop {
     display:none;
   }
+
+  .container-room .normal-button {
+    text-align: center;
+  }
+
 }
 
 @media screen and (min-width:1200px) {
@@ -1124,7 +1148,7 @@ section.module.parallax-sign-up {
   margin-right: 20px;
   text-transform: uppercase;
   font-size:14pt;
-  color: #4D4D4D;
+  color:#303030;
 }
 
 .container-room .review-quote {
@@ -1174,7 +1198,6 @@ section.module.parallax-sign-up {
 
 .container-room .blurb {
   font-family: Roboto, sans;
-  font-weight: 300;
   background-color:#E1E0ED;
 }
 
@@ -1209,8 +1232,8 @@ section.module.parallax-sign-up {
 
 @media screen and (max-width:768px) {
   .container-room {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   .container-room ul.stats {
@@ -1267,6 +1290,7 @@ section.module.parallax-sign-up {
   #rooms {
     background:none;
     height:auto;
+    1271px
   }
 }
 
@@ -1733,6 +1757,7 @@ p.loca-blurb {
     background-color: #E1E0ED;
     padding-bottom:50px;
     padding-top:20px;
+    border-radius: 3px;
 }
 
 
@@ -1787,6 +1812,7 @@ p.loca-blurb {
     margin-right: 24px;
     max-width: 629px }
   }
+}
 
 @media screen and (max-width:860px) {
   .room-comparison-section .squeeze {
@@ -1801,6 +1827,24 @@ p.loca-blurb {
   font-size:12pt;}
 }
 
+
+@media screen and (min-width:1200px) {
+.room-comparison-section {
+    border-radius: 3px;
+    margin: auto;
+    width: 1120px;
+    margin-bottom: 40px;
+    }
+}
+
+@media screen and (min-width:1400px) {
+.room-comparison-section {
+    border-radius: 3px;
+    margin: auto;
+    width: 1318px;
+    margin-bottom: 40px;
+    }
+}
 
 /* This is for FlexSlider Font CSS */
 @font-face {
