@@ -1220,12 +1220,16 @@ section.module.parallax-sign-up {
 
 .contact-form label {
   display: block;
-  margin-bottom:0px;
+  line-height: normal;
+  margin-bottom: 2px;
 }
+
 .contact-form textarea {
   width: 100%;
   margin-left: 0px;
   padding-left: 8px;
+  border-color: #8b945b;
+  border-style: inset;
 }
 
 .contact-form .field {
@@ -1235,6 +1239,21 @@ section.module.parallax-sign-up {
 .contact-form input {
   width:100%;
   padding-left: 8px;
+  border-color: #8b945b;
+  border-width: 1px;
+  border-style: inset;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #e6e8de;
+  border-color: #b6bf86;
+  border-style: outset;
+}
+
+.contact-form input[type="submit"]:active {
+  background-color: #b0a68d;
+  border-style: inset;
+  border-color: #818472
 }
 
 

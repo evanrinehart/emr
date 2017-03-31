@@ -1087,7 +1087,9 @@ function submitGroupContactForm(params){
       params.success(response);
     },
     error: function(xhr){
-      params.failure(xhr.status, xhr.responseText);
+      if(xhr.readyState >= 4){
+        params.failure(xhr.status, xhr.responseText);
+      }
     }
   });
 }
@@ -1103,26 +1105,28 @@ $(document).on('submit', '.large-group-contact-form', function(ev){
     size: form.size.value,
     comment: form.comment.value
   };
-$(".contact-form input[type='submit']").attr('disabled','disabled');
-$(".contact-form input[type='submit']").val("Please Wait...");
 
+  var submitButton = $(".contact-form input[type='submit']");
+  console.log(submitButton);
+  var originalText = submitButton.val();
+  submitButton.attr('disabled','disabled');
+  submitButton.val("Please Wait...");
 
-  /* DEBUG MESSAGE */
-  console.log('submitting data: ', data);
+  console.log(originalText);
 
   submitGroupContactForm({
     data: data,
     success: function(response){
-      /* PUT SUCCESS CODE HERE */
-      $("button.close").click()
-      alert("Thank you, your form has been successfully submited.")
-      console.log('success: ', response);
+      submitButton.val(originalText);
+      submitButton.attr('disabled', null);
+      $("button.close").click();
+      alert("Thank you, your form has been successfully submited.");
     },
     failure: function(code, response){
-      /* PUT ERROR CODE HERE */
-      $("button.close").click()
-      alert ("Error: your form could not be submitted at this time. Please try again later or contact us via phone or e-mail.")
-      console.log('failure code=', code, ':', response);
+      submitButton.val(originalText);
+      submitButton.attr('disabled', null);
+      $("button.close").click();
+      alert("Error: your form could not be submitted at this time. Please try again later or contact us via phone or e-mail.");
     }
   });
 });
