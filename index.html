@@ -102,6 +102,10 @@ src="https://www.facebook.com/tr?id=1016142188416147&ev=PageView&noscript=1"
         <div>
           <a class="purchase-gift-card-link" href="giftcard.html">Purchase Gift Card</a>
         </div>
+<div>
+      <a class="purchase-gift-card-link" data-toggle="modal" data-target="#group-contact">Large Group Request</a>
+      </div> 
+    </p>
         <div class="mc-container">
         <div class="mc-header-form">
           <!-- Newsletter Signup Form Here -->
@@ -538,7 +542,7 @@ follow our story on social media.
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
         </div>
         <div class="modal-body">
           <h4 class="modal-title" id="myModalLabel">Historic Home Demolished for Hospital Construction</h4>
@@ -795,29 +799,60 @@ interested in and the total party size.
     </div>
   </div>
 
-<!-- DUMMY GROUP CONTACT FORM
-<form class="large-group-contact-form">
+
+<div class="modal old-style-popup" id="group-contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header"> 
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size: 24pt"><span aria-hidden="true">&times;</span></button>
+          <h4 class="form-header"> Large Group Request </h4>
+        </div>
+
+        <div class="modal-body">
+        <form class="large-group-contact-form" style="
+    margin: auto;
+">
+  <div class="contact-form">
+  <div class="field">
   <label>First Name</label>
   <input type="text" name="first_name">
-
+  </div>
+  
+  <div class="field">
   <label>Last Name</label>
   <input type="text" name="last_name">
+  </div>
 
+  <div class="field">
   <label>Email</label>
   <input type="text" name="email">
+  <br>
+  </div>
 
+  <div class="field">
   <label>Phone</label>
   <input type="text" name="phone">
+  </div>
 
+  <div class="field">
   <label>Size of Group</label>
   <input type="text" name="size">
+  </div>
 
-  <label>Additional Comment</label>
+  <div class="field">
+  <label>Additional Comments</label>
   <textarea name="comment"></textarea>
+  </div>
 
   <input type="submit">
 </form>
--->
+</div>
+  </div>
+  </div>
+  </div>
+  </div>
+
 
   <script src="public/jquery.js?v=304d580990"></script>
 <!--    <script type="text/javascript" src="assets/js/index.js?v=304d580990"></script> -->

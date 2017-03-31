@@ -1103,6 +1103,9 @@ $(document).on('submit', '.large-group-contact-form', function(ev){
     size: form.size.value,
     comment: form.comment.value
   };
+$(".contact-form input[type='submit']").attr('disabled','disabled');
+$(".contact-form input[type='submit']").val("Please Wait...");
+
 
   /* DEBUG MESSAGE */
   console.log('submitting data: ', data);
@@ -1111,10 +1114,14 @@ $(document).on('submit', '.large-group-contact-form', function(ev){
     data: data,
     success: function(response){
       /* PUT SUCCESS CODE HERE */
+      $("button.close").click()
+      alert("Thank you, your form has been successfully submited.")
       console.log('success: ', response);
     },
     failure: function(code, response){
       /* PUT ERROR CODE HERE */
+      $("button.close").click()
+      alert ("Error: your form could not be submitted at this time. Please try again later or contact us via phone or e-mail.")
       console.log('failure code=', code, ':', response);
     }
   });
