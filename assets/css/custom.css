@@ -1830,7 +1830,6 @@ p.loca-blurb {
   #waiting-room {
     background-size: auto 100%;
     background-position: -400px top; }
-
 }
 
 @media screen and (max-width:600px){
@@ -1858,7 +1857,6 @@ p.loca-blurb {
   letter-spacing: 3px;
   font-size: 22pt;
 }
-}
 
 .body-text {
     line-height: 2.0;
@@ -1868,7 +1866,6 @@ p.loca-blurb {
     padding-right: 14px;
     padding-left: 14px;
     padding-top: 10px;
-
 }
 
 .section-heading{
@@ -1903,14 +1900,7 @@ p.loca-blurb {
   }
   
   #how-to-play hr {
-      width: 225px;}
+      width: 225px;
+    }
 }
-
-
-
-} 
-
-
-
-
 
