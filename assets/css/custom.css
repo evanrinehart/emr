@@ -733,11 +733,15 @@ section.module.parallax-sign-up {
   font-family:sans-serif;
 }
 
-#how-to-play hr {
-   text-align: center;
-   margin-top: -15px;
-   width: 285px;
+.section-header-line {
+  text-align: center;
    border-color: #D5C87D;
+   margin-top: 0
+
+}
+
+#how-to-play hr {
+   width: 285px;
 }
 
 #how-to-play table img {
@@ -884,10 +888,7 @@ section.module.parallax-sign-up {
 }
 
 #rooms hr {
-  border-color: #D5C87D;
   width: 130px; 
-  margin-top: 0px;
-
 }
 
 #rooms hr.line-one {
@@ -1290,21 +1291,12 @@ section.module.parallax-sign-up {
 }
 
 hr.loca-line {
-  color:#D5C87D;
-  border-color:#D5C87D;
-  margin-top:0px;
-  margin-bottom:18px;
   max-width:175px;
 }
 
 p.loca-blurb {
-    font-size: 14pt;
-    font-family: Merriweather, Georgia, serif;
-    letter-spacing: 1px;
-    margin: 0;
-    color: #D5C87D;
-    font-weight:100;
-}
+  color: #D5C87D;
+   }
 
 #newsletter {
     background-image: url(../img/EMR_perfume-shop-above-updates.jpg);
@@ -1866,6 +1858,8 @@ p.loca-blurb {
     padding-right: 14px;
     padding-left: 14px;
     padding-top: 10px;
+    margin-bottom: 25px;
+    letter-spacing: .5px;
 }
 
 .section-heading{
@@ -1874,18 +1868,15 @@ p.loca-blurb {
     color: #D5C87D;
     font-size: 42pt;
     white-space: nowrap;
-    margin-bottom: 20px;
     line-height: normal;
+    margin-bottom:0px;
   }
 
   .htc-blurb {
     max-width:629px;
-    margin: auto;
-    padding: 0;
-    padding-left: 14px;
-    padding-right: 14px;
-    margin-bottom: 25px; 
-  }
+    padding-left: 24px;
+    padding-right: 24px
+    }
 
   .htc-header {
     text-align:center;
