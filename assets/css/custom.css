@@ -1851,6 +1851,7 @@ p.loca-blurb {
 }
 
 .body-text {
+    font-family: Roboto, sans-serif;
     line-height: 2.0;
     font-size: 12pt;
     margin: auto;
@@ -1860,6 +1861,7 @@ p.loca-blurb {
     padding-top: 10px;
     margin-bottom: 25px;
     letter-spacing: .5px;
+
 }
 
 .section-heading{
