@@ -1890,6 +1890,10 @@ p.loca-blurb {
     margin-bottom: 25px; 
   }
 
+  .htc-header {
+    text-align:center;
+  }
+
   @media only screen and (max-width:498px) {
   .section-heading {
     font-size:32pt;
