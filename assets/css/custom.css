@@ -733,30 +733,11 @@ section.module.parallax-sign-up {
   font-family:sans-serif;
 }
 
-
-#how-to-play h2 {
-  font-family: Merriweather, Georgia, serif;
-  letter-spacing: 1px;
-  color: #D5C87D;
-  font-size: 42pt;
-  white-space: nowrap;
-  margin-bottom:20px;
-  line-height:normal;
-}
-
 #how-to-play hr {
    text-align: center;
    margin-top: -15px;
    width: 285px;
    border-color: #D5C87D;
-}
-
-@media only screen and (max-width:498px) {
-  #how-to-play h2 {
-    font-size:32pt;
-    }
-    #how-to-play hr {
-      width: 225px;}
 }
 
 #how-to-play table img {
@@ -891,27 +872,6 @@ section.module.parallax-sign-up {
 #rooms img {width:100%;
 }
 
-
-#rooms h2 {
-    font-size: 32pt;
-    font-family: Merriweather, Georgia, serif;
-    letter-spacing: 1px;
-    margin: 0;
-    color: #D5C87D;
-    z-index: 0;
-  
-}
-
-#rooms p {
-  line-height: 2.0;
-  font-size: 12pt;
-  margin: auto;
-  margin-top: 6px;
-  padding-right: 14px;
-  padding-left: 14px;
-  padding-top: 10px
-}
-
 #rooms .copy {
   width: 400px;
   background-color: #6C3B4A;
@@ -1042,28 +1002,11 @@ section.module.parallax-sign-up {
   background-position: -16px -12px;
 }
 
-.container-room h3 {
-  font-family: Roboto, sans-serif;
-  font-weight: normal;
-  color: #4D4D4D;
-  font-variant: small-caps;
-  letter-spacing: 3px;
-  font-size: 22pt;
-}
-
 .left-box-one {
   background-color:#E1E0ED;
   float:left;
   width:400px;
 }
-
-.left-box-one h3 {
-  font-size:26pt;
-  font-weight:500;
-  margin-bottom:-6px;
-  color:#303030;
-}
-
 .mgs-right {
   float: right;
   width:760px;
@@ -1128,15 +1071,6 @@ section.module.parallax-sign-up {
 @media screen and (min-width:1200px) {
   .carousel.mobile {
     display:none;
-  }
-}
-
-
-
-
-@media screen and (max-width:400px) {
-  .left-box-one h3 {
-  font-size:18pt;
   }
 }
 
@@ -1264,7 +1198,7 @@ section.module.parallax-sign-up {
 
   @media screen and (max-width: 768px) {
     .container-room ul.stats li {
-      font-size:10pt;
+      font-size:9pt;
   }
 .container-room .review-quote .attribution {
     margin-left: 50px;
@@ -1353,14 +1287,6 @@ section.module.parallax-sign-up {
 #location .copy p {
   line-height: 1.5;
   margin-bottom: 1em;
-}
-
-#location .copy h2 {
-    font-size: 32pt;
-    font-family: Merriweather, Georgia, serif;
-    letter-spacing: 1px;
-    margin: 0;
-    color: #D5C87D;
 }
 
 hr.loca-line {
@@ -1736,15 +1662,6 @@ p.loca-blurb {
 }
 
 
-.room-comparison-section h3 {
-  color: #303030;
-  font-variant: small-caps;
-  letter-spacing: 4px;
-  font-size:32pt;
-  margin:auto;
-  text-align:center;
-}
-
 .room-comparison-section p.blurb {
   font-weight: 200;
   font-size:30px;
@@ -1929,5 +1846,67 @@ p.loca-blurb {
 @media screen and (max-width:325px){ 
   #waiting-room {
     background-position: -758px top;
+  } 
+
+}
+
+.subheading {
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+  color: #4D4D4D;
+  font-variant: small-caps;
+  letter-spacing: 3px;
+  font-size: 22pt;
+}
+}
+
+.body-text {
+    line-height: 2.0;
+    font-size: 12pt;
+    margin: auto;
+    margin-top: 6px;
+    padding-right: 14px;
+    padding-left: 14px;
+    padding-top: 10px;
+
+}
+
+.section-heading{
+    font-family: Merriweather, Georgia, serif;
+    letter-spacing: 1px;
+    color: #D5C87D;
+    font-size: 42pt;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    line-height: normal;
   }
- } 
+
+  .htc-blurb {
+    max-width:629px;
+    margin: auto;
+    padding: 0;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-bottom: 25px; 
+  }
+
+  @media only screen and (max-width:498px) {
+  .section-heading {
+    font-size:32pt;
+    }
+  .subheading {
+  font-size:18pt;
+  }
+  
+  #how-to-play hr {
+      width: 225px;}
+}
+
+
+
+} 
+
+
+
+
+
