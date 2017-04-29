@@ -731,7 +731,7 @@ nav ol, nav ul {
   color: #FFFCE4;
   font-size: 15pt;
   font-family: Roboto, sans-serif;
-  padding-left: 20px;
+  padding-left: 25px;
   padding-top: 30px;
   padding-bottom: 30px;
   padding-right: 0;
@@ -868,10 +868,6 @@ nav ol, nav ul {
   #waiting-room {
     background-size: auto 100%;
     background-position: -660px top; }
-  
-  #footer {
-    padding-left:40px;
-  }  
 }
 
 @media screen and (max-width:325px){ 
