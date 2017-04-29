@@ -629,6 +629,9 @@ nav ol, nav ul {
     display: block;
   }
 
+  .container-room .stats li {
+  }
+
 }
 
 .buy-tickets-button.big {
@@ -728,7 +731,7 @@ nav ol, nav ul {
   color: #FFFCE4;
   font-size: 15pt;
   font-family: Roboto, sans-serif;
-  padding-left: 40px;
+  padding-left: 20px;
   padding-top: 30px;
   padding-bottom: 30px;
   padding-right: 0;
