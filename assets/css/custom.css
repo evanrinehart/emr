@@ -157,8 +157,8 @@ a.purchase-gift-card-link {
   float: right;
   font-size: 18pt;
   text-align: center;
-  height: 54px;
-  padding-top: 5px;
+  height: 53px;
+  padding-top: 6px;
   box-sizing: content-box;
 }
 
@@ -408,6 +408,7 @@ nav ol, nav ul {
 
 #how-to-play .step {
   width: 265px;
+  height: 670px;
   display: inline-block;
   vertical-align: top;
   background-color: #E6E7E9;
@@ -597,7 +598,7 @@ nav ol, nav ul {
 }
 
 /* the main media query for rooms section */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .carousel.mobile {
     display: block;
   }
