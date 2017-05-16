@@ -1,13 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="140px" height="105px" viewBox="0 0 140 105" enable-background="new 0 0 140 105" xml:space="preserve">
-<path fill="#010101" d="M74.406,0.018C74.314,0.009,74.225,0,74.133,0c-2.42,0-4.095,1.961-4.095,4.381
-	c0,2.384,0.929,4.322,4.568,4.372v0.014c17.288,0.237,32.411,15.005,32.411,33.13c0,18.271-15.004,33.349-33.275,33.349
-	c-17.439,0-31.916-13.158-33.191-30.446h7.694L36.371,25.06l-11.87,19.741h7.28C33.068,66.639,51.33,84,73.596,84
-	c23.104,0,41.903-18.891,41.903-41.997C115.499,19.172,97.136,0.45,74.406,0.018z"/>
-<path fill="#010101" d="M78.246,20.423c0-2.061-1.655-3.831-3.712-3.831h-0.802c-2.057,0-3.675,1.77-3.675,3.831v22.025
-	L59.27,53.217c-1.592,1.593-1.511,4.178-0.004,5.761c1.51,1.602,4.158,1.602,5.75,0l11.92-11.921c0.092-0.1,0.164-0.2,0.255-0.291
-	c0.655-0.678,1.055-1.597,1.055-2.612L78.246,20.423L78.246,20.423z"/>
-</svg>
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="140px"
+   height="105px"
+   viewBox="0 0 140 105"
+   enable-background="new 0 0 140 105"
+   xml:space="preserve"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="room-duration-icon.svg"><metadata
+     id="metadata4965"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs4963" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="665"
+     inkscape:window-height="480"
+     id="namedview4961"
+     showgrid="false"
+     inkscape:zoom="2.247619"
+     inkscape:cx="70"
+     inkscape:cy="52.5"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Layer_1" /><path
+     fill="#010101"
+     d="M74.406,0.018C74.314,0.009,74.225,0,74.133,0c-2.42,0-4.095,1.961-4.095,4.381  c0,2.384,0.929,4.322,4.568,4.372v0.014c17.288,0.237,32.411,15.005,32.411,33.13c0,18.271-15.004,33.349-33.275,33.349  c-17.439,0-31.916-13.158-33.191-30.446h7.694L36.371,25.06l-11.87,19.741h7.28C33.068,66.639,51.33,84,73.596,84  c23.104,0,41.903-18.891,41.903-41.997C115.499,19.172,97.136,0.45,74.406,0.018z"
+     id="path4957"
+     style="fill:#4d4d4d;fill-opacity:1" /><path
+     fill="#010101"
+     d="M78.246,20.423c0-2.061-1.655-3.831-3.712-3.831h-0.802c-2.057,0-3.675,1.77-3.675,3.831v22.025  L59.27,53.217c-1.592,1.593-1.511,4.178-0.004,5.761c1.51,1.602,4.158,1.602,5.75,0l11.92-11.921c0.092-0.1,0.164-0.2,0.255-0.291  c0.655-0.678,1.055-1.597,1.055-2.612L78.246,20.423L78.246,20.423z"
+     id="path4959"
+     style="fill:#4d4d4d;fill-opacity:1" /></svg>

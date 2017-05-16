@@ -2,24 +2,25 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>ESCAPE MY ROOM</title>
-    <meta name="description" content="Unravel the mysterious history of the DeLaporte family and their secret role in shaping New Orleans&#x27; history!" />
+    <title>Escape My Room - Award Winning New Orleans Escape Game</title>
+    <meta name="description" content="Unravel the mysterious history of the DeLaporte family and their secret role in shaping New Orleans&#x27; history!">
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <link rel="shortcut icon" href="assets/img/favicon.ico?v=304d580990">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/screen.css?v=304d580990" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
     <link rel="stylesheet" type="text/css" href="assets/css/booking.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/flexslider.css">
+
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,700italic,300italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Droid+Sans:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,700italic,300italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Droid+Sans:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,900' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -29,7 +30,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="canonical" href="index.html" />
+    <link rel="canonical" href="index.html">
 
 <!-- Facebook Pixel Code -->
 <script>
@@ -46,7 +47,7 @@ fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1016142188416147&ev=PageView&noscript=1"
-/></noscript>
+></noscript>
 <!-- DO NOT MODIFY -->
 <!-- End Facebook Pixel Code -->
 
@@ -67,20 +68,17 @@ src="https://www.facebook.com/tr?id=1016142188416147&ev=PageView&noscript=1"
 
 <div id="top-menu-container">
   <div class="menu-banner large">
-    <a class="title" href="/">ESCAPE MY ROOM</a>
-    <span class="city">New Orleans</span>
+    <p class="title-wrapper"> <a class="title" href="https://escapemyroom.com">ESCAPE MY ROOM</a> </p>
+    <p> <span class="city">New Orleans</span> </p>
   </div>
-  <span class="menu-banner small">
-    <a class="title" href="/">ESCAPE MY ROOM</a><br>
-    <span class="city">New Orleans</span>
-  </span>
+  <a id="top-menu-buy-tickets-button"  class="activate-booking buy-tickets-button" href="#tickets-nav">BUY<br>TICKETS</a>
   <ul id="top-menu">
-    <li><a class="link arctic_scroll" href="#how-it-works-nav">How it Works</a></li>
+    <li><a class="link arctic_scroll" href="#how-to-play-nav">How to Play</a></li>
     <li><a class="link arctic_scroll" href="#rooms-nav">Rooms</a></li>
     <li><a class="link arctic_scroll" href="#location-nav">Location</a></li>
-    <li><a class="link arctic_scroll" href="#newsletter-nav">Updates</a></li>
-    <li><a class="activate-booking buy-tickets-button arctic_scroll" href="#tickets-nav">BUY TICKETS</a></li>
+    <!--<li><a class="link arctic_scroll" href="#newsletter-nav">Updates</a></li> -->
   </ul>
+ 
   <div id="mobile-hamburger">
     <span></span>
     <span></span>
@@ -91,46 +89,36 @@ src="https://www.facebook.com/tr?id=1016142188416147&ev=PageView&noscript=1"
 </div>
 
 
-<section class="main-header " style="background-image: url(assets/img/cover-waiting-room.jpg)">
+<div id="title-section">
+  <h1>Escape My Room</h1>
+  <h2>New Orleans</h2>
+  <p><a class="activate-booking buy-tickets-button" href="#tickets-nav">BUY TICKETS</a></p>
+  <p><a class="purchase-gift-card-link" href="giftcard.html">Purchase Gift Card</a></p>
+</div>  <!-- close title-section -->
 
-    <div class="vertical escape-overlay">
-      <div class="main-header-content inner">
-        <h1 class="main-crawl">Escape the room once, and you'll want to be locked up again and again.</h1>
-        <div class="space-below">
-<a class="activate-booking buy-tickets-button" href="#tickets-nav">BUY TICKETS</a>
-        </div>
-        <div>
-          <a class="purchase-gift-card-link" href="giftcard.html">Purchase Gift Card</a>
-        </div>
-        <div class="mc-container">
-        <div class="mc-header-form">
-          <!-- Newsletter Signup Form Here -->
-          </div>
-        </div><!-- /.mc-containter -->
-      </div><!-- /.main-header-content ./inner -->
-    </div><!-- /.vertical -->
-
-</section>
-
-  <div id="how-it-works">
-    <span id="how-it-works-nav"></span>
-    <h2>How it works</h2>
-
+  <div id="how-to-play" class="big-section">
+    <span id="how-to-play-nav"></span>
+    <h2 class="section-heading">How To Play</h2>
+    <hr class="section-header-line how-to-play-line"> </hr>
+    <div class="steps">
     <div class="step">
       <div class="heading">1. Invite friends</div>
       <div class="icon">
         <img src="assets/img/hiw-friends.png">
       </div>
-      <div class="how-tab">
-        <div class="arrow-up"></div>
-        <p class="blurb">
-Invite friends, family, or coworkers! Escape My Room is best experienced as
-part of a team.  Each escape room can hold a maximum of 8 guests, but you can
-book as many or as few tickets as you like.  If you don’t book all 8 tickets in
-your timeslot, there’s a good chance someone else will book the remaining
-tickets and you’ll make new friends!
+      <p class="body-text">
+It’s more fun with people
+you know. Each escape
+room can hold a maximum
+of 8 guests, but you can
+book as many or as few
+tickets as you like. If you
+don’t book all tickets, there’s
+a good chance someone
+else will book the remaining
+tickets for that timeslot and
+you’ll make new friends.
         </p>
-      </div>
     </div>
 
     <div class="step">
@@ -138,398 +126,283 @@ tickets and you’ll make new friends!
       <div class="icon">
         <img src="assets/img/hiw-tickets.png">
       </div>
-      <div class="how-tab">
-        <div class="arrow-up"></div>
-        <p class="blurb">
-Buy tickets here on our website. All Escape My Room tickets must be purchased
-at least one hour in advance. Walk-ins are not allowed. Choose your room,
-select the number of tickets you’ll need, and then find a date and a time that
-work well for you.
+      <p class="body-text">
+Tickets must be purchased
+online at least one hour
+in advance here on our
+website. Walk-ins are
+not allowed. If you are
+coming for a teambuilding
+event, please write to
+us in advance at: <span class=e-mail>info@escapemyroom.com</span>
         </p>
-      </div>
     </div>
 
-    <div class="clear"></div>
-
     <div class="step">
-      <div class="heading">3. Get locked in a room</div>
+      <div class="heading">3. Play the room</div>
       <div class="icon">
         <img src="assets/img/hiw-lock.png">
       </div>
-      <div class="how-tab">
-        <div class="arrow-up"></div>
-        <p class="blurb">
-Get locked in a room!  You have one hour to escape, but if you do not escape
-within the hour, then we’ll come in and show you what you missed.  Please
-arrive on time to be able to look around the family museum.  You risk
-forfeiting your ticket if you are more than 15 minutes late.
+      <p class="body-text">
+Show up to our location
+on time or risk forfeiting
+your ticket. We cannot
+let you in if you are more
+than 15 minutes late. You
+have one hour to escape,
+if you do not escape
+within the hour, then we
+come in and explain any
+remaining mysteries.
         </p>
-      </div>
+    </div>
     </div>
 
-    <div class="step">
-      <div class="heading">4. Solve puzzles</div>
-      <div class="icon">
-        <img src="assets/img/hiw-solve-puzzles.png">
-      </div>
-      <div class="how-tab">
-        <div class="arrow-up"></div>
-        <p class="blurb">
-While in the room, you must work together as a team to find clues and solve
-puzzles,uncovering secrets and scandals of the DeLaporte family along the way.
-        </p>
-      </div>
-    </div>
-
-    <div class="clear"></div>
-
-    <div class="step">
-      <div class="heading">5. Come back</div>
-      <div class="icon">
-        <img src="assets/img/hiw-come-back.png">
-      </div>
-      <div class="how-tab">
-        <div class="arrow-up"></div>
-        <p class="blurb">
-Come back! We debut a new escape room every two to four months, so If you have
-a good time (and we promise that you will), come back and play a different
-room!
-        </p>
-      </div>
-    </div>
-
-    <div class="clearfix"></div>
-
-    <p class="tip">Still have questions? Look at our Tips and FAQs or email us at info@escapemyroom.com</p>
+    <p class="tip">More Questions?</p>
 
     <p class="nav-button">
       <a data-toggle="modal" data-target="#tips-faq">READ TIPS + FAQ</a>
     </p>
   </div>
 
-  <div id="rooms">
-    <span id="rooms-nav"></span>
-    <div class="copy">
-      <h2>Rooms</h2>
+<div id="rooms-intro-bg">
+</div>
 
-      <p>
-Escape My Room features rooms inspired by the DeLaporte mansion which was torn
-down to make way for a new hospital complex near the Superdome.  Before the
-house was demolished, everything within it was removed and placed into storage.
-      </p>
+<div class="parallelogram-top"></div>            
+ 
+<div id="rooms" class="big-section">
+  <span id="rooms-nav"></span>
 
-      <p class="nav-button">
-        <a data-toggle="modal" data-target="#about-rooms">Read More</a>
-      </p>
-    </div>
-
-    <div class="clearfix"></div>
-  </div>
+  <h2 class="section-heading">Rooms</h2>
+  <hr class="section-header-line rooms-line">
 
   <div id="mardi-gras-study" class="container-room">
-  <div class="clamp">
-    <h3>Mardi Gras Study</h3>
-
-    <div class="clear-both"></div>
-
-    <ul class="stats">
-      <li><i class="icon room-duration-icon"></i> 1 Hour</li>
-      <li><i class="icon price-per-person-icon"></i> $30/Person</li>
-      <li><i class="icon exit-percentage-icon"></i> 32% Escape Rate</li>
-      <li><i class="icon group-size-icon"></i> 2-8 Players</li>
-    </ul>
-
-    <div class="review-quote">
-      <p class="quote-text">
-<span class="jumbo">“</span>GREAT experience! The storyline is creative, and the decor is hauntingly
-delightful. Very eclectic, especially heightened with New Orleans history and
-culture to make it a more special experience than would be in other cities.<span class="jumbo">”</span>
-      </p>
-      <p class="attribution">- <a href="http://www.yelp.com/biz/escape-my-room-new-orleans?hrid=wFghA2U3-vBtdkpytGGvCA">Laura P. via Yelp</a></p>
-    </div>
-
-    <div class="clear-both"></div>
-
-    <p class="extra-button">
-      <a href="#tickets-nav" data-room="41552J7MHUA150CDE4C67F" class="activate-booking buy-tickets-button">BUY TICKETS</a>
-    </p>
-
-    <div class="picture">
-      <img src="assets/img/statuette.jpg">
-    </div>
-
-    <div class="blurb">
+    <div class="room-container-left">
+      <h3 class="subheading">Mardi Gras Study</h3>
+      <ul class="stats">
+        <li><i class="icon room-duration-icon"></i> 1 Hour</li>
+        <li><i class="icon group-size-icon"></i> 2-8 Players</li>
+        <li><i class="icon price-per-person-icon"></i> $30/Person</li>
+        <li><i class="icon exit-percentage-icon"></i> 37% Escape Rate</li>
+      </ul>
+      <div class="carousel mobile">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="assets/img/EMR_rooms-mardi-gras-study-1.jpg">
+            </li>
+            <li>
+              <img src="assets/img/EMR_rooms-mardi-gras-study-2.jpg">
+            </li>
+            <li>
+              <img src="assets/img/EMR_rooms-mardi-gras-study-3.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
       <p class="normal-button">
-        <a href="#tickets-nav" data-room="41552J7MHUA150CDE4C67F" class="activate-booking buy-tickets-button">BUY TICKETS</a>
+        <a href="#tickets-nav" data-room="41552J7MHUA150CDE4C67F" class="big activate-booking buy-tickets-button">BUY TICKETS</a>
+      </p>
+      <p class="body-text">
+  The year is 1990, and Odette DeLaporte has invited you to her study. As the last remaining heir in New Orleans to the DeLaporte fortune, she needs your help locating a treasure which went missing a long time ago.
+  The reclusive matriarch has not been seen in public for quite some time, yet she has agreed to meet with you with the hope that you can recover what’s been lost.
       </p>
 
-      <p>
-The year is 1990, and Odette DeLaporte has invited you to her study. As the
-last remaining heir in New Orleans to the DeLaporte fortune, she needs your
-help locating a treasure which went missing a long time ago.
-      </p>
-
-      <p>
-The reclusive matriarch has not been seen in public for quite some time, yet
-she has agreed to meet with you with the hope that you can recover what’s been
-lost.
+      <p class="mobile-button">
+        <a href="#tickets-nav" data-room="41552J7MHUA150CDE4C67F" class="big activate-booking buy-tickets-button">BUY TICKETS</a>
       </p>
     </div>
 
-    <p class="extra-button">
-      <a href="#tickets-nav" data-room="41552J7MHUA150CDE4C67F" class="activate-booking buy-tickets-button">BUY TICKETS</a>
-    </p>
-
+    <div class="room-container-right">
+      <div class="carousel desktop">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="assets/img/EMR_rooms-mardi-gras-study-1.jpg">
+            </li>
+            <li>
+              <img src="assets/img/EMR_rooms-mardi-gras-study-2.jpg">
+            </li>
+            <li>
+              <img src="assets/img/EMR_rooms-mardi-gras-study-3.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="clear-both"></div>
+  </div>
 
-  </div>
-  </div>
+  <div class="clear-both"></div>
 
   <div id="jazz-parlor" class="container-room">
-  <div class="clamp">
-    <h3>Jazz Parlor</h3>
-
-    <div class="clear-both"></div>
-
-    <ul class="stats">
-      <li><i class="icon room-duration-icon"></i> 1 Hour</li>
-      <li><i class="icon price-per-person-icon"></i> $30/Person</li>
-      <li><i class="icon exit-percentage-icon"></i> 38% Escape Rate</li>
-      <li><i class="icon group-size-icon"></i> 2-8 Players</li>
-    </ul>
-
-    <div class="review-quote">
-      <p class="quote-text">
-<span class="jumbo">“</span>Very well organized and put together. Very clean
-and well kept, especially with all the eclectic items to maintain and dust.
-Super friendly staff. Be prepared to work together, have fun and stimulate your
-mind in a family-friendly atmosphere.<span class="jumbo">”</span>
-      </p>
-      <p class="attribution">- <a href="https://www.tripadvisor.com/ShowUserReviews-g60864-d8316859-r379653293-Escape_My_Room-New_Orleans_Louisiana.html">TripAdvisor Reviewer</a></p>
-    </div>
-
-    <div class="clear-both"></div>
-
-    <p class="extra-button">
-      <a href="#tickets-nav" data-room="41552RTK3W7150C94470C3" class="activate-booking buy-tickets-button">BUY TICKETS</a>
-    </p>
-
-    <div class="picture">
-      <img src="assets/img/parallax-cats-small.jpg">
-    </div>
-
-    <div class="blurb">
+    <div class="room-container-left">
+      <h3 class="subheading">Jazz Parlor</h3>
+      <ul class="stats">
+        <li><i class="icon room-duration-icon"></i> 1 Hour</li>
+        <li><i class="icon group-size-icon"></i> 2-8 Players</li>
+        <li><i class="icon price-per-person-icon"></i> $30/Person</li>
+        <li><i class="icon exit-percentage-icon"></i> 37% Escape Rate</li>
+      </ul> 
+      <div class="carousel mobile">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="assets/img/EMR_rooms-jazz-parlor-1.jpg">
+            </li>
+            <li>
+              <img src="assets/img/EMR_rooms-jazz-parlor-2.jpg">
+            </li>
+            <li>
+              <img src="assets/img/EMR_rooms-jazz-parlor-3.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
       <p class="normal-button">
-        <a href="#tickets-nav" data-room="41552RTK3W7150C94470C3" class="activate-booking buy-tickets-button">BUY TICKETS</a>
+<a href="#tickets-nav" data-room="41552J7MHUA150CDE4C67F" class="big activate-booking buy-tickets-button">BUY TICKETS</a>
+      </p>
+      <p class="body-text">
+Travel back in time to the scene of
+a murder in the music parlor of the
+DeLaporte Mansion. Join forces with
+the police and grieving DeLaporte
+family members as they comb the
+crime scene for evidence. Can the
+two groups cooperate long enough
+to solve this 60-year-old crime, or will
+the answers be lost forever?
       </p>
 
-      <p>
-Travel back in time to the scene of a murder in the music parlor of the
-DeLaporte Mansion. Join forces with the police and grieving DeLaporte family
-members as they comb the crime scene for evidence. Can the two groups cooperate
-long enough to solve this 60-year-old crime, or will the answers be lost
-forever?
-      </p>
-
-      <p>
-The Jazz Parlor features relics of New Orleans’ most bizarre family, and
-numerous secrets untold. Expose the DeLaporte scandal as you learn the history
-of jazz.
+      <p class="mobile-button">
+        <a href="#tickets-nav" data-room="41552J7MHUA150CDE4C67F" class="big activate-booking buy-tickets-button">BUY TICKETS</a>
       </p>
     </div>
 
-    <p class="extra-button">
-      <a href="#tickets-nav" data-room="41552RTK3W7150C94470C3" class="activate-booking buy-tickets-button">BUY TICKETS</a>
-    </p>
-
+    <div class="room-container-right">
+      <div class="carousel desktop">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="assets/img/EMR_rooms-jazz-parlor-1.jpg">
+            </li>
+            <li>
+              <img src="assets/img/EMR_rooms-jazz-parlor-2.jpg">
+            </li>
+            <li>
+              <img src="assets/img/EMR_rooms-jazz-parlor-3.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="clear-both"></div>
-
   </div>
-  </div>  
 
-  <div class="room-comparison-section">
-  <div class="squeeze">
-    <h3>How to choose?</h3>
+  <div id="how-to-choose" class="container-room">
+    <h3 class="subheading">How To Choose</h3>
 
-    <p class="blurb">
+    <div class="squeeze">
+      <p class="body-text">
 You’ll have a great time regardless of the room you choose.  There is a story
 which connects all of our escape rooms, but they don’t need to be played in
 order to understand it.
-    </p>
-
-    <div class="room-comparison">
-      <div class="listing left">
-        <div class="header">Mardi Gras Study</div>
-        <ul>
-        <li><span>Opened June 2015</span></li>
-        <li><span>Best for less experienced escape room players</span></li>
-        <li><span>Ages 12 and up</span></li>
-        <li><span>First chapter in the DeLaporte story</span></li>
-        <li><span>Better for digital and mobile escape game players</span></li>
-        <li><span>Involves finding something valuable that’s gone missing</span></li>
-        <li><span class="last">More handicapped accessible, please contact us before booking</span></li>
-        </ul>
-      </div>
-
-      <div class="listing right">
-        <div class="header">Jazz Parlor</div>
-        <ul>
-        <li><span>Opened May 2016</span></li>
-        <li><span>Best for experienced escape room players</span></li>
-        <li><span>Ages 12 and up</span></li>
-        <li><span>Newest chapter in the DeLaporte story</span></li>
-        <li><span>Best for players who like more “tech”</span></li>
-        <li><span>Involves solving a murder</span></li>
-        <li><span class="last">Less handicapped accessible, please contact us before booking</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="clear-both"></div>
-
-  </div>
-  </div>
-
-<!--
-  <div id="tickets" class="container-fluid">
-    <span id="tickets-nav"></span>
-    <h2>Buy Tickets</h2>
-
-    <div class="copy col-md-6">
-      <p>
-Use the calendar to purchase tickets, or
-<a href="https://emr.acuityscheduling.com/" target="_blank">open the calendar in a new window</a>.
-Tickets cost $28 per person, and there are 7 tickets available
-for each time slot. If you would like more than one ticket, enter the number of
-tickets you would like to purchase before selecting a date.
       </p>
 
-      <p>
-If you have a code to redeem, please enter it on the first screen by clicking
-the button "redeem code." Codes are given out when gift certificates are
-purchased. We do not currently offer any discounts on admission.
-      </p>
-    </div>
+<table>
+  <tr>
+    <th class="cell left">Mardi Gras Study</th>
+    <th class="cell right">Jazz Parlor</th>
+  </tr>
+  <tr>
+    <td class="cell left">Opened June 2015</td>
+    <td class="cell right">Opened May 2016</td>
+  <tr>  
+    <td class="cell left">Best for less experienced escape room players</td>
+    <td class="cell right">Best for more experienced escape room players</td>
+   </tr>
+   <tr> 
+    <td class="cell left">Ages 12 and up</td>
+    <td class="cell right">Ages 12 and up</td>
+   </tr> 
+    <td class="cell left">First chapter in the DeLaporte story</td>
+    <td class="cell right">Newest chapter in the DeLaporte story</td>
+   <tr> 
+    <td class="cell left">Involves finding something valuable that's gone missing</td>
+    <td class="cell right">Involves solving a murder</td>
+   </tr> 
+   <tr>
+     <td class="cell left">More handicapped accessible, please contact us before booking</td>
+     <td class="cell right">Less handicapped accessible, please contact us before booking</td>
+   </tr> 
+</table>
 
-    <div class="widget col-md-6">
-      <iframe src="https://app.acuityscheduling.com/schedule.php?owner=11450723" width="100%" height="800" frameBorder="0"></iframe>
-      <script src="https://d3gxy7nm8y4yjr.cloudfront.net/js/embed.js" type="text/javascript"></script>
-    </div>
-  </div>
--->
+    </div> <!-- close squeeze -->
 
-  <div id="location">
-    <span id="location-nav"></span>
+  </div> <!-- closing how to choose subsection -->
+
+</div> <!-- closing rooms section -->
+
+
+<div id="waiting-room">
+</div>
+
+<div id="location" class="big-section">
+  <div id="location-nav"></div>
+
+  <div class="squeeze">
+    <div class="mobile">
+      <h2 class="section-heading">Location</h2>
+      <hr class="section-header-line location-line">
+    </div>
     <div class="map">
       <iframe
         id="google-maps"
         width="450"
         height="450"
         frameborder="0"
-        style="border:0"
         src="https://www.google.com/maps/embed/v1/place?q=633%20Constance%20St%2C%20New%20Orleans%2C%20LA%2C%20United%20States&key=AIzaSyDQsIA2erhxwUqO6L4au1EBOXhh8e_NyWg">
       </iframe>
     </div>
-
     <div class="copy">
-      <h2>Location</h2>
-
-      <p>
+      <div class="normal">
+        <h2 class="section-heading">Location</h2>
+        <hr class="section-header-line location-line">
+      </div>
+      <p class="body-text">
 Escape My Room is located at 633 Constance St. in a former perfume factory
 building about three blocks from Harrah’s Casino.  We are within walking
 distance or a short cab ride away from most major hotels. Specific details
 about how to enter the building will be provided upon booking.
       </p>
 
-      <p>
+      <p class="body-text">
 Parking is available in nearby lots and is free on the street after 7pm.
       </p>
 
-      <p>
+      <p class="body-text">
 Escape My Room does not allow walk-ins. Everyone visiting must have a ticket
 which can only be purchased online in advance.
       </p>
     </div>
 
     <div class="clearfix"></div>
-  </div>
 
-  <div id="newsletter">
-    <span id="newsletter-nav"></span>
-    <h2>Updates</h2>
-    <p>
-To stay abreast of openings and updates, please subscribe to our newsletter or
-follow our story on social media.
-    </p>
+  </div> <!-- close squeeze div -->
 
-<!-- Begin MailChimp Signup Form -->
-    <div id="mc_embed_signup">
-      <form
-        action="https://escapemyroom.us9.list-manage.com/subscribe/post?u=a8797e0d9e7a8f692511f64f7&amp;id=64eee47b42"
-        method="post"
-        id="mc-embedded-subscribe-form"
-        name="mc-embedded-subscribe-form"
-        class="validate"
-        target="_blank"
-        novalidate
-      >
-        <div id="mc_embed_signup_scroll">
-          <div class="mc-field-group">
-            <div class="input-group undo-bootstrap-table-on-mobile ad-hoc-space-below">
-              <input
-                type="email"
-                value=""
-                name="EMAIL"
-                class="required email form-control override-bootstrap-font-size-12 undo-bootstrap-corners-on-mobile"
-                id="mce-EMAIL"
-                placeholder="Your email address"
-              >
-              <span class="input-group-btn">
-                <input
-                  type="submit"
-                  value="SUBSCRIBE"
-                  name="subscribe"
-                  id="mc-embedded-subscribe"
-                  class="form-button btn override-bootstrap-font-size-18 force-bootstrap-corners hide-on-mobile"
-                >
-              </span>
+</div> <!-- close location section -->
 
-            </div>
-
-            <div class="input-group undo-bootstrap-table-on-mobile show-on-mobile">
-              <input type="submit" value="SUBSCRIBE" name="subscribe" id="mc-embedded-subscribe" class="btn form-button override-bootstrap-font-size-18">
-            </div>
-          </div>
-          <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
-          </div>
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;">
-            <input type="text" name="b_a8797e0d9e7a8f692511f64f7_64eee47b42" tabindex="-1" value="">
-          </div>
-        </div>
-      </form>
-    </div>
-<!--End MailChimp Signup Form -->
-
-    <div class="links">
-      <a href="http://twitter.com/escapemyroom" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a>
-      <a href="http://facebook.com/escapemyroom" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>
-      <a href="http://instagram.com/escapemyroom" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
-    </div>
-
+  <div id="office-bg">
   </div>
 
   <div id="footer">
     <p>
-      &copy; 2016 ESCAPE MY ROOM. All rights reserved.<br>
-      633 Constance St., New Orleans LA 70130<br>
+      &copy; DELAPORTE VENTURES LLC.<br>
+      633 Constance St.<br>
+      New Orleans LA 70130<br>
       504-475-7580<br>
-      <a href="mailto:info@escapemyroom.com">info@escapemyroom.com</a>
-    </p>
-    <p id="privacy-policy">
-      <a href="https://www.iubenda.com/privacy-policy/7890172">Privacy Policy</a>
+      <a class="email-link" href="mailto:info@escapemyroom.com">info@escapemyroom.com</a><br>
+      <a class="privacy-policy-link" href="https://www.iubenda.com/privacy-policy/7890172">Privacy Policy</a>
     </p>
   </div>
 
@@ -827,6 +700,7 @@ interested in and the total party size.
   <script type="text/javascript" src="assets/js/isMobile.js"></script>
   <script type="text/javascript" src="assets/js/sayswho.js"></script>
   <script type="text/javascript" src="assets/js/sha1.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.flexslider.js"></script>
 
   <script src="assets/js/booking/html.js"></script>
   <script src="assets/js/booking/lib.js"></script>
@@ -861,6 +735,10 @@ interested in and the total party size.
       var screenH = $(window).height();
       $('#tips-faq .modal-body').height(screenH*0.666);
     });
+
+    $('.flexslider').flexslider({
+      animation: "slide"
+    });
   </script>
 
   <script>
@@ -877,20 +755,9 @@ interested in and the total party size.
 
   <script type="text/javascript">
       function adjust_google_maps(){
-        var small = $(window).width() < 768;
         var iframe = $('iframe#google-maps');
         var container = iframe.parent();
-        var section = container.parent();
-        var w = section.width();
-        var l = container.offset().left;
-        if(small){
-          var newW = w - 2*l;
-        }
-        else{
-          var newW = w / 2 - 2 * l;
-        }
-        iframe.width(newW);
-        $('#location .copy').width(newW - 40);
+        iframe.width(container.width());
       }
 
       $(window).resize(function(){
