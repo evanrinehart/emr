@@ -826,6 +826,15 @@ nav ol, nav ul {
   color: #8c8a26;
 }
 
+/* can't edit iubenda link in any way */
+a.iubenda-nostyle {
+  color: #bcba56;
+}
+
+a.iubenda-nostyle:hover {
+  color: #8c8a26;
+}
+
 
 /* This is for FlexSlider Font CSS */
 @font-face {
