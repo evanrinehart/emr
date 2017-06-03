@@ -22,7 +22,7 @@ a.purchase-gift-card-link {
 
 #title-section {
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
     url('../img/cover-waiting-room.jpg');
   background-size: auto 100%;
   background-position-x: center;
