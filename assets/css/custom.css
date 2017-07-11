@@ -805,6 +805,11 @@ nav ol, nav ul {
   top: -69px;
 }
 
+#groups-nav {
+  position: absolute;
+  top: -69px;
+}
+
 #location-nav {
   position: absolute;
   top: -68px;
@@ -976,7 +981,6 @@ a.iubenda-nostyle:hover {
 #groups {
   background-color: #63527C;
   color: #D5C87D;
-  padding: 10px 20px;
 }
 
 #groups .groups-line {
