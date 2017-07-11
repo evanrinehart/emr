@@ -1103,8 +1103,7 @@ $(document).on('submit', '#groups form', function(ev){
   ev.preventDefault();
   var form = $(this)[0];
   var data = {
-    first_name: form.first_name.value,
-    last_name: form.last_name.value,
+    name: form.name.value,
     email: form.email.value,
     phone: form.phone.value,
     company: form.company.value,
@@ -1130,8 +1129,7 @@ $(document).on('submit', '#groups form', function(ev){
       problems.push(field);
   }
 
-  required(form.first_name);
-  required(form.last_name);
+  required(form.name);
   required(form.email);
   required(form.phone);
   required(form.message);
