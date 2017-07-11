@@ -176,6 +176,13 @@ function bookingWidget(width, height, room, ticketCount, baseDate, rooms, availa
   }
 }
 
+var comodoSealHtml = [
+'<a href="https://ssl.comodo.com">',
+'<img src="https://ssl.comodo.com/images/comodo_secure_seal_113x59_transp.png" alt="SSL Certificate" width="113" height="59" style="border: 0px;">',
+'</a><br>',
+'<span style="font-weight:bold; font-size:7pt"><a href="https://ssl.comodo.com">SSL Certificate</a></span><br>'
+].join('');
+
 function checkoutPanel(data){
 
   with(HTML){
@@ -1092,7 +1099,7 @@ function submitGroupContactForm(params){
   });
 }
 
-$(document).on('submit', '.large-group-contact-form', function(ev){
+$(document).on('submit', '#groups form', function(ev){
   ev.preventDefault();
   var form = $(this)[0];
   var data = {
@@ -1100,22 +1107,62 @@ $(document).on('submit', '.large-group-contact-form', function(ev){
     last_name: form.last_name.value,
     email: form.email.value,
     phone: form.phone.value,
+    company: form.company.value,
+    event_type: form.event_type.value,
+    date: form.date.value,
     size: form.size.value,
-    comment: form.comment.value
+    message: form.message.value
   };
+
+  $(form).find('.field').removeClass('problem');
+  $(form).find('.note').removeClass('problem');
+
+  var problems = [];
+  function required(field){
+    if(field.value.trim() == '') problems.push(field);
+  }
+  function validateEmail(field){
+    if(!field.value.trim().match(/^[\w+\-\.]+@\w+\.(\w|\.)+$/))
+      problems.push(field);
+  }
+  function validatePhone(field){
+    if(!field.value.trim().match(/^([0-9]|\.|\(|\)|\s|-)+$/))
+      problems.push(field);
+  }
+
+  required(form.first_name);
+  required(form.last_name);
+  required(form.email);
+  required(form.phone);
+  required(form.message);
+  validateEmail(form.email);
+  validatePhone(form.phone);
+
+  problems.forEach(function(field){
+    $(field).closest('.field').addClass('problem');
+    $(form).find('.note').addClass('problem');
+  });
+
+  if(problems.length > 0) return;
 
   /* DEBUG MESSAGE */
   console.log('submitting data: ', data);
+  var button = $(form).find('input[type="submit"]');
+  button.attr('disabled','disabled');
+  button.addClass('disabled');
 
   submitGroupContactForm({
     data: data,
     success: function(response){
-      /* PUT SUCCESS CODE HERE */
-      console.log('success: ', response);
+      $(form).addClass('used');
+      setTimeout(function(){
+        alert("Your message has been delivered to our booking department!");
+      }, 100);
     },
     failure: function(code, response){
-      /* PUT ERROR CODE HERE */
-      console.log('failure code=', code, ':', response);
+      alert('Just now a mysterious event prevented your message from being delivered.');
+      console.log(code, response);
+      button.removeClass('disabled');
     }
   });
 });

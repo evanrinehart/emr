@@ -163,10 +163,11 @@ a.purchase-gift-card-link {
 }
 
 #top-menu a {
-    color: #FCFAE2;
-    text-decoration: none;
-    border-top: 3px rgba(240, 232, 206, .9);
-    transition: none;
+  color: #FCFAE2;
+  text-decoration: none;
+  border-top: 3px rgba(240, 232, 206, .9);
+  transition: none;
+  cursor: pointer;
 }
 
 #top-menu a.link:hover {
@@ -202,7 +203,7 @@ nav ol, nav ul {
   }
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1000px) {
   #mobile-hamburger {
     display: block;
   }
@@ -407,7 +408,7 @@ nav ol, nav ul {
 }
 
 #how-to-play .step {
-  width: 265px;
+  width: 300px;
   height: 670px;
   display: inline-block;
   vertical-align: top;
@@ -425,7 +426,7 @@ nav ol, nav ul {
   text-align: left;
 }
 
-@media screen and (max-width:1100px) {
+@media screen and (max-width:1200px) {
   #how-to-play {
     padding-left: 20px;
     padding-right: 20px;
@@ -450,32 +451,13 @@ nav ol, nav ul {
 /* ROOMS */
 
 #rooms-intro-bg {
-  background-size: auto 100%;
-  background-position: -55px 0;
+  background-size: 100% auto;
+  background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../img/bg-rooms.jpg");
-  height: 600px;
+  background-image: url("../img/candelabrum-girl.jpg");
+  height: 400px;
 }
 
-
-@media only screen and (min-width: 900px){
-  #rooms-intro-bg {
-    background-position: center;
-  }
-}
-
-@media only screen and (min-width: 1000px){
-  #rooms-intro-bg {
-    background-size: 100% auto;
-    background-position: center;
-  }
-}
-
-@media only screen and (min-width: 1600px){
-  #rooms-intro-bg {
-    height: 800px;
-  }
-}
 
 .parallelogram.top {
   transform: skew(0deg,-3deg);
@@ -734,16 +716,14 @@ nav ol, nav ul {
 
 #office-bg {
   background-image: url(../img/EMR_perfume-shop-above-updates.jpg);
-  background-size: auto 100%;
-  background-position: right 0;
-  height: 800px;
-}
-
-@media only screen and (min-width: 540px){
-  #office-bg {
-    background-size: 100% auto;
-    background-position: left 0 bottom 20%;
-  }
+  padding: 0;
+  color: #404040;
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #footer {
@@ -868,42 +848,17 @@ a.iubenda-nostyle:hover {
 }
     
 #waiting-room {
-    background-image: url(../img/EMR_waiting-room-above-location.jpg);
-    padding: 0;
-    color: #404040;
-    position: relative;
-    overflow: hidden;
-    height: 861px;
-    background-size: 100% auto;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url(../img/EMR_waiting-room-above-location.jpg);
+  padding: 0;
+  color: #404040;
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-
-@media screen and (max-width:1300px){
-  #waiting-room {
-    background-size: auto 100%;
-  }
-
-}
-
-@media screen and (max-width:768px){
-  #waiting-room {
-    background-size: auto 100%;
-    background-position: -400px top; }
-}
-
-@media screen and (max-width:600px){
-  #waiting-room {
-    background-size: auto 100%;
-    background-position: -660px top; }
-}
-
-@media screen and (max-width:325px){ 
-  #waiting-room {
-    background-position: -758px top;
-  } 
-}
 
 .subheading {
   font-family: Roboto, sans-serif;
@@ -1018,3 +973,216 @@ a.iubenda-nostyle:hover {
 
 
 
+#groups {
+  background-color: #63527C;
+  color: #D5C87D;
+  padding: 10px 20px;
+}
+
+#groups .groups-line {
+  width: 192px;
+  margin-bottom: 30px;
+}
+
+#groups .blurb {
+  max-width: 540px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+#groups .squeeze {
+  max-width: 960px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+#groups .responsive-column {
+  width: 460px;
+  height: 560px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  float: left;
+  background-color: #E1E0ED;
+  color: #404040;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+#groups .subheading {
+  text-align: center;
+}
+
+#groups form {
+  max-width: 960px;
+  margin: auto;
+/*  background-color: #202020;*/
+/*  color: #808080; */
+  padding: 20px;
+  margin-bottom: 40px;
+  font-size: 12pt;
+}
+
+#groups form.used {
+  display: none;
+}
+
+#groups form .field {
+  float: left;
+  width: 460px;
+  margin-bottom: 5px;
+}
+
+#groups form .field.wide {
+  float: none;
+  width: 920px;
+  font-size: 12pt;
+}
+
+#groups form label {
+  font-weight: normal;
+  font-size: 12pt;
+}
+
+#groups form .input-box {
+  color: black;
+  font-family: sans-serif;
+  font-size: 12pt;
+}
+
+#groups form .field.wide label {
+  width: 150px;
+}
+
+#groups form .field.left label {
+  width: 150px;
+}
+
+#groups form .field.right label {
+  width: 160px;
+}
+
+#groups form .field.wide .input-box {
+  width: 764px;
+}
+
+#groups form .field.left .input-box {
+  width: 280px;
+}
+
+#groups form .field.right .input-box {
+  width: 294px;
+}
+
+#groups form .big-field label {
+  display: block;
+}
+
+#groups form .big-field textarea {
+  width: 100%;
+  height: 100px;
+  color: black;
+  font-size: 12pt;
+}
+
+#groups form .submit {
+  text-align: center;
+}
+
+#groups form input[type="submit"] {
+  color: black;
+  box-shadow: black 2px 2px 1px 0px;
+  border-radius: 5px;
+  background-color: lightgray;
+}
+
+#groups form input[type="submit"].disabled {
+  color: gray;
+}
+
+#groups form .field.problem .input-box,
+#groups form .field.problem textarea {
+  background-color: #ffa8a8;
+  border-color: #ca6138;
+}
+
+#groups form .field.problem label,
+#groups form .note.problem {
+  color: #e98681;
+}
+
+@media only screen and (max-width: 1000px){
+  #groups .responsive-column {
+    width: auto;
+    max-width: 460px;
+    float: none;
+    margin: auto;
+    margin-bottom: 30px;
+    height: auto;
+  }
+
+  #groups form {
+    width: auto;
+    max-width: 540px;
+    padding: 0;
+  }
+
+  #groups form .field {
+    width: auto;
+    margin-bottom: 10px;
+  }
+
+  #groups form .field.wide {
+    width: auto;
+  }
+
+  #groups form label {
+    display: block;
+    width: auto;
+  }
+
+  #groups form .field.left .input-box {
+    width: 100%;
+  }
+
+  #groups form .field.right .input-box {
+    width: 100%;
+  }
+
+  #groups form .field.wide .input-box {
+    width: 100%;
+  }
+
+  #groups form .field {
+    float: none;
+    display: block;
+  }
+  
+  #groups form .big-field textarea {
+    width: 100%;
+  }
+
+  #groups form .submit {
+    text-align: left;
+  }
+
+}
+
+
+#weird-wall {
+  background-image: url(../img/wall-of-weird.jpg);
+  padding: 0;
+  color: #404040;
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hidden {
+  display: none;
+}

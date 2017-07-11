@@ -75,7 +75,9 @@ src="https://www.facebook.com/tr?id=1016142188416147&ev=PageView&noscript=1"
   <ul id="top-menu">
     <li><a class="link arctic_scroll" href="#how-to-play-nav">How to Play</a></li>
     <li><a class="link arctic_scroll" href="#rooms-nav">Rooms</a></li>
+    <li><a class="link arctic_scroll" href="#groups-nav">Groups</a></li>
     <li><a class="link arctic_scroll" href="#location-nav">Location</a></li>
+    <li><a class="link" data-toggle="modal" data-target="#tips-faq">FAQ</a></li>
     <!--<li><a class="link arctic_scroll" href="#newsletter-nav">Updates</a></li> -->
   </ul>
  
@@ -127,15 +129,16 @@ you’ll make new friends.
         <img src="assets/img/hiw-tickets.png">
       </div>
       <p class="body-text">
-Tickets must be purchased
-online at least one hour
-in advance here on our
-website. Walk-ins are
-not allowed. If you are
-coming for a teambuilding
-event, please write to
-us in advance at: <span class=e-mail>info@escapemyroom.com</span>
-        </p>
+Tickets must be purchased online at least one hour in advance here on our
+website. Walk-ins are not allowed.
+      </p>
+
+      <p class="body-text">
+If you are interested in bringing in a group of 8 or more for a team building
+activity or a party, please contact us in advance at
+<span class="e-mail"><a href="mailto:booking@escapemyroom.com">booking@escapemyroom.com</a></span>.
+      </p>
+
     </div>
 
     <div class="step">
@@ -344,10 +347,125 @@ order to understand it.
 
 <div class="parallelogram bottom rooms"></div>            
 
-
+<!-- change one of the two waiting-room background images -->
 <div id="waiting-room">
 </div>
 
+<div class="parallelogram top location"></div>            
+<div id="groups" class="big-section">
+  <div id="groups-nav"></div>
+
+  <h2 class="section-heading">Groups</h2>
+  <hr class="section-header-line groups-line">
+
+  <p class="body-text blurb">
+Escape My Room an Award-winning New Orleans escape game is perfect for
+team building, corporate events, and private parties.
+  </p>
+
+
+  <div class="squeeze">
+    <div class="clear-both"></div>
+
+    <div class="responsive-column">
+      <h3 class="subheading">Private Party</h3>
+      <p class="body-text">
+Host your next party at the Delaporte Family Manor and make it a night to
+remember. Whether you’re planning a birthday, anniversary, retirement or just a
+reason to get together with friends contact us today to get the party planning
+started.
+      </p>
+    </div>
+
+    <div class="responsive-column">
+      <h3 class="subheading">Team Building</h3>
+      <p class="body-text">
+  Escape My Room is a new innovative team building activity where teams must
+  communicate, collaborate and problem-solve to escape. Collaboration is
+  essential for successfully escaping any of the rooms at the Delaporte Family
+  Manor. Since participants must collaborate to solve the myriad puzzles (not
+  just the puzzles that lead to escape), Escape My Room is suitable and effective
+  for developing teambuilding and/or problem-solving skills. You and your
+  colleagues have 60 minutes to “beat the clock” and exit the room. Interested in
+  joining us? Fill out the form below and a member of our team will contact you
+  to create your customized team building experience. 
+      </p>
+    </div>
+
+    <div class="clear-both"></div>
+
+  </div><!-- close squeeze -->
+
+  <p class="body-text blurb">
+Interested in bringing a large group to Escape My Room? Please fill out the
+form below and a member of our team will contact you to customize your group
+experience.
+  </p>
+
+  <form method="POST" action="https://booking.escapemyroom.com/groups">
+    <div class="field left">
+      <label>First Name*</label>
+      <input class="input-box" type="text" name="first_name">
+    </div>
+
+    <div class="field right">
+      <label>Last Name*</label>
+      <input class="input-box" type="text" name="last_name">
+    </div>
+
+    <div class="clear-both"></div>
+
+    <div class="field left">
+      <label>Email*</label>
+      <input class="input-box" type="text" name="email">
+    </div>
+
+    <div class="field right">
+      <label>Phone Number*</label>
+      <input class="input-box" type="text" name="phone">
+    </div>
+
+    <div class="clear-both"></div>
+
+    <div class="field wide">
+      <label>Company</label>
+      <input class="input-box" type="text" name="company">
+    </div>
+
+    <div class="field wide">
+      <label>Type of Group Event</label>
+      <input class="input-box" type="text" name="event_type">
+    </div>
+
+    <div class="field left">
+      <label>Date</label>
+      <input class="input-box" type="date" name="date">
+    </div>
+
+    <div class="field right">
+      <label>Group Size (if known)</label>
+      <input class="input-box" type="text" name="size">
+    </div>
+
+    <div class="clear-both"></div>
+
+    <div class="field wide big-field">
+      <label>Message*</label>
+      <textarea name="message"></textarea>
+    </div>
+
+    <p class="note">*required fields</p>
+    
+    <div class="submit">
+      <input type="submit" value="Send">
+    </div>
+  </form>
+
+</div><!-- close groups section -->
+<div class="parallelogram bottom location"></div>            
+
+<div id="weird-wall">
+</div>
 
 <div class="parallelogram top location"></div>            
 <div id="location" class="big-section">
@@ -389,7 +507,7 @@ which can only be purchased online in advance.
       </p>
     </div>
 
-    <div class="clearfix"></div>
+    <div class="clear-both"></div>
 
   </div> <!-- close squeeze div -->
 
@@ -656,10 +774,10 @@ it and escape.  We plan on opening more rooms in the future, and if you sign up
 for our mailing list, you’ll be the first to hear about them.
 </p>
 
-<h5>Can I have a party at Escape My Room?</h5>
+<h5>Are you able to host a large group or private event?</h5>
 <p>
-Please write to us at info@escapemyroom.com with the date/time you are
-interested in and the total party size.
+Absolutely! Contact us at booking@escapemyroom.com so that we can customize
+your group experience. 
 </p>
 <!-- XXX -->
 
@@ -718,13 +836,6 @@ interested in and the total party size.
   <script src="assets/js/booking/debug.js"></script>
 
   <script>
-    $(function(){
-      adjust_google_maps();
-      FastClick.attach(document.body);
-    });
-  </script>
-
-  <script>
     $('#mobile-hamburger').click(function(e){
       $(this).toggleClass('open');
       $('#top-menu').toggleClass('open');
@@ -764,10 +875,53 @@ interested in and the total party size.
         iframe.width(container.width());
       }
 
+      function adjust_background_section_2(){
+        var section = $('#rooms-intro-bg');
+        var container = section.parent();
+        var magic = 1.55;
+        section.height(container.width() / magic);
+      }
+
+      function adjust_background_section_3(){
+        var section = $('#waiting-room');
+        var container = section.parent();
+        var magic = 1.55;
+        section.height(container.width() / magic);
+      }
+
+      function adjust_background_section_4(){
+        var section = $('#weird-wall');
+        var container = section.parent();
+        var magic = 1.55;
+        section.height(container.width() / magic);
+      }
+
+      function adjust_background_section_5(){
+        var section = $('#office-bg');
+        var container = section.parent();
+        var magic = 0.70;
+        section.height(container.width() / magic);
+      }
+
       $(window).resize(function(){
         adjust_google_maps();
+        adjust_background_section_2();
+        adjust_background_section_3();
+        adjust_background_section_4();
+        adjust_background_section_5();
       });
 
+    </script>
+
+    <script>
+      $(function(){
+        adjust_google_maps();
+        adjust_background_section_2();
+        adjust_background_section_3();
+        adjust_background_section_4();
+        adjust_background_section_5();
+        FastClick.attach(document.body);
+      });
     </script>
 
 <!--Start of Tawk.to Script-->
