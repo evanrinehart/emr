@@ -981,6 +981,7 @@ a.iubenda-nostyle:hover {
 #groups {
   background-color: #63527C;
   color: #D5C87D;
+  letter-spacing: 1px;
 }
 
 #groups .groups-line {
@@ -1057,27 +1058,27 @@ a.iubenda-nostyle:hover {
 }
 
 #groups form .field.wide label {
-  width: 150px;
+  width: 175px;
 }
 
 #groups form .field.left label {
-  width: 150px;
+  width: 175px;
 }
 
 #groups form .field.right label {
-  width: 160px;
+  width: 175px;
 }
 
 #groups form .field.wide .input-box {
-  width: 764px;
+  width: 255px;
 }
 
 #groups form .field.left .input-box {
-  width: 280px;
+  width: 255px;
 }
 
 #groups form .field.right .input-box {
-  width: 294px;
+  width: 278px;
 }
 
 #groups form .big-field label {
