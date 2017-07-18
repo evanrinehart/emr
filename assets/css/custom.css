@@ -1223,3 +1223,7 @@ a.iubenda-nostyle:hover {
 .hidden {
   display: none;
 }
+
+.gatekeeper {
+  display: none;
+}
