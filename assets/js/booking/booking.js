@@ -1105,6 +1105,7 @@ $(document).on('submit', '#groups form', function(ev){
   var data = {
     name: form.name.value,
     email: form.email.value,
+    real_email: form.real_email.value,
     phone: form.phone.value,
     company: form.company.value,
     event_type: form.event_type.value,
@@ -1130,10 +1131,10 @@ $(document).on('submit', '#groups form', function(ev){
   }
 
   required(form.name);
-  required(form.email);
+  required(form.real_email);
   required(form.phone);
   required(form.message);
-  validateEmail(form.email);
+  validateEmail(form.real_email);
   validatePhone(form.phone);
 
   problems.forEach(function(field){
