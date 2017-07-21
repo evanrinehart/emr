@@ -1162,6 +1162,7 @@ $(document).on('submit', '#groups form', function(ev){
       alert('Just now a mysterious event prevented your message from being delivered.');
       console.log(code, response);
       button.removeClass('disabled');
+      button.attr('disabled',null);
     }
   });
 });
