@@ -4,6 +4,8 @@ var targetColumnWidth = 160;
 var old_ticket_quantity_kludge = 2;
 var previous_hold_id_kludge = '';
 
+var emailPattern = /^[\w+\-\.]+@[\w\-]+\.[\w\-\.]+$/;
+
 //emr test account
 //var stripePubkey = 'pk_test_ersJ7dsklDhpa4dOW6Wtw1Ky';
 
@@ -402,7 +404,7 @@ function validateCheckoutForm(form){
   if(blank(field('first_name'))) return 'First name is required.';
   if(blank(field('last_name'))) return 'Last name is required.';
   if(blank(field('email'))) return 'Email is required.';
-  if(!field('email').match(/^[\w+\-\.]+@[\w\-]+\.[\w\-\.]+$/)) return 'The email address looks invalid.';
+  if(!field('email').match(emailPattern)) return 'The email address looks invalid.';
   if(blank(field('phone'))) return 'A phone number is required.';
   if(!field('phone').match(/^([0-9]|\.|\(|\)|\s|-)+$/)) return 'The phone number looks invalid.';
   var total = parseFloat(field('total'));
@@ -1122,7 +1124,7 @@ $(document).on('submit', '#groups form', function(ev){
     if(field.value.trim() == '') problems.push(field);
   }
   function validateEmail(field){
-    if(!field.value.trim().match(/^[\w+\-\.]+@[\w\-]\.[\w\-\.]+$/))
+    if(!field.value.trim().match(emailPattern))
       problems.push(field);
   }
   function validatePhone(field){
