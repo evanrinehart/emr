@@ -359,6 +359,7 @@ function roomColor(room){
   switch(room){
     case 'Mardi Gras Study': return 'mardi-gras-study';
     case 'Jazz Parlor': return 'jazz-parlor';
+    case "Inventor's Attic": return 'inventors-attic';
     default: return 'color4';
   }
 }
