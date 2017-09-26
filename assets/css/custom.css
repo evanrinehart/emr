@@ -921,17 +921,18 @@ a.iubenda-nostyle:hover {
   position: relative;
 }
 
-#how-to-choose .subheading {
-  text-align: center;
-}
-
 #how-to-choose .squeeze {
-  max-width: 480px;
   margin: auto;
-}
+  }
 
 #how-to-choose table {
   margin-bottom: 20px;
+}
+
+#how-to-choose thead {
+  border-bottom: 1px solid gray;
+  padding-bottom:-5px;
+  font-variant:small-caps;
 }
 
 #how-to-choose .cell {
@@ -945,17 +946,35 @@ a.iubenda-nostyle:hover {
 }
 
 #how-to-choose .left.cell {
-  padding-right: 5px;
+  padding-right: 10px;
 }
 
 #how-to-choose .right.cell {
-  padding-left: 5px;
+  padding-left: 10px;
+  border-right: 1px solid gray;
+  padding-right: 10px;
+  padding-top: 10px;
+
 }
 
 #how-to-choose .left.cell {
   border-right: 1px solid gray;
+  padding-top: 10px;
 }
 
+#how-to-choose .left.cell {
+  border-right: 1px solid gray;
+  padding-top: 10px;
+}
+
+#how-to-choose .three.cell {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+#how-to-choose .body-text {
+  margin-right:5px;
+  margin-left:5px;
+}
 
 @media only screen and (max-width: 480px){
   .section-heading {
