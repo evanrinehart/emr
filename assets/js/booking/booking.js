@@ -19,6 +19,10 @@ var state = {
   ticketCount: 2
 };
 
+function roomIdExistsIn(rooms, roomId){
+  return rooms.map(function(r){ return r.room_id; }).indexOf(roomId) >= 0;
+}
+
 function computeDynamicColumnCount(width){
   return Math.floor(width / targetColumnWidth);
 }
@@ -359,7 +363,8 @@ function roomColor(room){
   switch(room){
     case 'Mardi Gras Study': return 'mardi-gras-study';
     case 'Jazz Parlor': return 'jazz-parlor';
-//    case "Inventor's Attic": return 'inventors-attic';
+    case "Inventor's Attic": return 'inventors-attic';
+    case "Smuggler's Den": return 'smugglers-den';
     default: return 'color4';
   }
 }
@@ -506,6 +511,7 @@ $(document).on('click', '.booking-widget .slot', function(e){
   function data(name){ return ele.attr('data-'+name); }
   var room_id = data('room-id');
   var event_id = data('event-id');
+
   logClientActionHistory('click-time-slot',{
     room: data('room-name'),
     desired: desired_ticket_count,
@@ -515,56 +521,74 @@ $(document).on('click', '.booking-widget .slot', function(e){
     current_hold_id: HoldIdManager.currentHoldId()
   });
 
-  summonTallModal(checkoutPanel({
-    room_id: data('room-id'),
-    event_id: data('event-id'),
-    room_name: data('room-name'),
-    desired_ticket_count: desired_ticket_count,
-    remaining_tickets: data('remaining-tickets'),
-    date: readDate(data('date')),
-    time: data('time')
-  }));
+  function openCheckoutPanel(){
+    summonTallModal(checkoutPanel({
+      room_id: data('room-id'),
+      event_id: data('event-id'),
+      room_name: data('room-name'),
+      desired_ticket_count: desired_ticket_count,
+      remaining_tickets: data('remaining-tickets'),
+      date: readDate(data('date')),
+      time: data('time')
+    }));
 
-  function fetchPriceCallback(){
-    fetchPrice({
-      room_id: room_id,
-      event_id: event_id,
-      ticket_quantity: desired_ticket_count,
-      previous_hold_id: previous_hold_id,
-      callbacks: {
-        ok: function(result){
-          var total = result.total;
-          old_ticket_quantity_kludge = desired_ticket_count;
-          //$('[name="previous-hold-id"]').val(result.hold_id);
-          //previous_hold_id_kludge = result.hold_id;
-          logClientActionHistory('open-slot-price-fetch-complete',{
-            total: result.total,
-            hold_id: result.hold_id
-          });
-          HoldIdManager.pushHoldId(result.hold_id, 'slot-price-fetched');
-          var panel = $('.checkout-panel');
-          panel.find('.calculating-indicator').hide();
-          panel.find('[name="total"]').val(total);
-          panel.find('.total').text(money(total));
-          panel.find('.total').show();
+    function fetchPriceCallback(){
+      fetchPrice({
+        room_id: room_id,
+        event_id: event_id,
+        ticket_quantity: desired_ticket_count,
+        previous_hold_id: previous_hold_id,
+        callbacks: {
+          ok: function(result){
+            var total = result.total;
+            old_ticket_quantity_kludge = desired_ticket_count;
+            //$('[name="previous-hold-id"]').val(result.hold_id);
+            //previous_hold_id_kludge = result.hold_id;
+            logClientActionHistory('open-slot-price-fetch-complete',{
+              total: result.total,
+              hold_id: result.hold_id
+            });
+            HoldIdManager.pushHoldId(result.hold_id, 'slot-price-fetched');
+            var panel = $('.checkout-panel');
+            panel.find('.calculating-indicator').hide();
+            panel.find('[name="total"]').val(total);
+            panel.find('.total').text(money(total));
+            panel.find('.total').show();
 
-          updateCardDisable();
+            updateCardDisable();
 
-          resetBookingTimeout();
-        },
-        error: function(problem){
-          summonDialog(dialog('ERROR', problem, function(){
-            dismissModalPanel();
-          }));
-          releaseHold(HoldIdManager.currentHoldId());
-          HoldIdManager.invalidateHoldId('fetch-price-failed-initially');
-          postDebugInfoNow('fetch-price-failed-initially');
+            resetBookingTimeout();
+          },
+          error: function(problem){
+            summonDialog(dialog('ERROR', problem, function(){
+              dismissModalPanel();
+            }));
+            releaseHold(HoldIdManager.currentHoldId());
+            HoldIdManager.invalidateHoldId('fetch-price-failed-initially');
+            postDebugInfoNow('fetch-price-failed-initially');
+          }
         }
-      }
-    });
+      });
+    }
+
+    fetchPriceCallback();
   }
 
-  fetchPriceCallback();
+  // special smuggler's den intervening msg popup
+  if(room_id == '415617TTNNW15FFF79CBD5'){
+    var msg = [
+    "Ages 16 and up. This room requires crawling for a short distance and you will ",
+    "be in complete darkness for the majority of the time. This is a private game, ",
+    "after one person buys tickets, no one else will be able to purchase them for that time."
+    ].join('');
+
+    summonDialog(dialog("BOOYA",msg,function(){
+      openCheckoutPanel();
+    }));
+  }
+  else{
+    openCheckoutPanel();
+  }
 
 });
 
@@ -881,6 +905,10 @@ function reloadBookingUI(initialRoom){
   var room = state.room;
   withAvailabilities(baseDate, dateAdd(baseDate, columns), {
     now: function(rooms, availabilities){
+      if(room && !roomIdExistsIn(rooms, room)){
+        state.room = undefined;
+        room = undefined;
+      }
       reloadMainModalPanel(function(w, h){
         return bookingWidget(w, h, room, tickets, baseDate, rooms, availabilities);
       });

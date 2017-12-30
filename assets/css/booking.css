@@ -321,12 +321,16 @@ body.custom-modal-open {
 
 .booking-widget .mardi-gras-study { color: #F4F7BA; }
 .booking-widget .jazz-parlor { color: #ccccff; }
+.booking-widget .inventors-attic { color: #ff82ab; }
+.booking-widget .smugglers-den { color: #ffc130; }
 .booking-widget .color3 { color: #FF3030; }
 .booking-widget .color4 { color: #FF82AB; }
 .booking-widget .color5 { color: #FFDAB9; }
 .booking-widget .color6 { color: #FFBBFF; }
 .booking-widget .bg-mardi-gras-study { background-color: #F4F7BA; }
 .booking-widget .bg-jazz-parlor { background-color: #ccccff; }
+.booking-widget .bg-inventors-attic { background-color: #ff82ab; }
+.booking-widget .bg-smugglers-den { background-color: #ffc130; }
 .booking-widget .bg-color3 { background-color: #FF3030; }
 .booking-widget .bg-color4 { background-color: #FF82AB; }
 .booking-widget .bg-color5 { background-color: #FFDAB9; }
