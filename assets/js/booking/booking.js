@@ -576,13 +576,15 @@ $(document).on('click', '.booking-widget .slot', function(e){
 
   // special smuggler's den intervening msg popup
   if(room_id == '415617TTNNW15FFF79CBD5'){
+//  if(room_id == '41552J7MHUA150CDE4C67F'){
     var msg = [
-    "Ages 16 and up. This room requires crawling for a short distance and you will ",
-    "be in complete darkness for the majority of the time. This is a private game, ",
-    "after one person buys tickets, no one else will be able to purchase them for that time."
+    "<b>Ages 16 and up. This room requires crawling for a short distance and you will ",
+    "be in complete darkness for the majority of the time.<br><br>",
+    "This is a private game, after one person buys tickets, no one else will ",
+    "be able to purchase them for that time.</b>"
     ].join('');
 
-    summonDialog(dialog("BOOYA",msg,function(){
+    summonDialog(dialog("Note",msg,function(){
       openCheckoutPanel();
     }));
   }
