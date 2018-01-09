@@ -4,7 +4,7 @@ var targetColumnWidth = 160;
 var old_ticket_quantity_kludge = 2;
 var previous_hold_id_kludge = '';
 
-var emailPattern = /^[\w+\-\.]+@[\w\-]+\.[\w\-\.]+$/;
+var emailPattern = /^[\w+\-\.]+@[\w\-]+\.[\-\.a-zA-Z]+$/;
 
 //emr test account
 //var stripePubkey = 'pk_test_ersJ7dsklDhpa4dOW6Wtw1Ky';
