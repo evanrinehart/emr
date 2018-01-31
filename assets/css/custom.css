@@ -1244,5 +1244,5 @@ a.iubenda-nostyle:hover {
 }
 
 .gatekeeper {
-  display: none;
+  display: none !important;
 }
